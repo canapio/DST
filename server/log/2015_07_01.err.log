@@ -1,0 +1,69 @@
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+/usr/local/nodeprj3/parsingfile/LecturesParserFile/556f1ea1dbda4a5f1bf514c4_1433372273339.js:19
+    var $ = window.$;
+                  ^
+TypeError: Cannot read property '$' of undefined
+    at Object.jsdom.env.done (/usr/local/nodeprj3/parsingfile/LecturesParserFile/556f1ea1dbda4a5f1bf514c4_1433372273339.js:19:19)
+    at Request._callback (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/lib/jsdom.js:169:18)
+    at self.callback (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/node_modules/request/request.js:354:22)
+    at Request.emit (events.js:107:17)
+    at Request.onRequestError (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/node_modules/request/request.js:1011:8)
+    at ClientRequest.emit (events.js:107:17)
+    at Socket.socketErrorListener (_http_client.js:271:9)
+    at Socket.emit (events.js:107:17)
+    at net.js:459:14
+    at process._tickCallback (node.js:355:11)
+js-bson: Failed to load c++ bson extension, using pure JS version
+/usr/local/nodeprj3/parsingfile/LecturesParserFile/556f1ea1dbda4a5f1bf514c4_1433372273339.js:19
+    var $ = window.$;
+                  ^
+TypeError: Cannot read property '$' of undefined
+    at Object.jsdom.env.done (/usr/local/nodeprj3/parsingfile/LecturesParserFile/556f1ea1dbda4a5f1bf514c4_1433372273339.js:19:19)
+    at Request._callback (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/lib/jsdom.js:169:18)
+    at self.callback (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/node_modules/request/request.js:354:22)
+    at Request.emit (events.js:107:17)
+    at Request.onRequestError (/usr/local/nodeprj3/parsingfile/LecturesParserFile/node_modules/jsdom/node_modules/request/request.js:1011:8)
+    at ClientRequest.emit (events.js:107:17)
+    at Socket.socketErrorListener (_http_client.js:271:9)
+    at Socket.emit (events.js:107:17)
+    at net.js:459:14
+    at process._tickCallback (node.js:355:11)
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+js-bson: Failed to load c++ bson extension, using pure JS version
+/usr/local/nodeprj3/parsingfile/PostsParser_LectureFile/556eec7a9dc2fb9d6d529d9c_1433339861857.js:18
+    var $ = window.$;
+                  ^
+TypeError: Cannot read property '$' of undefined
+    at Object.jsdom.env.done (/usr/local/nodeprj3/parsingfile/PostsParser_LectureFile/556eec7a9dc2fb9d6d529d9c_1433339861857.js:18:19)
+    at Request._callback (/usr/local/nodeprj3/parsingfile/PostsParser_LectureFile/node_modules/jsdom/lib/jsdom.js:169:18)
+    at self.callback (/usr/local/nodeprj3/parsingfile/PostsParser_LectureFile/node_modules/jsdom/node_modules/request/request.js:354:22)
+    at Request.emit (events.js:107:17)
+    at Request.onRequestError (/usr/local/nodeprj3/parsingfile/PostsParser_LectureFile/node_modules/jsdom/node_modules/request/request.js:1011:8)
+    at ClientRequest.emit (events.js:107:17)
+    at Socket.socketErrorListener (_http_client.js:271:9)
+    at Socket.emit (events.js:107:17)
+    at net.js:459:14
+    at process._tickCallback (node.js:355:11)
+js-bson: Failed to load c++ bson extension, using pure JS version
