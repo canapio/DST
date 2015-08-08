@@ -1,0 +1,110 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+	<title></title>
+	<script src="js/jquery-1.10.2.js"></script>
+   	<script src="js/bootstrap.js"></script> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		sessionStorage.setItem("token", "N");
+		
+		$("#user_id").keydown(function (key) {
+            if (key.keyCode == 13) {
+                compare();
+            }
+        });
+
+		$("#user_password").keydown(function (key) {
+            if (key.keyCode == 13) {
+                compare();
+            }
+        });
+	})
+	function compare(){
+		var input_id = $('#user_id').val();
+		var input_password = $('#user_password').val();
+		if(input_id == "dst123" && input_password == "wkdwjsehd"){
+			sessionStorage.setItem("token","Y");
+			location.href='http://14.49.37.33:8003/DSTWebManager/ProfessorList.html';
+		}
+		else{
+
+			alert("아이디 또는 패스워드 확인 바랍니다.")	
+		}
+	}
+
+</script>
+<style type="text/css">
+      /* Override some defaults */
+      .input-sm{
+      	width : 180px;
+      	margin-bottom: 7px;
+      }
+      .btn{
+      	margin-left : 0px;
+      	width: 180px;
+      }
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; 
+      }
+      .container {
+        width: 300px;
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; 
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+	  .login-form {
+		margin-left: 65px;
+	  }
+	
+	  legend {
+		margin-right: -50px;
+		font-weight: bold;
+	  	color: #404040;
+	  }
+
+    </style>
+
+</head>
+<body>
+	
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="login-form">
+					<h2>Login</h2>
+					
+						<div class="clearfix">
+							<input id="user_id" type="text"class="form-control input-sm" placeholder="UserId">
+						</div>
+						<div class="clearfix">
+							<input id="user_password" type="password" class="form-control input-sm" placeholder="Password">
+						</div>
+						<button id="check" onclick="compare()" class="btn btn-Info btn-sm" >Sign in</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<html lang="ko" class=" modernizr-js modernizr-flexbox modernizr-flexboxlegacy modernizr-canvas modernizr-canvastext modernizr-webgl modernizr-no-touch modernizr-geolocation modernizr-postmessage modernizr-websqldatabase modernizr-indexeddb modernizr-hashchange modernizr-history modernizr-draganddrop modernizr-websockets modernizr-rgba modernizr-hsla modernizr-multiplebgs modernizr-backgroundsize modernizr-borderimage modernizr-borderradius modernizr-boxshadow modernizr-textshadow modernizr-opacity modernizr-cssanimations modernizr-csscolumns modernizr-cssgradients modernizr-cssreflections modernizr-csstransforms modernizr-csstransforms3d modernizr-csstransitions modernizr-fontface modernizr-generatedcontent modernizr-video modernizr-audio modernizr-localstorage modernizr-sessionstorage modernizr-webworkers modernizr-applicationcache modernizr-svg modernizr-inlinesvg modernizr-smil modernizr-svgclippaths"><head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title>S/W 설계 및 실험(화)</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/common/css/xe.min.css?20150223101723">
+<link rel="stylesheet" href="/common/js/plugins/ui/jquery-ui.min.css?20150223101718">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/modules/board/skins/sketchbook5/css/board.css?20150204102759">
+<!--[if lt IE 9]><link rel="stylesheet" href="/modules/board/skins/sketchbook5/css/ie8.css?20150204102759" />
+<![endif]--><link rel="stylesheet" href="/layouts/hestia/css/layout.css?20150213150350">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="/modules/editor/styles/default/style.css?20150223101657">
+<!-- JS -->
+<!--[if lt IE 9]><script src="/common/js/jquery-1.x.min.js?20150223101722"></script>
+<![endif]--><!--[if gte IE 9]><!--><script src="/common/js/jquery.min.js?20150223101721"></script>
+<!--[endif]----><script src="/common/js/x.min.js?20150223101722"></script>
+<script src="/common/js/xe.min.js?20150223101722"></script>
+<script src="/modules/board/tpl/js/board.min.js?20150223101713"></script>
+<script src="/layouts/hestia/js/common.js?20150129130016"></script>
+<!-- RSS -->
+<!-- ICON -->
+
+
+<style>
+body {background:url('/layouts/hestia/img/background/bg.png') #FFFFFE no-repeat top center fixed; min-width:980px;}
+.WidthWrap {width:980px !important;}
+#box_wrap  {width:980px !important;}
+</style>
+<style data-id="bdCss">
+.bd a:focus,.bd input:focus,.bd button:focus,.bd textarea:focus,.bd select:focus{outline-color:#87cefa;}
+.bd .replyNum{color:#87cefa !important}
+.bd .trackbackNum{color:#5f9ea0 !important}
+.bd.fdb_count .replyNum{background:#87cefa;}
+.bd.fdb_count .trackbackNum{background:#5f9ea0;}
+.bd em,.bd .color{color:#87cefa;}
+.bd .shadow{text-shadow:1px 1px 1px #5f9ea0;}
+.bd .bolder{color:#87cefa;text-shadow:2px 2px 4px #5f9ea0;}
+.bd .bg_color{background-color:#87cefa;}
+.bd .bg_f_color{background-color:#87cefa;background:-webkit-linear-gradient(#FFF -50%,#87cefa 50%);background:linear-gradient(to bottom,#FFF -50%,#87cefa 50%);}
+.bd .border_color{border-color:#87cefa;}
+.bd .bx_shadow{box-shadow:0 0 2px #5f9ea0;}
+.viewer_with.on:before{background-color:#87cefa;box-shadow:0 0 2px #87cefa;}
+.bd_zine.zine li:first-child,.bd_tb_lst.common_notice tr:first-child td{margin-top:2px;border-top:1px solid #DDD}
+.bd_zine .info b,.bd_zine .info a{color:#5f9ea0;}
+.bd_zine.card h3{color:#87cefa;}
+.bd_tb_lst{margin-top:0}
+.bd_tb_lst .cate span,.bd_tb_lst .author span,.bd_tb_lst .last_post small{max-width:px}
+</style><script>
+//<![CDATA[
+var current_url = "http://ai.ce.pusan.ac.kr/?mid=board_Cizb94";
+var request_uri = "http://ai.ce.pusan.ac.kr/";
+var current_mid = "board_Cizb94";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "http://ai.ce.pusan.ac.kr";
+xe.current_lang = "ko";
+xe.cmd_find = "찾기";
+xe.cmd_cancel = "취소";
+xe.cmd_confirm = "확인";
+xe.msg_no_root = "루트는 선택 할 수 없습니다.";
+xe.msg_no_shortcut = "바로가기는 선택 할 수 없습니다.";
+xe.msg_select_menu = "대상 메뉴 선택";
+//]]>
+</script>
+</head>
+<body data-pinterest-extension-installed="cr1.37">
+<!-- DEFAULT SETTING -->
+<div id="wraps">
+<div id="box_wrap" class="blue"> 
+    
+<!--↓↓ HEADER -->
+<div id="header">
+   
+    <!--↓↓ gnb -->
+    <div class="gnb">
+      <div class="gnbWrap WidthWrap">
+        <div class="gnb_widgt"></div>
+        <!--login -->
+        <div class="account">
+          <ul>
+                          <li><a class="gnb_login" href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;act=dispMemberLoginForm">로그인</a></li>
+              <li><a href="http://ai.ce.pusan.ac.kr/index.php?act=dispMemberSignUpForm">회원가입</a></li>
+              <li><a href="http://ai.ce.pusan.ac.kr/index.php?act=dispMemberFindAccount">ID/PW 찾기</a></li>
+                                  </ul>
+        </div>
+      </div>
+    </div>
+        
+  <!--↓↓ head -->
+  <div class="head">
+    <div class="headWrap WidthWrap">
+      <h1> <a href="http://ai.ce.pusan.ac.kr" id="siteTitle" style="padding:15px 0px 0px 339px;"> <img src="http://ai.ce.pusan.ac.kr/files/attach/images/108/179f54b1820d3f56607aa7a3ca9ac32d.png" alt="Intelligent System Lab.">                </a> </h1>
+                </div>
+  </div>
+      
+<!--↓↓ lnb -->
+<div class="lnb">
+    <div class="lnbWrap WidthWrap">
+      <ul>
+        <li class="first"><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_CdUQ15" class="">Home</a>
+                  </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_TDeO25" class="">ISLAB</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_TDeO25">지도교수 소개</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_zLxr39">연구실 소개</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_pDvp49">연구실 위치</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_miHy26">연구과제 및 실적</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_stkC21">발표논문</a></li>          </ul>        </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_MrKi26" class="">연구원</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_MrKi26">박사과정</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_YdEz36">석사과정</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_mNhQ43">졸업생</a></li>          </ul>        </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_HtsX79" class="">연구내용</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_HtsX79">자동화 컨테이너 터미널</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_QYgB93">마이크로그리드 운영</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_VFqh38">스마트 홈 서비스</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=page_YDus85">교통상황 예보</a></li>          </ul>        </li><li class="active"><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cqum41" class="">학부강의</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cqum41">이산수학(I)</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_LORt24">- Homeworks</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_zgVO10">인공지능</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_aTSh99">- Homeworks</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_JaXU80">S/W 설계 및 실험(월)</a></li><li class="active"><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94">S/W 설계 및 실험(화)</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_MuvU75">알고리즘</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_jtGx37">컴퓨터 시스템 입문</a></li>          </ul>        </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_xxbE88" class="">대학원강의</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_xxbE88">데이터 마이닝</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_XJDP11">진화형 알고리즘</a></li>          </ul>        </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_oeot56" class="">게시판</a>
+          <ul style="display: none;">
+            <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_oeot56">공지사항</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_UZHZ94">Q &amp; A</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_YIeF05">포토 갤러리</a></li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_tgtn20">졸업생 게시판</a></li>          </ul>        </li><li><a href=""></a>
+                  </li>      </ul>
+    </div>
+</div>
+</div>
+<!--↑↑ HEADER --> 
+    
+<!--↓↓ BODY -->
+<div id="body">
+  <div class="content_set WidthWrap">
+     
+      <!--↓↓ snb -->
+      <div class="snb" style="width:px !important; margin-right:30px; float:left;">
+                <h2>학부강의</h2>
+        <ul class="snb_navi">
+          <li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cqum41">이산수학(I)</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_LORt24">- Homeworks</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_zgVO10">인공지능</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_aTSh99">- Homeworks</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_JaXU80">S/W 설계 및 실험(월)</a>
+                      </li><li class="active"><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94">S/W 설계 및 실험(화)</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_MuvU75">알고리즘</a>
+                      </li><li><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_jtGx37">컴퓨터 시스템 입문</a>
+                      </li>        </ul>                                                                              </div>
+                <!--↓↓ content -->
+    <div class="content">
+              <div class="title_set"> 
+          <!--↓↓ 현재위치출력 -->
+                                        <h2>S/W 설계 및 실험(화)</h2>
+          <!--↓↓ 현재위치출력 -->
+          <ul>
+            <li>home</li>            <li>학부강의</li>            <li>S/W 설계 및 실험(화)</li>                      </ul>
+        </div>
+            <div><!--#JSPLUGIN:ui--><script>//<![CDATA[
+var lang_type = "ko";
+var bdLogin = "로그인 하시겠습니까?@http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&act=dispMemberLoginForm";
+jQuery(function($){
+	board('#bd_406_0');
+	$.cookie('bd_viewer_font',$('body').css('font-family'));
+});
+//]]></script>
+<div></div><div id="bd_406_0" class="bd use_np  hover_effect" data-default_style="list" data-bdfilestype="" data-bdnavside="N">
+<div class="bd_hd clear">
+	<div class="bd_bc fl">
+	<a href="http://ai.ce.pusan.ac.kr/"><strong>Home</strong></a>
+		<i class="fa fa-angle-right"></i><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cqum41">학부강의</a>
+		<i class="fa fa-angle-right"></i><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94"><em>S/W 설계 및 실험(화)</em></a>
+			</div>	
+		
+	<div class="bd_set fr m_btn_wrp m_no">
+																									</div>
+	
+	</div>
+<div class="bd_lst_wrp">
+<div class="tl_srch clear">
+	
+			
+	</div>
+<div class="cnb_n_list">
+</div>
+		<table class="bd_lst bd_tb_lst bd_tb">
+	<caption class="blind">List of Articles</caption>
+	<thead class="bg_f_f9">
+		
+		<tr>
+						<th scope="col" class="no"><span><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;order_type=desc" title="내림차순">번호</a></span></th>																																													<th scope="col" class="title"><span><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;sort_index=title&amp;order_type=desc">제목</a></span></th>
+																																										<th scope="col"><span>글쓴이</span></th>																																													<th scope="col"><span><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;sort_index=regdate&amp;order_type=desc">날짜</a></span></th>																																													<th scope="col" class="m_no"><span><a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;sort_index=readed_count&amp;order_type=desc">조회 수</a></span></th>														</tr>
+	</thead>
+	<tbody>
+		
+		<tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1353"><strong>최종보고서, 발표자료</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.06.18</td>																																													<td class="m_no">34</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1347"><strong>6.22(월) 소프트웨어 설계 및 실험 최종발표</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.06.15</td>																																													<td class="m_no">32</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1346"><strong>6.20(토) 소프트웨어 설계 및 실험 기말고사</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.06.15</td>																																													<td class="m_no">45</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1338"><strong>6월 12일 2시 보강있습니다.</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.06.10</td>																																													<td class="m_no">14</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1336"><strong>구두검사 시간표입니다(6.21 일)</strong></a>
+																				<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/update.gif" alt="update" title="update" style="margin-right:2px;"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.06.10</td>																																													<td class="m_no">33</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1155"><strong>4.21(화) 휴강입니다</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.04.17</td>																																													<td class="m_no">16</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1083"><strong>제안서 제출 관련 공지드립니다.</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.03.30</td>																																													<td class="m_no">76</td>														</tr><tr class="notice">
+						<td class="no">
+				<strong>공지</strong>			</td>																																													<td class="title">
+				<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=508"><strong>S/W 설계 및 실험 화요일 분반 게시판입니다</strong></a>
+																				<span class="extraimages"></span>
+			</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time">2015.02.04</td>																																													<td class="m_no">103</td>														</tr>		
+		<tr>
+						<td class="no">
+								13			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1035" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1035&amp;listStyle=viewer">
+					Intent				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:15">2015.03.24</td>																																													<td class="m_no">211</td>														</tr><tr>
+						<td class="no">
+								12			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1113" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1113&amp;listStyle=viewer">
+					SQLite				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"><i class="attached_image" title="Image"></i></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:12">2015.04.07</td>																																													<td class="m_no">150</td>														</tr><tr>
+						<td class="no">
+								11			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1148" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1148&amp;listStyle=viewer">
+					Service				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:04">2015.04.14</td>																																													<td class="m_no">66</td>														</tr><tr>
+						<td class="no">
+								10			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1175" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1175&amp;listStyle=viewer">
+					중간발표				</a>
+																								<span class="extraimages"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="00:03">2015.04.22</td>																																													<td class="m_no">89</td>														</tr><tr>
+						<td class="no">
+								9			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1186" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1186&amp;listStyle=viewer">
+					JNI				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="17:15">2015.04.28</td>																																													<td class="m_no">144</td>														</tr><tr>
+						<td class="no">
+								8			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1240" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1240&amp;listStyle=viewer">
+					HTML5				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:04">2015.05.12</td>																																													<td class="m_no">99</td>														</tr><tr>
+						<td class="no">
+								7			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1265" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1265&amp;listStyle=viewer">
+					JSON &amp; Jquery Mobile				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="16:58">2015.05.19</td>																																													<td class="m_no">112</td>														</tr><tr>
+						<td class="no">
+								6			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1282" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1282&amp;listStyle=viewer">
+					ajax jquery				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:06">2015.05.26</td>																																													<td class="m_no">86</td>														</tr><tr>
+						<td class="no">
+								5			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1318" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1318&amp;listStyle=viewer">
+					Open API				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="17:46">2015.06.02</td>																																													<td class="m_no">67</td>														</tr><tr>
+						<td class="no">
+								4			</td>																																													<td class="title">
+				
+								<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1334" class="hx" data-viewer="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;document_srl=1334&amp;listStyle=viewer">
+					Web Storage				</a>
+																								<span class="extraimages"><img src="http://ai.ce.pusan.ac.kr/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;"></span>
+							</td>
+																																										<td class="author"><span><a href="#popup_menu_area" class="member_4" onclick="return false">권성철</a></span></td>																																													<td class="time" title="18:03">2015.06.09</td>																																													<td class="m_no">50</td>														</tr>	</tbody>
+</table>	<div class="btm_mn clear">
+	
+		<div class="fl">
+				
+		<form action="http://ai.ce.pusan.ac.kr/" method="get" onsubmit="return procFilter(this, search)" class="bd_srch_btm"><input type="hidden" name="act" value="">
+			<input type="hidden" name="vid" value="">
+			<input type="hidden" name="mid" value="board_Cizb94">
+			<input type="hidden" name="category" value="">
+			<span class="btn_img itx_wrp">
+				<button type="submit" onclick="jQuery(this).parents('form.bd_srch_btm').submit();return false;" class="ico_16px search">Search</button>
+				<label for="bd_srch_btm_itx_406">검색</label>
+				<input type="text" name="search_keyword" id="bd_srch_btm_itx_406" class="bd_srch_btm_itx srch_itx" value="">
+			</span>
+			<span class="btn_img select">
+				<select name="search_target">
+					<option value="title_content">제목+내용</option><option value="title">제목</option><option value="content">내용</option><option value="comment">댓글</option><option value="user_name">이름</option><option value="nick_name">닉네임</option><option value="user_id">아이디</option><option value="tag">태그</option>				</select>
+			</span>
+					</form>	</div>
+	<div class="fr">
+							</div>
+</div><form action="./" method="get" class="bd_pg clear"><input type="hidden" name="error_return_url" value="/index.php?mid=board_Cizb94"><input type="hidden" name="act" value="">
+	<fieldset>
+	<legend class="blind">Board Pagination</legend>
+	<input type="hidden" name="vid" value="">
+	<input type="hidden" name="mid" value="board_Cizb94">
+	<input type="hidden" name="category" value="">
+	<input type="hidden" name="search_keyword" value="">
+	<input type="hidden" name="search_target" value="">
+	<input type="hidden" name="listStyle" value="list">
+				<strong class="direction"><i class="fa fa-angle-left"></i> Prev</strong>	<a class="frst_last bubble this" href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94" title="첫 페이지">1</a>
+				<a class="frst_last bubble" href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;page=2" title="끝 페이지">2</a>	<a href="http://ai.ce.pusan.ac.kr/index.php?mid=board_Cizb94&amp;page=2" class="direction">Next <i class="fa fa-angle-right"></i></a>		<div class="bd_go_page tg_cnt2 wrp">
+		<button type="button" class="tg_blur2"></button>
+		<input type="text" name="page" class="itx">/ 2 <button type="submit" class="bd_btn">GO</button>
+		<span class="edge"></span>
+		<i class="ie8_only bl"></i><i class="ie8_only br"></i>
+		<button type="button" class="tg_blur2"></button>
+	</div>
+	</fieldset>
+</form>
+</div>	</div></div>
+    </div>
+  </div>
+</div>
+<!--↑↑ BODY --> 
+    
+<!--↓↓ FOOTER_MENU --> 
+<!--↓↓ FOOTER -->
+<div id="footer">
+      <div id="footerWrapA" cleass="WidthWrap">
+      <div class="address">Copyright ⓒ PNU Intelligent Systems Lab. All right reserved.   l   E - mail : krryu@pusan.ac.kr<br>
+
+부산대학교 공과대학 정보컴퓨터공학부 지능형시스템 연구실 | 609-735 부산광역시 금정구 장전동 산30번지 | Tel : 051-510-3531 | Fax : 051-517-2431</div>
+    </div>
+    </div>
+    
+<!--↑↑ FOOTER --> 
+</div>
+</div>
+<!--↓↓ scroll_top -->
+<div class="nav_up" id="nav_up"></div>
+<!-- ETC -->
+<div class="wfsr"></div>
+<script src="/files/cache/js_filter_compiled/d046d1841b9c79c545b82d3be892699d.ko.compiled.js?20150223101717"></script><script src="/files/cache/js_filter_compiled/1bdc15d63816408b99f674eb6a6ffcea.ko.compiled.js?20150223101717"></script><script src="/files/cache/js_filter_compiled/9b007ee9f2af763bb3d35e4fb16498e9.ko.compiled.js?20150223101717"></script><script src="/addons/autolink/autolink.js?20150223101755"></script><script src="/common/js/plugins/ui/jquery-ui.min.js?20150223101718"></script><script src="/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20150223101718"></script><script src="/addons/resize_image/js/resize_image.min.js?20150223101755"></script><script src="/modules/board/skins/sketchbook5/js/imagesloaded.pkgd.min.js?20150204102757"></script><script src="/modules/board/skins/sketchbook5/js/jquery.cookie.js?20150204102757"></script><script src="/modules/editor/skins/xpresseditor/js/xe_textarea.min.js?20150223101649"></script><script src="/modules/board/skins/sketchbook5/js/jquery.autogrowtextarea.min.js?20150204102757"></script><script src="/modules/board/skins/sketchbook5/js/board.js?20150204102757"></script><script src="/modules/board/skins/sketchbook5/js/jquery.masonry.min.js?20150204102758"></script>
+
+<div class="fontcheckWrp"><p id="fontcheck_np1" style="font-family:'나눔손글씨 펜','Nanum Pen Script',np,monospace,Verdana !important">Sketchbook5, 스케치북5</p><p id="fontcheck_np2" style="font-family:monospace,Verdana !important">Sketchbook5, 스케치북5</p></div><span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span></body></html>

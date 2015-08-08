@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>세부 글 목록</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery_modal.js"></script>
+    <script src="js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- for loading 창-->
+    <link rel="stylesheet" href="css/ladda-themeless.min.css">
+        <link rel="stylesheet" href="css/prism.css">
+
+    <script src="js/spin.min.js"></script>
+    <script src="js/ladda.min.js"></script>
+
+
+
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <link href="bootstrap-fileinput-master/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="bootstrap-fileinput-master/js/fileinput.min.js" type="text/javascript"></script>
+
+
+
+
+   <script>
+      var serverurl = "http://14.49.37.33:3003"//"http://localhost:3002";//
+      var link_check= 1;//edit&done 구분
+      var nav_only_one = 1;//첫 edit 클릭식 nav html에 추가
+      var nav_hide_not = 1;//첫 edit시에만 toggle안돌아가게 설정  
+      var enable_post=[];//status = e인 객체들 담는 배열
+      var disable_post=[];//status = d인 객체들 담는 배열
+      var renewal_post=[];
+      var delete_post=[];//delete한 객체 담는 배열
+      var delete_ids=[];
+      var temp_delete_id;//임시      
+      
+      var params = window.location.search.substr(1).split('&');
+      var lecture_id = params[0].split('=')[1];
+      if(lecture_id != null){
+    
+        var faculty_name = params[1].split('=')[1];
+        var lecture_title = params[2].split('=')[1];
+        var faculty_id = params[3].split('=')[1];
+        
+        var decode_faculty_name = decodeURIComponent(faculty_name);
+        var decode_lecture_title = decodeURIComponent(lecture_title);
+      }
+      //PostList.html?lecture_id=556eed758ec052d26ec1fa9b&faculty_name=류광렬&faculty_id=556eec7a9dc2fb9d6d529d98
+      
+
+      var html_nav_bottom = '<nav name="on_off" class="navbar navbar-fixed-bottom" style="color:red">\
+        <div class="container-fluid">\
+          <div id="navbar" class="navbar-collapse collapse">\
+            <ul class="nav navbar-nav navbar-right">\
+              <li><button onclick="location.reload()" type="button" class="btn btn-default navbar-btn">Cancel</button></li>\
+              <li><span>　</span></li>\
+              <li><button id="btn_done" class="btn btn-danger ladda-button navbar-btn" data-style="slide-down"><span class="ladda-label">Done</span><span class="ladda-spinner"></span></button></li>\
+              <li><span>　</span></li>\
+            </ul>\
+          </div>\
+        </div>\
+      </nav>'
+
+      $(document).ready(function(){
+        if(sessionStorage.getItem("token") != "Y"){
+          
+          location.href="http://14.49.37.33:8003/DSTWebManager/login.html"
+        }
+        $("#btn_edit").click(function(){//edit 버튼 누를때 해야될 기능
+          delete_post = [];
+          if(nav_only_one == 1){//제일 처음 한번 nav_bottom생성 후, btn_done 함수 등록(?) 
+            $("#div_nav_bottom").html(html_nav_bottom);
+
+            $('#btn_done').click(function(e){
+              e.preventDefault();
+              
+              if(link_check == -1){
+                var obj=[]
+                name_change();
+                make_up_de_post();
+                l = Ladda.create(this);
+                          
+                Update_Delete_list(lecture_id,renewal_post, obj, delete_post,l);
+                
+              }        
+            })     
+            nav_only_one *= -1;
+          }
+          if(link_check == 1){            
+            if(nav_hide_not == 0){//초기값 1, edit 한번이라도 누르면 0 이됨 그 이후 계속 0 이니 항상 실행
+              $("nav[name=on_off]").toggle()  
+            }
+            nav_hide_not *= 0;
+            $("span[name=on_off]").toggle()
+            $("button[name=on_off]").toggle()
+            //$("#link_on_off").bind('click', function(e){e.preventDefault();})
+            $("#nav_top").css("background-color", "#FFA055");
+            link_check *= -1;
+            //$('#btn_plus_space').html(html_btn_plus);//edit 버튼 클릭시 + 버튼 생성
+            $("#btn_refresh").prop('disabled',true);
+            $("#btn_addfaculty").prop('disabled',false);
+            $("#btn_edit").prop('disabled',true);
+            
+            $('#mytable_en').html(rowFormHTML_en_input(enable_post));
+            $('#mytable_di').html(rowFormHTML_di_input(disable_post));
+          }
+        });
+
+        //$('#nav_top_span').html("교수님 목록 > " + decode_faculty_name +" 교수님 > "+decode_lecture_title)
+        $('#nav_top_span').html("<a href='http://14.49.37.33:8003/DSTWebManager/ProfessorList.html' style='color : white;'>교수님 목록</a>  > <a href='http://14.49.37.33:8003/DSTWebManager/LectureList.html?faculty_id="+faculty_id+"&faculty_name="+faculty_name+"'  style='color:white;'>" + decode_faculty_name+" 교수님</a>  > <a href='"+window.location+"'style='color:white;' >"+decode_lecture_title+"</a>" )
+
+
+        // <!-- ========================= -->
+        // <!-- ========================= -->
+        // <!-- ========================= -->
+        $("#test-upload").fileinput({
+          'showPreview' : false,
+          'allowedFileExtensions' : ['jpg', 'png','gif'],
+          'elErrorContainer': '#errorBlock'
+        });
+
+
+
+
+
+
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+          $("#nav_top").toggleClass("toggled");
+          $("#div_nav_bottom").toggleClass("toggled");
+        });
+        $("#sidebar-wrapper").css("background-color","#000000");
+        
+        $('#myModal').on('shown.bs.modal', function (){
+            $('#myInput').focus()          
+        })
+        
+        $('#modal_yes').click(function(){//edit 버튼 누를때 해야될 기능
+          var post_title = ""
+          var post_order = ""
+          var post_status = ""
+          var params = window.location.search.substr(1).split('&');
+          var lecture_id = params[0].split('=');
+          var num =parseInt(post_order)
+          post_title = document.getElementById('post_title').value;
+          post_order = document.getElementById('post_order').value;
+          post_status = document.getElementById('post_status').value;
+          document.getElementById('post_title').value="";
+          document.getElementById('post_order').value="";
+          document.getElementById('post_status').value="";
+          var post_data={
+            lecture_id : lecture_id[1],
+            title : post_title,
+            order : post_order,
+            status : post_status
+          }
+
+          if(post_title == ""){
+            alert("Title을 입력 하세요")
+          }
+          else{  
+            var l = Ladda.create(this);
+            Post_list(post_data,l)
+            $('#myModal').modal('hide');  
+          }
+        })
+          
+
+       // $("nav[name=on_off]").toggle()//refresh기능 때문에 따로 꺼냄
+
+        $('#btn_refresh').click(function(e){
+          e.preventDefault();
+          var l =Ladda.create(this);
+          
+          Read_list(l);
+
+        })
+        $('#btn_refresh').click();
+
+        
+      });
+
+      function sort(){
+        $("#sortable").sortable({
+          placeholder: 'ui-state-highlight'
+        });
+      }
+
+      function reset(){
+        $("#sortable").sortable("disable");
+      }
+
+      $('#edit').bind('click',sort);
+      $('#done').bind('click',reset);
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////통신 모듈//////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+      function Post_list(data, l){//add한 list DB로 전송
+        l.start();
+        $.ajax({
+          type: 'POST',
+          data: data,
+          crossDomain: true, 
+          url:  serverurl+'/DST/addpost',
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            l.stop();
+            console.log('success');
+            console.log(JSON.stringify(result));
+            if(result.data.status != 'd'){
+              enable_post.push(result.data)
+            }
+            else{
+              disable_post.push(result.data)
+            }
+            $('#mytable_en').html(rowFormHTML_en_input(enable_post));//for 화면갱신
+            $('#mytable_di').html(rowFormHTML_di_input(disable_post));
+          },
+          error: function(e) {
+            l.stop();
+            console.log( 'error : '+JSON.stringify(e) ) 
+          }
+        })
+      };
+      function Read_list(l){//DB에서 받아옴
+        l.start();
+          
+        var param = {
+          lecture_id : lecture_id
+        }
+        $.ajax({
+          type: 'GET',
+          data: param,
+          crossDomain: true, 
+          url: serverurl+'/DST/postlist',
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            l.stop();
+            console.log("success : "+JSON.stringify(result));
+            page_renewal_Read(result.data.list)
+          },
+          error: function(e) {
+            l.stop();
+            console.log( 'error : '+JSON.stringify(e) ) 
+          }
+        })
+      };
+      function Update_Delete_list(data0,data1, data2, data3, l){
+        l.start();
+        $.ajax({
+          type: 'POST',
+          data: {
+            lecture_id: data0,
+            posts : data1, 
+            orders_ids : data2, 
+            delete_ids: data3
+          },
+          crossDomain: true, 
+          url: serverurl+'/DST/updatedeleteposts',//DB에 전체 facultys, delete_facultys 전송 해서 DB수정
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            l.stop();
+            console.log('success');
+            page_renewal_UpdateDelete()
+          },
+          error: function(e) {
+            l.stop();
+            console.log( 'error : '+JSON.stringify(e) )
+            location.reload(); 
+          }
+        })
+      }
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+      function make_enable_post(datas){//enable_faculty 채움
+        var obj = {}
+        enable_post=[]
+        for(var j = 0 ; j < datas.length ;j++){
+          if(datas[j].status != 'd'){
+            obj ={
+              _id : datas[j]._id,
+              title : datas[j].title,
+              status : datas[j].status,
+              createdate : datas[j].createdate,
+              order : datas[j].order
+            }
+            if(obj != {}){
+              enable_post.push(obj);
+            }
+          }            
+        }
+      }
+
+      function make_disable_post(datas){//disable_faculty 채움
+        var obj = {}
+        disable_post=[]
+        for(var j = 0 ; j < datas.length ;j++){
+          if(datas[j].status == 'd'){
+            obj ={
+              _id : datas[j]._id,
+              title : datas[j].title,
+              status : datas[j].status,
+              createdate : datas[j].createdate,
+              order : datas[j].order
+            }
+            if(obj != {}){
+              disable_post.push(obj);
+            }
+          }            
+        }
+      }
+      
+      function make_up_de_post(){
+        for(var i = 0 ; i < enable_post.length ; i++ ){
+          renewal_post.push(enable_post[i])
+        }
+        for(var j = 0 ; j < disable_post.length ; j++ ){
+          renewal_post.push(disable_post[j])
+        }
+      }
+
+      var rowFormHTML_en = function(datas) {//enable table html code 만듬
+        var html_en = ""
+        html_en += '<table class="table table-striped">\
+                        <thead>\
+                          <tr>\
+                            <th width="40%">Title</th>\
+                            <th width="30%">Create Date</th>\
+                            <th width="30%">Status</th>\
+                          </tr>\
+                        </thead>\
+                        <tbody>'
+
+        for (var i=0; i<datas.length; i++) {
+          
+          if(datas[i].status != 'd'){
+            html_en += '<tr>'
+            html_en += '<td>'+datas[i].title+'</a></td>'
+            html_en += '<td>'+datas[i].createdate+'</td>'
+            html_en += '<td>'+datas[i].status
+            html_en += '<button onclick="click_Disable(this);" name="on_off" id="btn_'+datas[i]._id +'" type="button" class="btn btn-warning btn-xs" style=\'float:right\'>Disable</button>\
+                    <span style=\'float:right\'>　</span>\
+                    <button onclick="click_Delete(this);" name="on_off"  id="deletebtn_'+datas[i]._id +'"  type="button" class="btn btn-danger btn-primary btn-circle" style="float:right" data-toggle="modal" data-target="#delete_modal">\
+                      <i class="glyphicon glyphicon glyphicon-minus"></i>\
+                    </button>\
+                    <span style=\'float:right\'>　</span>\
+                    <span name="on_off" class="glyphicon glyphicon glyphicon-align-justify" aria-hidden="true" style=\'float:right\'></span>\
+                    </td>'
+            html_en += '</tr>'
+          }
+        }
+        html_en += '</tbody>\
+                </table>'
+      
+        return html_en
+      }
+
+      var rowFormHTML_di = function(datas) {//disable table html code 만듬
+        var html_di = ""
+        html_di += '<div class="table-responsive_1">\
+                        <table class="table table-striped">\
+                        <thead>\
+                          <tr>\
+                            <th width="40%">Title</th>\
+                            <th width="30%">Create Date</th>\
+                            <th width="30%">Status</th>\
+                          </tr>\
+                        </thead>\
+                        <tbody>'
+        
+        for (var i=0; i<datas.length; i++) {
+          if(datas[i].status == 'd'){
+            html_di += '<tr>'
+            html_di += '<td>'+datas[i].title+'</a></td>'
+            html_di += '<td>'+datas[i].createdate+'</td>'
+            html_di += '<td>'+datas[i].status
+            html_di += '<span>　　　</span>\
+                      <button onclick="click_Enable(this);" name="on_off" id="btn_'+datas[i]._id +'" type="button" class="btn btn-success btn-xs" style=\'float:right\'>Enable</button>\
+                      <span style=\'float:right\'>　</span>\
+                      <button onclick="click_Delete(this);" name="on_off"  id="deletebtn_'+datas[i]._id +'"  type="button" class="btn btn-danger btn-primary btn-circle" style="float:right" data-toggle="modal" data-target="#delete_modal">\
+                      <i class="glyphicon glyphicon glyphicon-minus"></i>\
+                      </button>\
+                    </td>'
+            html_di += '</tr>'
+          }  
+        }         
+        html_di += '    </tbody>\
+                      </table>\
+                    </div>'
+        return html_di  
+      }
+     
+      var rowFormHTML_en_input  = function(datas) {//enable input table html code 만듬
+        var html_en_input = ""
+        html_en_input += '<table class="table table-striped">\
+                        <thead>\
+                          <tr>\
+                            <th width="40%">Title</th>\
+                            <th width="30%">Create Date</th>\
+                            <th width="30%">Status</th>\
+                          </tr>\
+                        </thead>\
+                        <tbody>'
+
+        for (var i=0; i<datas.length; i++) {
+          
+          if(datas[i].status != 'd'){
+            html_en_input += '<tr>'
+            html_en_input += '<td><input type="text" id="input_' + datas[i]._id + '" class="form-control input-xs" value="'+datas[i].title+'"></td>'
+            html_en_input += '<td>'+datas[i].createdate+'</td>'
+            if(datas[i].status == 'e'){
+              html_en_input += '<td><button class="btn btn-xs" onclick="change_en_wa(this);" id="btnStatus_'+datas[i]._id +'">E</button>'
+            }
+            else{
+              html_en_input += '<td><button class="btn btn-xs" onclick="change_en_wa(this);" id="btnStatus_'+datas[i]._id +'">W</button>'
+            }
+            html_en_input += '<button onclick="click_Disable(this);" name="on_off" id="btn_'+datas[i]._id +'" type="button" class="btn btn-warning btn-xs" style=\'float:right\'>Disable</button>\
+                    <span style=\'float:right\'>　</span>\
+                    <button onclick="click_Delete(this);" name="on_off"  id="deletebtn_'+datas[i]._id +'"  type="button" class="btn btn-danger btn-primary btn-circle" style="float:right" data-toggle="modal" data-target="#delete_modal">\
+                      <i class="glyphicon glyphicon glyphicon-minus"></i>\
+                    </button>\
+                    <span style=\'float:right\'>　</span>\
+                    <span name="on_off" class="glyphicon glyphicon glyphicon-align-justify" aria-hidden="true" style=\'float:right\'></span>\
+                    </td>'
+            html_en_input += '</tr>'
+          }
+        }
+        html_en_input += '    </tbody>\
+                      </table>\
+                    </div>'
+      
+        return html_en_input
+      }
+
+      var rowFormHTML_di_input = function(datas) {//disable input table html code 만듬
+        var html_di_input = ""
+        html_di_input += '<div class="table-responsive_1">\
+                        <table class="table table-striped">\
+                        <thead>\
+                          <tr>\
+                            <th width="40%">Title</th>\
+                            <th width="30%">Create Date</th>\
+                            <th width="30%">Status</th>\
+                          </tr>\
+                        </thead>\
+                        <tbody>'
+        
+        for (var i=0; i<datas.length; i++) {
+          if(datas[i].status == 'd'){
+            html_di_input += '<tr>'
+            html_di_input += '<td><input type="text" id="input_' + datas[i]._id + '" class="form-control input-xs" value="'+datas[i].title+'"></td>'
+            html_di_input += '<td>'+datas[i].createdate+'</td>'
+            html_di_input += '<td>'+datas[i].status
+            html_di_input += '<span>　　　</span>\
+                      <button onclick="click_Enable(this);" name="on_off" id="btn_'+datas[i]._id +'" type="button" class="btn btn-success btn-xs" style=\'float:right\'>Enable</button>\
+                      <span style=\'float:right\'>　</span>\
+                      <button onclick="click_Delete(this);" name="on_off"  id="deletebtn_'+datas[i]._id +'"  type="button" class="btn btn-danger btn-primary btn-circle" style="float:right" data-toggle="modal" data-target="#delete_modal">\
+                      <i class="glyphicon glyphicon glyphicon-minus"></i>\
+                      </button>\
+                    </td>'
+            html_di_input += '</tr>'
+          }  
+        }         
+        html_di_input += '    </tbody>\
+                      </table>\
+                    </div>'
+        return html_di_input  
+      }
+
+      function page_renewal_Read(posts) {
+        make_enable_post(posts)
+        make_disable_post(posts)
+        sort_post()
+        $('#mytable_en').html(rowFormHTML_en(enable_post));
+        $('#mytable_di').html(rowFormHTML_di(disable_post));
+        $("span[name=on_off]").toggle()
+        $("button[name=on_off]").toggle()//page 갱신(refresh)
+      }
+
+      function page_renewal_UpdateDelete(){
+        $('#mytable_en').html(rowFormHTML_en(enable_post));
+        $('#mytable_di').html(rowFormHTML_di(disable_post));
+        $("nav[name=on_off]").toggle()
+        $("span[name=on_off]").toggle()
+        $("button[name=on_off]").toggle()
+        $("#nav_top").css("background-color", "#000000");
+        link_check *= -1;
+        $("#btn_refresh").prop('disabled',false);//버튼 enable, disable 설정 
+        $("#btn_addfaculty").prop('disabled',true);
+        $("#btn_edit").prop('disabled',false);
+      }
+
+      function click_Enable (btn){//enable 버튼 클릭      
+        var id = btn.id.split('_')[1];
+        for (var i=0; i<disable_post.length; i++) {
+          if (disable_post[i]._id==id) {
+            var temppost = disable_post[i];
+            disable_post.splice(i, 1);
+            temppost.status = "e";
+            enable_post.push(temppost);
+            break;
+          }
+        }
+        sort_post();
+        $('#mytable_en').html(rowFormHTML_en_input(enable_post));//for 화면갱신
+        $('#mytable_di').html(rowFormHTML_di_input(disable_post));
+      }
+
+      function click_Disable (btn){//disable 버튼 클릭
+        var id = btn.id.split('_')[1];
+        for (var i=0; i<enable_post.length; i++) {
+          if (enable_post[i]._id==id) {
+            var temppost = enable_post[i];
+            enable_post.splice(i, 1);
+            temppost.status = "d";
+            disable_post.push(temppost);
+            break;
+          }
+        }
+        sort_post();
+        $('#mytable_en').html(rowFormHTML_en_input(enable_post));
+        $('#mytable_di').html(rowFormHTML_di_input(disable_post));
+      }
+    
+      function click_Delete (btn) {//delete 누를시 id값 임시 저장
+        var id = btn.id.split('_')[1];
+        temp_delete_id = id;
+      }
+
+      function execute_delete (btn) {//modal 에서 확인 누를시 click_Delete에서 따운 id로 실제 delete 실행
+        var id = temp_delete_id;
+        for (var i=0; i<enable_post.length; i++) {
+          if (enable_post[i]._id==id) {
+            delete_post.push(enable_post[i]);
+            enable_post.splice(i, 1);
+            break;
+          }
+        }
+        for (var i=0; i<disable_post.length; i++) {
+          if (disable_post[i]._id==id) {
+            delete_post.push(disable_post[i]);
+            disable_post.splice(i, 1);
+            break;
+          }
+        }
+        $('#mytable_en').html(rowFormHTML_en_input(enable_post));//for 화면갱신
+        $('#mytable_di').html(rowFormHTML_di_input(disable_post));
+      }
+
+      function name_change(){// name, title 수정 한거 enable_faculty, disable_faculty에도 적용
+        for( var i = 0; i<enable_post.length ; i++){
+          enable_post[i].title = $('#input_' + enable_post[i]._id).val() 
+        }
+        for( var j = 0; j<disable_post.length ; j++){
+          disable_post[j].title = $('#input_' + disable_post[j]._id).val() 
+        }
+      }
+     
+      function sort_post(){
+        var temp_obj={}
+        if(enable_post.length > 1){
+          for(var i = 0; i < enable_post.length -1 ; i++){
+            for(var j = 0 ; j < enable_post.length-i-1 ; j++){
+              if(enable_post[j].order < enable_post[j+1].order){//order가 작을수록 배열 뒤에 존재
+                temp_obj = enable_post[j+1];
+                enable_post[j+1] = enable_post[j];
+                enable_post[j] = temp_obj;
+              }
+            } 
+          }
+        }
+        if(disable_post.length > 1){
+          for(var i = 0; i < disable_post.length -1 ; i++){
+            for(var j = 0 ; j < disable_post.length-i-1 ; j++){
+              if(disable_post[j].order < disable_post[j+1].order){
+                temp_obj = disable_post()[j+1];
+                disable_post[j+1] = disable_post[j];
+                disable_post[j] = temp_obj;
+              }
+            } 
+          }
+        }
+      }
+
+      function change_en_wa(btn){
+        var id = btn.id.split('_')[1];
+        if( $('#btnStatus_'+id).html() == 'E'){
+          $('#btnStatus_'+id).html("W")
+          for (var i=0; i<enable_post.length; i++) {
+            if (enable_post[i]._id==id) {
+              enable_post[i].status = 'w';
+              break;
+            }
+          }
+        }
+        else{
+          $('#btnStatus_'+id).html("E")
+          for (var i=0; i<enable_post.length; i++) {
+            if (enable_post[i]._id==id) {
+              enable_post[i].status = 'e';
+              break;
+            }
+          }
+        }        
+      }
+
+
+    </script>
+    <style>
+      .input-xs {
+        height: 23px;
+      }
+      .navbar-fixed-top{
+        background-color: #000000;        
+      }
+      .navbar-fixed-bottom{
+        background-color: #FFA055; 
+        z-index: 999;
+      }
+      .table-responsive_1{
+        padding-bottom: 150px;
+      }
+      .btn-circle {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 2px;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper" >
+            <ul class="sidebar-nav">
+              </br>
+   
+                <li class="sidebar-brand">
+                    <a href="http://14.49.37.33:8003/DSTWebManager/ProfessorList.html">
+                        DST Web Manager
+                    </a>
+                </li>
+              
+                <li>
+                    <a style="text-decoration: none;color: #FFF;background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;" href="http://14.49.37.33:8003/DSTWebManager/ProfessorList.html">Home</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/NoticeList.html">Notice</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/index.html">Service</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+<!-- top navbar -->    
+    <nav id="nav_top" class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <ul class="nav navbar-nav navbar-right">  
+            <li><button id="menu-toggle" class="btn navbar-btn" data-><span class="ladda-label"><i class="glyphicon glyphicon-align-justify"></i></button></li>
+            <li><span>　</span></li>           
+            <li><span id="nav_top_span" class="navbar-brand" style="color:white"></span></li>
+          </ul>
+
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><button id="btn_refresh" class="btn btn-success ladda-button navbar-btn" data-style="slide-down"><span class="ladda-label">Refresh</span><span class="ladda-spinner"></span></button></li>
+            <li><span>　</span></li>
+
+            <li><button id="btn_addfaculty" type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal" disabled>+</button></li>
+            <li><span>　</span></li>
+            <li><button  id="btn_edit" type="button" class="btn btn-default navbar-btn">Edit </button></li>
+            <li><span>　</span></li>  
+          </ul>          
+        </div>
+      </div>
+    </nav>
+
+<!-- bottom navbar -->
+    <div id="div_nav_bottom">
+    </div>
+
+<!-- enable table -->
+    <div class="container-fluid">
+      <div class="row">  
+        <div class="col-sm-9 col-sm-offset-1 ">
+           <div><h1 class="page-header"></h1></div>
+            <div><h1 class="page-header" style="font-weight:bold">세부 글 목록</h1></div>
+            <div><h4>　  </h4></div>
+            <div><h1 >Enable</h1></div>             
+            <div id="mytable_en" class="table-responsive">              
+            
+            </div>
+        </div>
+      </div>
+    </div>
+
+<!-- disable table -->
+    <div class="container-fluid">
+      <div class="row">           
+        <div class="col-sm-9 col-sm-offset-1 ">
+          <div><h4>　  </h4></div>
+          <div><h1>Disable</h1></div>              
+          <div id="mytable_di" class="table-responsive">            
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <!-- disable table -->
+    <div class="container-fluid">
+      <div class="row">           
+        <div class="col-sm-9 col-sm-offset-1 ">
+          <div><h4>　  </h4></div>
+          <div><h1>Upload</h1></div>              
+          <form id="uploadForm"
+               enctype="multipart/form-data"
+               method="post">
+              <div class="form-group">
+                  <input id="file-1" type="file" name="userPhoto" multiple class="file" data-overwrite-initial="false" data-min-file-count="1" data-max-file-count="1">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+
+
+<!-- Modal for + -->
+    <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">교수님 추가</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-list">
+              <li class="nav-header">Title</li>
+              <li><input type="text" class="form-control" id="post_title"></li>
+              <li class="nav-header">Order</li>
+              <li><input type="text" class="form-control" id="post_order"></li>
+              <li class="nav-header">Status</li>
+              <li><input type="text" class="form-control" id="post_status"></li>
+              
+            </ul> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary ladda-button" data-style="slide-down" id="modal_yes" >확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal for delete-->
+    <div class="modal fade bs-example-modal-sm" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">삭제하시겠습니까?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" id="modal_yes" data-dismiss="modal" onclick="execute_delete(this);">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+
+
+
+
+
+
+  <!-- ========================= -->
+  <!-- ========================= -->
+  <!-- ========================= -->
+  <script type="text/javascript">
+  
+    $("#file-1").attr('name', lecture_id) 
+    $("#file-1").fileinput({
+        uploadUrl: serverurl+'/DST/postsparser/upload',
+        allowedFileExtensions : ['js'],
+
+        maxFileSize: 1000,
+        maxFilesNum: 10,
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function(filename) {
+          return lecture_id+'.js';
+            return filename.replace('(', '_').replace(']', '_');
+        },
+        browseClass: "btn btn-success",
+        browseLabel: " Import javascript File",
+        browseIcon: '<i class="glyphicon glyphicon-file_import"></i>',
+        removeClass: "btn btn-danger",
+        removeLabel: "Delete",
+        removeIcon: '<i class="glyphicon glyphicon-trash"></i>',
+        uploadClass: "btn btn-info",
+        uploadLabel: "Upload",
+        uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
+        dropZoneTitle: '교수님 파싱 파일 업로드..',
+        uploadExtraData: {lecture_id:lecture_id}
+    });
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+
+
+
+
+
+
+
+
+
+</html>

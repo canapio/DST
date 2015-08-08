@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>강의 목록  </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery_modal.js"></script>
+    <script src="js/bootstrap.js"></script> 
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- for loading 창-->
+    <link rel="stylesheet" href="css/ladda-themeless.min.css">
+        <link rel="stylesheet" href="css/prism.css">
+
+    <script src="js/spin.min.js"></script>
+    <script src="js/ladda.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <!-- ========================= -->
+    <link href="bootstrap-fileinput-master/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="bootstrap-fileinput-master/js/fileinput.js" type="text/javascript"></script>
+
+
+
+    <script>
+      var serverurl = "http://14.49.37.33:3003" //"http://localhost:3002";//
+      var link_check= 1;//edit&done 구분
+      var enable_Notice=[];//status = e인 객체들 담는 배열
+      var delete_Notice=[];//delete한 객체 담는 배열
+      var delete_ids=[];
+      var temp_delete_id;//임시      
+      
+
+     
+
+      $(document).ready(function(){
+        if(sessionStorage.getItem("token") != "Y"){
+          location.href="http://14.49.37.33:8003/DSTWebManager/login.html"
+        }
+       
+        $('#myModal').on('shown.bs.modal', function (){
+            $('#myInput').focus()          
+        })
+   
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+          $("#nav_top").toggleClass("toggled");
+          $("#div_nav_bottom").toggleClass("toggled");
+        });
+        Read_list();          
+ 
+      });     
+
+      
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////통신 모듈//////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+      function Post_list(data){//add한 list DB로 전송
+        
+
+        $.ajax({
+          type: 'POST',
+          data: data,
+          crossDomain: true, 
+          url: serverurl+'/DST/pushnotice',
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            
+            console.log('success');
+           // console.log(JSON.stringify(result));
+            enable_Notice.push(result.data)
+            $('#mytable_en').html(rowFormHTML_en(enable_Notice));//for 화면갱신
+          },
+          error: function(e) {
+            
+            console.log( 'error : '+JSON.stringify(e) ) 
+          }
+        })
+      };
+      function Read_list(){//DB에서 받아옴       
+        
+        var param = {}
+       
+        $.ajax({
+          type: 'GET',
+          data: param,
+          crossDomain: true, 
+          url: serverurl+'/DST/noticelist',
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            
+            console.log('success');
+            page_renewal_Read(result.data.list)
+           
+          },
+          error: function(e) {
+            
+            console.log( 'error : '+JSON.stringify(e) ) 
+          }
+        })
+      };
+      function delete_list(data){//DB에서 받아옴       
+        
+        var param = {}
+       
+        $.ajax({
+          type: 'POST',
+          data: data,
+          crossDomain: true, 
+          url: serverurl+'/DST/deletenotice',
+          contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+          success: function(result) {
+            
+            console.log('success');
+            //console.log(JSON.stringify(result));
+            $('#mytable_en').html(rowFormHTML_en(enable_Notice));//for 화면갱신
+          },
+          error: function(e) {
+            
+            console.log( 'error : '+JSON.stringify(e) ) 
+          }
+        })
+      };
+      
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+      function make_post(datas){//enable_faculty 채움
+        var obj = {}
+        enable_Notice=[]
+        for(var j = 0 ; j < datas.length ;j++){
+          if(datas[j].status != 'd'){
+            obj ={
+              _id : datas[j]._id,
+              title : datas[j].title,
+              description : datas[j].description,
+              createdate : datas[j].createdate,
+              order : datas[j].order
+            }
+            if(obj != {}){
+              enable_Notice.push(obj);
+            }
+          }            
+        }
+      }
+
+      var rowFormHTML_en = function(datas) {//enable table html code 만듬
+        var html_en = ""
+        html_en += '<table class="table table-striped">\
+                        <thead>\
+                          <tr>\
+                            <th width="10%">Title</th>\
+                            <th width="60%">Description</th>\
+                            <th width="30%">Createdate</th>\
+                          </tr>\
+                        </thead>\
+                        <tbody>'
+
+        for (var i=0; i<datas.length; i++) {
+          
+          if(datas[i].status != 'd'){
+            html_en += '<tr>'
+            html_en += '<td>' + datas[i].title + '</td>'
+            html_en += '<td>'+datas[i].description+'</td>'
+            html_en += '<td>'+datas[i].createdate 
+            html_en += '<button onclick="click_Delete(this)"  id="deletebtn_'+datas[i]._id +'"type="button" class="btn btn-danger btn-primary btn-circle" style="float:right" data-toggle="modal" data-target="#delete_modal">\
+                      <i class="glyphicon glyphicon glyphicon-minus"></i>\
+                    </button>\
+                    </td>'
+            html_en += '</tr>'
+          }
+        }
+        html_en += '</tbody>\
+                </table>'
+      
+        return html_en
+      }
+
+      function page_renewal_Read(notice) {
+        make_post(notice)
+        $('#mytable_en').html(rowFormHTML_en(enable_Notice));
+        $("span[name=on_off]").toggle()
+        $("button[name=on_off]").toggle()//page 갱신(refresh)
+      }
+
+      function click_Delete (btn) {//delete 누를시 id값 임시 저장
+        var id = btn.id.split('_')[1];
+        temp_delete_id = id;
+      }     
+
+      function execute_delete (btn) {//modal 에서 확인 누를시 click_Delete에서 따운 id로 실제 delete 실행
+        var id = temp_delete_id;
+        
+        for (var i=0; i<enable_Notice.length; i++) {
+          if (enable_Notice[i]._id==id) {
+            delete_Notice.push(enable_Notice[i]);
+            enable_Notice.splice(i, 1);
+            break;
+          }
+        }
+        var del_obj={
+          _id:id
+        }
+        delete_list(del_obj)
+        
+      }
+      function push_notice(){
+
+          var N_title = $('#Notice_title').val();
+          var N_description = $('#Notice_description').val();
+          if(N_title == "" || N_description ==""){
+            alert("Title or Description is NULL")
+          }
+          else{
+            obj ={
+              title : N_title,
+              description : N_description
+            }
+                      
+            Post_list(obj);
+            document.getElementById('Notice_title').value = "";
+            document.getElementById('Notice_description').value = ""; 
+          }        
+        
+      }
+
+    </script>
+    <style>
+      .input-xs {
+        height: 23px;
+      }
+      .navbar-fixed-top{
+        background-color: #000000;        
+      }
+      .navbar-fixed-bottom{
+        background-color: #FFA055; 
+      }
+      .table-responsive_1{
+        padding-bottom: 150px;
+      }
+      .btn-circle {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 2px;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+<div id="wrapper">
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper" >
+            <ul class="sidebar-nav">
+              </br>
+   
+                <li class="sidebar-brand">
+                    <a href="http://14.49.37.33:8003/DSTWebManager/ProfessorList.html">
+                        DST Web Manager
+                    </a>
+                </li>
+              
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/ProfessorList.html">Home</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/NoticeList.html" style="text-decoration: none;color: #FFF;background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;">Notice</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/index.html">Service</a>
+                </li>
+                <li>
+                    <a href="http://14.49.37.33:8003/DSTWebManager/login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+<!-- top navbar -->    
+    <nav id="nav_top" class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav navbar-right">      
+            <li><button id="menu-toggle" class="btn navbar-btn" data-><span class="ladda-label"><i class="glyphicon glyphicon-align-justify"></i></button></li>
+            <li><span>　</span></li>  
+            </li><span  id="nav_top_span" class="navbar-brand" style="color:white"> 공지 사항 </span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+<!-- enable table -->
+    <div class="container-fluid">
+      <div class="row">  
+        <div class="col-sm-9 col-sm-offset-1 ">
+           <div><h1 class="page-header"></h1></div>
+            <div><h1 class="page-header" style="font-weight:bold"> 공지 푸시 </h1></div>
+             
+              <ul class="nav nav-list">
+                <div class="form-group">
+                 <li class="nav-header" style="font-weight:bolder">Title</li>
+                  <li><input type="text" class="form-control" id="Notice_title"></li>
+                </div>
+                <div class="form-group">
+                  <li class="nav-header" style="font-weight:bolder">Description</li>
+                  <li><input type="text" class="form-control" id="Notice_description"></li>
+                </div>
+              
+              </ul>
+              
+              <div class="form-group">
+              <button class="btn btn-primary btn-sm" style="float:right" id="btn_push" data-toggle="modal" data-target="#push_modal">PUSH</button>  
+                
+              </div>
+              
+          
+
+
+            <div><h4>　  </h4></div>
+            <div><h1 >공지 리스트</h1></div>             
+            <div id="mytable_en" class="table-responsive">              
+            
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+<!-- Modal for delete-->
+    <div class="modal fade bs-example-modal-sm" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">삭제하시겠습니까?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" id="modal_yes" data-dismiss="modal" onclick="execute_delete(this);">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal for PUSH-->
+    <div class="modal fade bs-example-modal-sm" id="push_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body">보내시겠습니까?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary" id="modal_yes_push" data-dismiss="modal" onclick="push_notice()">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+
+
+
+  <!-- ========================= -->
+  <!-- ========================= -->
+  <!-- ========================= -->
+
+
+</html>

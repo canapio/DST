@@ -1,0 +1,49 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.form-signin {
+  max-width: 207px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.form-signin{
+  margin-bottom: 3px;
+}
+
+.form-button{
+  margin-top: 14px;
+}
+.form-title{
+  padding-top: 30px;
+  margin-bottom: 25px;
+}
+.form-subtitle{
+  margin-top:20px;
+  margin-left: 350px;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  font-size: 13px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[id="Inputid"] {
+  margin-bottom: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[id="Inputpassword"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
