@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  Hugang_poj_001
+//
+//  Created by GwakDoyoung on 2015. 5. 5..
+//  Copyright (c) 2015년 GwakDoyoung. All rights reserved.
+//
+
+#ifndef Hugang_poj_001_PrefixHeader_pch
+#define Hugang_poj_001_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "DSTNetworkClient.h"
+
+
+#import "TOWebViewController.h"
+#import "TOActivitySafari.h"
+#import "TOActivityChrome.h"
+
+#import "ExtraViewController.h"
+
+#import "PushController.h"
+
+
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
+
+#define ANALYTICSON YES
+#define GOOGLE_ANALYTICS_KEY @"UA-64596536-1"//
+
+#define ISIPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//RGB color macro
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#define SERVER_URL @"http://14.49.37.33:3003/DST"
+
+
+#define PUSH_ID ([FavoController shared].pushid)?([FavoController shared].pushid):(@"ABABABABABABABABA")
+//#define APNS_IOS @"ios"
+#define APNS_IOS @"ios_production"
+
+#define WEBPAGE_URL @"http://14.49.37.33:8003/DSTWebManager"
+
+#define APPSTORE_URL @"https://itunes.apple.com/us/app/id1000141391" //바껴야함//@"https://itunes.apple.com/us/app/id791551793"//
+#define APPSTORE_ID 1000141391//791551793//
+
+#endif
