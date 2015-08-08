@@ -1,0 +1,1421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<title>정보컴퓨터공학부 홈페이지</title>
+<meta name "generator" r" content="k2webtech">
+<meta name "author" r" content="sub">
+<script type="text/javascript" src="/Web-home/common/js/jquery-1.4.2.js"></script>
+<link rel="stylesheet" type="text/css" href="/user/cse/style/css/style.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40935875-1', 'pusan.ac.kr');
+  ga('send', 'pageview');
+</script>
+<link rel="stylesheet" type="text/css" href="/style/css/style.css">
+<link href="/Web-home/common/css/cody_default.css" rel=stylesheet>
+<link href="/Web-home/wizUI/css/k2wiz_contSet.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+#wrap-container{
+	margin-left:0;
+	margin-right:auto;
+	width:1000px;
+}
+</style>
+<script type="text/javascript" src="/style/js/ui.js"></script>
+<noscript>
+</noscript>
+<!--[if lt IE 7]>
+        <script type='text/javascript' src='/Web-home/common/js/unitpngfix.js'></script><noscript></noscript>
+<![endif]-->
+<script type='text/javascript'>  
+        var wizard_login = 0;
+        var site_member = 0;
+        var wizard_site = "cse";
+		var cody_menu_seq = "21679";
+		var menu_pos = '04';
+var menu_pos_1 = '4';
+var menu_pos_2 = '0';
+var menu_pos_3 = '0';
+var menu_pos_4 = '0';
+</script>
+<noscript>
+</noscript>
+<script type='text/javascript'>
+	var originalSize = '';
+	function f_getMaxHeight(obj){
+	  var maxHeight = 1;
+	  var tempHeight = 1;
+	  for(var i=0; i<obj.childNodes.length; i++){
+	   var cMaxHeight = f_getMaxHeight(obj.childNodes[i]);
+	   if(cMaxHeight > maxHeight) maxHeight = cMaxHeight;
+	   tempHeight = obj.childNodes[i].offsetTop + obj.childNodes[i].offsetHeight;
+	   if(tempHeight > maxHeight) maxHeight = tempHeight;
+	   }
+	  return maxHeight;
+	}
+	// 오브젝트검색
+	function MM_findObj(n, d) { //v4.01
+		var p,i,x;  
+		if(!d) d=document; 
+		if((p=n.indexOf('?'))>0&&parent.frames.length) {
+	  		d=parent.frames[n.substring(p+1)].document; 
+	  		n=n.substring(0,p);
+	  	}
+	  	if(!(x=d[n])&&d.all) x=d.all[n]; 
+	  	for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  	for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  	if(!x && d.getElementById) x=d.getElementById(n); 
+	  	return x;
+	}
+	function f_setPageSize(){
+		return;
+		if((obj=MM_findObj('pageBottom')) == null){
+		 	return;
+		}
+		pageBottom.style.display = 'none';
+		left = f_getMaxHeight(pageLeftT);
+		right = f_getMaxHeight(pageRightT);
+		pageRight.height = (left > right ? left : right);
+		pageBottom.style.display = 'block';
+		bottom = pageTop.offsetHeight + pageRight.offsetHeight + f_getMaxHeight(pageBottomT);
+		/*
+		if(bottom < document.body.clientHeight){
+			pageRight.height = pageRight.offsetHeight + document.body.clientHeight - bottom;
+		}*/
+	}
+	setTimeout("init_resize()",1000);
+	window.onresize = f_setPageSize;
+	this.id = 'serverIndex';
+function init() {
+	obj = document.getElementById('content-container');
+	obj1 = document.getElementById('pageLeftT');
+	obj2 = document.getElementById('pageRightT');
+	ht = ((obj1.scrollHeight>obj2.scrollHeight ?  obj1.scrollHeight : obj2.scrollHeight)) + 'px';
+	if(obj2.style.height != ht)
+		obj2.style.height = ht;
+	if(obj1.style.height != ht)
+		obj1.style.height = ht;
+	if(obj.style.height != ht)
+		obj.style.height = ht;
+	obj1.style.overflow = 'hidden';
+	obj2.style.overflow = 'hidden';
+	try {
+		document.domain="pusan.ac.kr";
+		top.parent.document.title="정보컴퓨터공학부 홈페이지";
+	} catch (e) {}
+}
+function init_resize() {
+	obj = document.getElementById('content-container');
+	obj1 = document.getElementById('pageLeftT');
+	obj2 = document.getElementById('pageRightT');
+	ht = ((obj1.scrollHeight>obj2.scrollHeight ?  obj1.scrollHeight : obj2.scrollHeight)) + 'px';
+	if(obj2.style.height != ht)
+		obj2.style.height = ht;
+	if(obj1.style.height != ht)
+		obj1.style.height = ht;
+	if(obj.style.height != ht)
+		obj.style.height = ht;
+	obj1.style.overflow = 'hidden';
+	obj2.style.overflow = 'hidden';
+}
+</script>
+<noscript>
+</noscript>
+</head>
+<body style="background:url() repeat;" onload="init()" topmargin=0 leftmargin=0 border=0>
+<div id="skipnavi" style="display:none;width:0;">
+	<ul>
+		<li><a href="#contents">본문바로가기</a></li>
+		<li><a href="#gnb">주메뉴바로가기</a></li>
+		<li><a href="#sub">부메뉴바로가기</a></li>
+	</ul>
+</div>
+<div id="wrap-container" style="background:url() repeat;">
+	<!-- s:header-container -->
+	<div id="header-container" style="width:100%;height:142px;">
+		<div id=pageTop style='position:absolute;width:1000px;height:142px; overflow:hidden;'>
+			<title></title>
+			<a href="/user/cse/index.action" target="index_frame"><img style="left: 0px; top: 0px; position: absolute; z-index: 505;" alt="부산대학교 공과대학 전기컴퓨터공학부 정보컴퓨터공학전공" src="/user/cse/mycodyimages/top_logo.jpg" border="0"/></a>
+			<div style="left: 590px; top: 10px; width: 350px; height: 7px; text-align: right; position: absolute; z-index: 505;">
+				<a title="HOME" href="/user/cse/index.action" target="index_frame"><img alt="HOME" src="/user/cse/mycodyimages/top_s_home.gif" border="0"/></a>
+				<a id="login_href" href="#"><img id="login_img" alt="로그인" src="/user/cse/mycodyimages/top_s_login.gif" border="0"/></a>
+				<a id="regist_href" href="#"><img id="regist_img" alt="회원가입" src="/user/cse/mycodyimages/top_s_join.gif" border="0"/></a>
+				<a href="/user/indexSub.action?codyMenuSeq=21723&amp;siteId=cse" target="index_frame"><img alt="사이트맵" src="/user/cse/mycodyimages/top_s_sitemap.gif" border="0"/></a>
+				<a href="/user/cseeng" target="_blank"><img alt="English" src="/user/cse/mycodyimages/top_s_eng.gif" border="0"/></a>
+				<script language="javascript">
+function popup_size(url,width,height,scrollbar){
+	if(scrollbar==""){
+		window.open(url,'','width='+width+', height='+height+'');
+	}else{
+		window.open(url,'','width='+width+', height='+height+', scrollbars=yes');
+	}
+}
+var obb = null;
+try
+{
+	if (wizard_login==1)
+	{
+	    // 로그아웃 표시
+		obb = document.getElementById("login_href");
+		if (obb)
+		{
+			obb.href = "/user/logout.action?parent=logout";
+		}
+		obb = document.getElementById("login_img");
+		if (obb)
+		{
+			obb.src = "/user/cse/mycodyimages/top_s_logout.gif";
+			obb.alt = "로그아웃";
+		}
+		obb = document.getElementById("regist_href");
+		if (obb)
+		{
+			obb.href = "javascript:popup_size('/si_programe/pusan/register/modify.jsp','670','540','')";
+		}
+		obb = document.getElementById("regist_img");
+		if (obb)
+		{
+			obb.src = "/user/cse/mycodyimages/top_s_modify.gif";
+			obb.alt = "정보수정";
+		}
+	} else {
+	    //로그인표시
+		obb = document.getElementById("login_href");
+		if (obb)
+		{
+			obb.href = "javascript:popup_size('/si_programe/pusan/pop_login.jsp','400','280','')";
+		}
+		obb = document.getElementById("login_img");
+		if (obb)
+		{
+			obb.src = "/user/cse/mycodyimages/top_s_login.gif";
+			obb.alt = "로그인";
+		}
+		obb = document.getElementById("regist_href");
+		if (obb)
+		{
+			obb.href = "javascript:popup_size('/si_programe/pusan/register/member_step1.jsp','700','700','yes')";
+		}
+		obb = document.getElementById("regist_img");
+		if (obb)
+		{
+			obb.src = "/user/cse/mycodyimages/top_s_join.gif";
+			obb.alt = "회원가입";
+		}
+	}
+}
+catch (e)
+{
+}
+				</script>
+			</div>
+			<img style="left: 317px; top: 34px; position: absolute; z-index: 505;" src="/user/cse/mycodyimages/topmenu_bg.jpg" border="0"/>
+			<div style="left: 317px; top: 34px; width: 623px; height: 100px; position: absolute; z-index: 506;">
+				<div class="gnb">
+					<a id="gnb"></a>
+					<ul id="cssmenu1">
+						<li id="menuli1" style="padding-right:19px" onmouseover='mopen(1);' onfocus='mopen(1);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21675&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu01.png" alt="학부소개" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu01_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu01_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu01.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu01.png';"/></a>
+						<ul id="menu1" class="sub" style="margin-top:2px;top:0px;width:1737px;left:-0.0px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu1_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21676&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							학부소개 </font>
+							</a>
+							</li>
+							<li id="menu1_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21681&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							연혁 </font>
+							</a>
+							</li>
+							<li id="menu1_3" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21682&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							시설현황 </font>
+							</a>
+							</li>
+							<li id="menu1_4" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21683&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							장학안내 </font>
+							</a>
+							</li>
+							<li id="menu1_5" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21686&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							진로현황 </font>
+							</a>
+							</li>
+							<li id="menu1_6" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21687&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							발전계획 </font>
+							</a>
+							</li>
+							<li id="menu1_7" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21691&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							정컴포커스 </font>
+							</a>
+							</li>
+							<li id="menu1_8" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21692&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							뉴스레터 </font>
+							</a>
+							</li>
+							<li id="menu1_9" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21693&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							오시는길 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li id="menuli2" style="padding-right:19px" onmouseover='mopen(2);' onfocus='mopen(2);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21677&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu02.png" alt="구성원" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu02_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu02_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu02.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu02.png';"/></a>
+						<ul id="menu2" class="sub" style="margin-top:2px;top:0px;width:772px;left:-26.4px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu2_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21694&siteId=cse&linkUrl=" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							교수진 </font>
+							</a>
+							</li>
+							<li id="menu2_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21695&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							조교 </font>
+							</a>
+							</li>
+							<li id="menu2_3" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21696&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							학생회 </font>
+							</a>
+							</li>
+							<li id="menu2_4" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21697&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							동아리 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li id="menuli3" style="padding-right:19px" onmouseover='mopen(3);' onfocus='mopen(3);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21678&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu03.png" alt="연구" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu03_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu03_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu03.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu03.png';"/></a>
+						<ul id="menu3" class="sub" style="margin-top:2px;top:0px;width:386px;left:-17.6px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu3_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21698&siteId=cse&linkUrl=" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							연구실소개 </font>
+							</a>
+							</li>
+							<li id="menu3_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21699&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							학위논문 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li id="menuli4" style="padding-right:19px" onmouseover='mopen(4);' onfocus='mopen(4);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21679&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu04.png" alt="학사행정" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu04_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu04_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu04.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu04.png';"/></a>
+						<ul id="menu4" class="sub" style="margin-top:2px;top:0px;width:965px;left:-105.6px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu4_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21704&siteId=cse&linkUrl=" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							공지사항 </font>
+							</a>
+							</li>
+							<li id="menu4_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21705&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							학부교과과정 </font>
+							</a>
+							</li>
+							<li id="menu4_3" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21706&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							규정 및 양식 </font>
+							</a>
+							</li>
+							<li id="menu4_4" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21707&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							컴퓨터실 </font>
+							</a>
+							</li>
+							<li id="menu4_5" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21708&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							질문 및 답변 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li id="menuli5" style="padding-right:19px" onmouseover='mopen(5);' onfocus='mopen(5);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21680&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu05.png" alt="커뮤니티" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu05_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu05_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu05.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu05.png';"/></a>
+						<ul id="menu5" class="sub" style="margin-top:2px;top:0px;width:1158px;left:-176.0px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu5_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21709&siteId=cse&linkUrl=" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							수업게시판 </font>
+							</a>
+							</li>
+							<li id="menu5_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21710&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							채용게시판 </font>
+							</a>
+							</li>
+							<li id="menu5_3" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21711&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							기타행사안내 </font>
+							</a>
+							</li>
+							<li id="menu5_4" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21712&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							자유게시판 </font>
+							</a>
+							</li>
+							<li id="menu5_5" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21713&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							담벼락 </font>
+							</a>
+							</li>
+							<li id="menu5_6" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21714&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							갤러리 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li id="menuli6" style="padding-right:19px" onmouseover='mopen(6);' onfocus='mopen(6);'>
+						<a href="/user/indexSub.action?codyMenuSeq=21715&siteId=cse" target="index_frame">
+						<img src="/user/cse/mycodyimages/menu06.png" alt="예비정컴인" onmouseover="javascript:this.src='/user/cse/mycodyimages/menu06_on.png';" onfocus="javascript:this.src='/user/cse/mycodyimages/menu06_on.png';" onmouseout="javascript:this.src='/user/cse/mycodyimages/menu06.png';" onblur="javascript:this.src='/user/cse/mycodyimages/menu06.png';"/></a>
+						<ul id="menu6" class="sub" style="margin-top:2px;top:0px;width:965px;left:-176.0px;" onmouseover="mcancelclosetime()" onmouseout="mclosetime();" onfocus="mcancelclosetime()" onblur="mclosetime();">
+							<li id="menu6_1" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21716&siteId=cse&linkUrl=" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							학부교과소개 </font>
+							</a>
+							</li>
+							<li id="menu6_2" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21717&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							취업현황 </font>
+							</a>
+							</li>
+							<li id="menu6_3" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21718&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							장학안내 </font>
+							</a>
+							</li>
+							<li id="menu6_4" style="line-height:1.5em;">
+							<a href="HTTP://go.pusan.ac.kr/" target="_blank">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							입학안내 </font>
+							</a>
+							</li>
+							<li id="menu6_5" style="line-height:1.5em;">
+							<a href="/user/indexSub.action?codyMenuSeq=21722&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#333333; ">
+							FAQ </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+				<script type="text/javascript" src="/style/js/ui_menu.js"></script>
+				<noscript>
+				</noscript>
+			</div>
+		</div>
+	</div>
+	<!-- e:header-container -->
+	<!-- s:mid-container -->
+	<div id="mid-container" style="width:100%;overflow:hidden">
+		<div id="left-container" style="height:340px;overflow:hidden;width:264px;">
+			<div id=pageLeftT style='width:264px;height:340px;position:absolute;overflow:hidden;'>
+				<title></title>
+				<img style="left: 0px; top: 0px; position: absolute; z-index: 505;" src="/user/cse/mycodyimages/left_bg.jpg" border="0"/>
+				<div style="left: 30px; top: 0px; width: 193px; height: 300px; position: absolute; z-index: 506;">
+					<script type='text/javascript'>
+<!--
+	var popup_on = 0;
+	var menu_seq = 0;
+	var deep = 0;
+	var menu_gb = 0;
+	var old_menu = '';
+	function menuclick(submenu, menu_no, move_url, move_target){
+	  menu_seq = menu_no;
+	  if( old_menu != submenu ) {
+		if( old_menu !='' ) {
+		  old_menu.style.display = 'none';
+		}
+		submenu.style.display = 'block';
+		old_menu = submenu;
+	  } else {
+		submenu.style.display = 'none';
+		old_menu = '';
+	  }
+	  if(move_url != "" && move_target != ""){
+		  menu_move(move_url, move_target);
+	  }
+	}
+	function menu_move(move_url, move_target){
+		if(menu_seq != 0 && old_menu != ''){
+			move_url = move_url + "&menu_seq=" + menu_seq;
+		}
+		if(move_target == '_top'){
+			top.location = move_url;
+		}else{
+			if(move_target == 'index_frame'){
+				top.index_frame.location.href = move_url;
+			}else{
+				top.document.frames[move_target].location= move_url;
+			}
+		}
+	}
+	var xmlhttp;
+	function toggleMenu(seq)
+	{
+ 	  xmlhttp=GetXmlHttpObject();
+	  if (xmlhttp==null)
+	  {
+	   alert ("Your browser does not support Ajax HTTP");
+	   return;
+	  }
+      var url="menuSubView.action";
+	  url=url+"?toggleMenu="+seq;
+	    xmlhttp.onreadystatechange=getOutput;
+	    xmlhttp.open("GET",url,true);
+	    xmlhttp.send(null);
+	}
+	function getOutput()
+	{
+	  if (xmlhttp.readyState==4)
+	  {
+	  //document.getElementById("prtCnt").innerHTML=xmlhttp.responseText;
+	  }
+	}
+	function GetXmlHttpObject()
+	{
+	    if (window.XMLHttpRequest)
+	    {
+	       return new XMLHttpRequest();
+	    }
+	    if (window.ActiveXObject)
+	    {
+	      return new ActiveXObject("Microsoft.XMLHTTP");
+	    }
+	 return null;
+	}
+-->
+					</script>
+					<noscript>
+					</noscript>
+					<a id="sub"></a>
+					<div style="padding:0;margin:0" class="subTit">
+						<img src="/user/cse/mycodyimages/left_title04.png" alt="공지사항"/>
+					</div>
+					<ul style="padding:0;margin:0;" class="subMenu">
+						<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;margin:0;border:0;text-align:left;background:url('/user/cse/mycodyimages/left_menu_bg.gif') no-repeat 0 0;">
+						<a href="/user/indexSub.action?codyMenuSeq=21704&amp;siteId=cse&amp;linkUrl=" target="index_frame">
+						<font style="height:32px;font-size:12px;font-family:돋움; color:#333333; ">
+						공지사항 </font>
+						</a>
+						</li>
+						<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;margin:0;border:0;text-align:left;background:url('/user/cse/mycodyimages/left_menu_bg.gif') no-repeat 0 0;">
+						<a href="/user/indexSub.action?codyMenuSeq=21705&amp;siteId=cse" target="index_frame">
+						<font style="height:32px;font-size:12px;font-family:돋움; color:#333333; ">
+						학부교과과정 </font>
+						</a>
+						</li>
+						<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;margin:0;border:0;text-align:left;background:url('/user/cse/mycodyimages/left_menu_bg.gif') no-repeat 0 0;">
+						<a href="/user/indexSub.action?codyMenuSeq=21706&amp;siteId=cse" target="index_frame">
+						<font style="height:32px;font-size:12px;font-family:돋움; color:#333333; ">
+						규정 및 양식 </font>
+						</a>
+						</li>
+						<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;margin:0;border:0;text-align:left;background:url('/user/cse/mycodyimages/left_menu_bg.gif') no-repeat 0 0;">
+						<a href="/user/indexSub.action?codyMenuSeq=21707&amp;siteId=cse" target="index_frame">
+						<font style="height:32px;font-size:12px;font-family:돋움; color:#333333; ">
+						컴퓨터실 </font>
+						</a>
+						</li>
+						<li style="background:transparent none repeat scroll 0% 0%;width:193px;margin:0;padding:0;border:0;text-align:;display:none">
+						<ul style="display:none">
+							<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;text-align:left;margin:0;border:0;background:url('') no-repeat 0 0;">
+							<a href="/user/indexSub.action?codyMenuSeq=22159&siteId=cse" target="index_frame">
+							<font style="font-size:12px;font-family:돋움; color:#003399; ">
+							컴퓨터실 이용안내 </font>
+							</a>
+							</li>
+						</ul>
+						</li>
+						<li style="line-height:32px;width:193px;height:32px;padding:2px 0 00px 30px;margin:0;border:0;text-align:left;background:url('/user/cse/mycodyimages/left_menu_bg.gif') no-repeat 0 0;">
+						<a href="/user/indexSub.action?codyMenuSeq=21708&amp;siteId=cse" target="index_frame">
+						<font style="height:32px;font-size:12px;font-family:돋움; color:#333333; ">
+						질문 및 답변 </font>
+						</a>
+						</li>
+					</ul>
+					<script type="text/javascript" src="/style/js/ui_menu.js"></script>
+					<noscript>
+					</noscript>
+				</div>
+			</div>
+		</div>
+		<div id="content-container" style="margin-left:0;margin-right:auto;width:736px;height:340px;overflow:auto;">
+			<div id=pageRightT style='position:absolute;width:736px;overflow:auto;'>
+				<a id="contents"></a>
+				<img style="left: 0px; top: 109px; position: absolute; z-index: 505;" src="/user/cse/mycodyimages/sconts_bg.jpg" border="0"/>
+				<div align="right" class="text_box_define_css" style="left: 388px; top: 175px; width: 256px; height: 20px; position: absolute; z-index: 506;">
+					<span style="color: rgb(152, 152, 152); font-family: dotum, arial; font-size: 11px;"><img src="/user/cse/mycodyimages/navi_icon.gif" border="0"/> HOME / 학사행정 / 공지사항</span>
+				</div>
+				<div class="text_box_define_css" style="left: 45px; top: 168px; width: 290px; height: 25px; position: absolute; z-index: 506;">
+					<span style="color: rgb(86, 86, 86); font-family: dotum, arial; font-size: 14px; font-weight: bold;">공지사항</span>
+				</div>
+				<img style="left: 0px; top: 0px; position: absolute; z-index: 505;" alt="" src="/user/cse/mycodyimages/svisual.jpg" border="0"/>
+				<div style="left: 32px; top: 209px; width: 611px; height: 410px; position: absolute; z-index: 501;">
+					<link href="/Web-home/contents/board/board/skin_001/kr/css/board_style.css" rel="stylesheet" type="text/css">
+					<link href="/Web-home/contents/board/board/skin_001/kr/css/board.css" rel="stylesheet" type="text/css">
+					<script type="text/javascript" src="/Web-home/contents/board/board/skin_001/kr/js/select.js"></script>
+					<noscript>
+					</noscript>
+					<script type="text/javascript" src="/Web-home/contents/board/board/skin_001/kr/js/board_common.js"></script>
+					<noscript>
+					</noscript>
+					<script type='text/javascript'>
+<!-- 
+	function war_alert(){
+		alert('해당 게시판에 대한 게시물 보기 권한이 없습니다.');
+	}
+	function selectAll(){
+	}
+	function selectAll(e){
+		var len = document.frm.chkAll.length;
+		if (e.checked) {
+			for(i = 0; i < len; i++){
+					document.frm.chkAll[i].checked = true;
+			}
+		}else{
+		   for(i = 0; i < len; i++){
+					document.frm.chkAll[i].checked = false;
+			}
+		}
+	}
+	function delete_board() {
+		var chk = 0;
+		for(i = 1; i < document.frm.chkAll.length;i++) {
+			if(document.frm.chkAll[i].checked == true) {
+				if(document.frm.chkAll[i].value != ''){
+					chk = 1;
+					var arr = document.frm.chkAll[i].value.split("/");
+					document.frm.chkBoxSeq.value = document.frm.chkBoxSeq.value+"/"+arr[1];
+				}
+			}
+		}
+		if(chk == 0) {
+			alert("삭제할 게시물을 선택하세요");
+			return;
+		}
+		if(confirm('삭제 후 복구할 수 없습니다. 해당 게시물을 삭제하시겠습니까?')){
+			document.frm.command.value = "delete";
+			document.frm.action= "/user/boardList.action";
+			document.frm.submit();
+		}
+	}
+	function jf_list_type(type) {
+		load1.style.display = 'none';
+		load2.style.display = '';
+		document.searchform.list_type.value = type;
+		document.form_list.command.value = "list";
+		document.searchform.action= "/k2web/servlet/kr.co.k2web.jwizard.contents.board.boardUser.servlet.userMainServlet";
+		document.searchform.submit();
+	}
+	function page_link(page){
+		document.form_list.page.value = page;
+		document.form_list.command.value = "list";
+		document.form_list.action= "boardList.action";
+		document.form_list.submit();
+	}
+	function preSubmit(){
+		var form = document.searchform;
+		var chkValue = document.searchform.search.value;
+		if(form.column.selectedIndex==0){
+			 alert("검색할 항목을 선택하여 주세요");
+			 return false;
+		}
+		if(chkValue ==''){
+			alert('검색어를 입력하세요');
+			form.search.focus();
+			return false;
+	    }
+	    return true;
+	}
+	function jf_write(){
+		if (document.form_list.warningYn.value == "Y") {
+		   alert('');
+		}
+		return true;
+		//document.form_list.command.value = "write";
+		//document.form_list.action= "boardList.action";
+		//document.form_list.submit();
+	}
+	function jf_view(site_id, boardId, boardSeq,secret_yn,secret_num,userId,replyUserId,sessionUserId){
+		 //슈퍼관리자, 사이트관리자, 게시판 관리자는 비밀글로 설정되어 있어도 비번을 묻지 않음
+		  //글 비밀번호가 있을시 비밀 번호를 물어봄
+		 if(sessionUserId  == userId||sessionUserId == replyUserId){
+		  }else{
+		  	if (secret_yn == "Y" && secret_num == "Y"){
+		        jf_passwd(boardSeq);
+		        return;
+		     }
+		  }
+	    document.form_list.siteId.value =site_id;
+		document.form_list.boardId.value = boardId;
+		document.form_list.boardSeq.value = boardSeq;
+		document.form_list.command.value = "view";
+		document.form_list.action= "boardList.action";
+		document.form_list.submit();
+	}
+	function jf_passwd(boardSeq) {
+		var strPath  = "boardList.action";
+		strPath += "?siteId=cse&boardId=10418";
+		strPath += "&command=pwd_popup&pwdProc=view&page=1&boardSeq=" + boardSeq;
+		strPath += "&boardType=01";
+		strPath += "&column=";
+		strPath += "&search=";
+		strPath += "&listType=";
+		strPath += "&parent=%2Fuser%2FindexSub.action%3FcodyMenuSeq%3D21679%26siteId%3Dcse%26";
+		window.open(strPath,'pwdchk','left=200,top=200,width=500,height=200,toolbar=no,location=no');
+	}
+	function f_setPageSize(){
+		return;
+		if((obj=MM_findObj('pageBottom'))==null) return;
+		pageBottom.style.display = 'none';
+		left = f_getMaxHeight(pageLeftT);
+		right = f_getMaxHeight(pageRightT);
+		pageRight.height = (left > right ? left : right);
+		pageBottom.style.display = 'block';
+		bottom = pageTop.offsetHeight + pageRight.offsetHeight + f_getMaxHeight(pageBottomT);
+		if(bottom < document.body.clientHeight){
+			pageRight.height = pageRight.offsetHeight + document.body.clientHeight - bottom;
+		}
+	}
+	//function send_mail_k2web( targetMail )
+	//{
+	//	if( targetMail.replace(/\s/g, "") == "" )
+	//	{
+	//		alert( "메일 주소가 없습니다." );
+	//		return false;
+	//	}
+	//	document.location.href = "mailto:" + targetMail;
+	//}
+	function jf_modify(site_id, boardId){
+		var url = "../manager/boardWrite.action?siteId="+site_id+"&boardId="+boardId;
+		window.open(url,'itemModiPopup','width=800,height=600,resizable=yes,scrollbars=yes');
+	}
+	//클립보드 복사(IE, FF 호환)
+	function copy_clip(meintext){
+		if (window.clipboardData) {
+			// the IE-manier
+			window.clipboardData.setData("Text", meintext);
+		// waarschijnlijk niet de beste manier om Moz/NS te detecteren;
+		// het is mij echter onbekend vanaf welke versie dit precies werkt:
+		} else if (window.netscape) {
+			// dit is belangrijk maar staat nergens duidelijk vermeld:
+			// you have to sign the code to enable this, or see notes below
+			netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+			// maak een interface naar het clipboard
+			var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+			if (!clip) return;
+			// maak een transferable
+			var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+			if (!trans) return;
+			// specificeer wat voor soort data we op willen halen; text in dit geval
+			trans.addDataFlavor('text/unicode');
+			// om de data uit de transferable te halen hebben we 2 nieuwe objecten nodig om het in op te slaan
+			var str = new Object();
+			var len = new Object();
+			var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+			var copytext=meintext;
+			str.data=copytext;
+			trans.setTransferData("text/unicode",str,copytext.length*2);
+			var clipid=Components.interfaces.nsIClipboard;
+			if (!clip) return false;
+			clip.setData(trans,null,clipid.kGlobalClipboard);
+		}
+		alert("아래주소가 클립보드에 복사되었습니다. Ctrl+V로 붙여넣기해서 사용하세요.\n" + meintext);
+	}
+//-->
+					</script>
+					<noscript>
+					</noscript>
+					<script>
+	document.oncontextmenu=new Function('return false');
+	document.onselectstart=new Function('return false');
+	document.ondragstart=new Function('return false');  
+					</script>
+					<noscript>
+					</noscript>
+					<div id="board-container">
+						<!-- 게시판타이틀 -->
+						<div class="k2_title" style="display:none" id="board_title_div">
+							학사행정-공지사항
+						</div>
+						<script type='text/javascript'>
+	var obj;
+	/*	
+	if(document.location == parent.document.location){
+		obj = document.getElementById("board_title_div");	
+		if (obj) {
+			obj.style.display = "";
+		}
+	}
+*/	
+						</script>
+						<noscript>
+						</noscript>
+						<!--게시판시작 -->
+						<link href="/Web-home/contents/board/board/skin_001/kr/css/board_style.css" rel="stylesheet" type="text/css">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_bg">
+						<tr>
+							<td>
+								<a href='/user/boardList.action?boardId=10418&page=1&categoryId=0&categoryDepth=' class="view_text"><strong>전체&gt;</strong></a>
+								<table width="100%" border="0" cellpadding="0" cellspacing="0" class="view_2">
+								<tr>
+									<td align="left" style="text-align:left;padding-left:5px;">
+										<a href='/user/boardList.action?boardId=10418&page=1&categoryId=1727&categoryDepth=0002'>
+										<!--img src="/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif"-->
+										<p style="padding-left:20px; background:url(/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif) left 3px no-repeat;">
+											 일반 (407)
+										</p>
+										</a>
+									</td>
+									<td align="left" style="text-align:left;padding-left:5px;">
+										<a href='/user/boardList.action?boardId=10418&page=1&categoryId=1728&categoryDepth=0003'>
+										<!--img src="/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif"-->
+										<p style="padding-left:20px; background:url(/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif) left 3px no-repeat;">
+											 수업 (155)
+										</p>
+										</a>
+									</td>
+									<td align="left" style="text-align:left;padding-left:5px;">
+										<a href='/user/boardList.action?boardId=10418&page=1&categoryId=1729&categoryDepth=0004'>
+										<!--img src="/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif"-->
+										<p style="padding-left:20px; background:url(/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif) left 3px no-repeat;">
+											 장학 (214)
+										</p>
+										</a>
+									</td>
+									<td align="left" style="text-align:left;padding-left:5px;">
+										<a href='/user/boardList.action?boardId=10418&page=1&categoryId=1730&categoryDepth=0005'>
+										<!--img src="/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif"-->
+										<p style="padding-left:20px; background:url(/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif) left 3px no-repeat;">
+											 면담 (55)
+										</p>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td align="left" style="text-align:left;padding-left:5px;">
+										<a href='/user/boardList.action?boardId=10418&page=1&categoryId=1731&categoryDepth=0006'>
+										<!--img src="/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif"-->
+										<p style="padding-left:20px; background:url(/Web-home/contents/board/board/skin_001/kr/img/icon_folder.gif) left 3px no-repeat;">
+											 이전자료 (2029)
+										</p>
+										</a>
+									</td>
+									</table>
+								</td>
+							</tr>
+							</table>
+							<div class="list">
+								<div class="listTop">
+									<p class="topBtn">
+										<img src="/Web-home/contents/board/rss.gif" onclick="copy_clip('http://uwcms.pusan.ac.kr/rssList.jsp?siteId=cse&boardId=10418');" style="cursor:pointer;"/>
+									</p>
+									<div class="listTopSearch">
+										<!-- 검색 시작 -->
+										<form name="searchform" method="get" action="/user/boardList.action" onsubmit="return preSubmit()">
+											<input name="boardId" value="10418" type="hidden">
+											<input name="siteId" value="cse" type="hidden">
+											<input name="parent" value="%2Fuser%2FindexSub.action%3FcodyMenuSeq%3D21679%26siteId%3Dcse%26" type="hidden">
+											<input name="page" value="1" type="hidden">
+											<input name="listType" value="" type="hidden">
+											<select name="column" title="게시판 검색 항목설정">
+												<option value="">선택</option>
+												<option value="title">제목</option>
+												<option value="userName">작성자</option>
+											</select>
+											<input type="text" name="search" class="inp" value="" title="검색어 입력" style="height:15px"/>
+											<input type="image" src="/Web-home/contents/board/board/skin_001/kr/img/btn_search.gif" class="img" alt="검색 "/>
+										</form>
+									</div>
+								</div>
+								<!-- 검색 끝 -->
+								<!--리스트시작 -->
+								<form name="frm" method="get" action="/user/boardList.action">
+									<input name="parent" value="%2Fuser%2FindexSub.action%3FcodyMenuSeq%3D21679%26siteId%3Dcse%26" type="hidden">
+									<input name="boardId" value="10418" type="hidden">
+									<input name="siteId" value="cse" type="hidden">
+									<input name="page" value="1" type="hidden">
+									<input name="search" value="" type="hidden">
+									<input name="column" value="" type="hidden">
+									<input name="boardType" value="01" type="hidden">
+									<input name="listType" value="" type="hidden">
+									<input name="categoryDepth" value="" type="hidden">
+									<input name="categoryId" value="0" type="hidden">
+									<input name="boardSeq" value="" type="hidden">
+									<input name="command" type="hidden">
+									<input name="chkBoxSeq" type="hidden">
+									<input name="chkBoxId" type="hidden">
+									<input name="chkBoxPos" type="hidden">
+									<input name="chkBoxDepth" type="hidden">
+									<input name="chkBoxFam_Seq" type="hidden">
+									<input name="warningYn" value="" type="hidden">
+									<input type=submit value="이동" style="display:none;">
+									<table summary="게시판리스트">
+									<col width="30"/>
+									<col width=""/>
+									<col width="70"/>
+									<col width="80"/>
+									<col width="60"/>
+									<col width="30"/>
+									<thead>
+									<tr>
+										<th scope="col" class="title_bg">
+											번호
+										</th>
+										<th scope="col" class="title_bg">
+											제목
+										</th>
+										<th scope="col" class="title_bg">
+											작성자
+										</th>
+										<th scope="col" class="title_bg">
+											작성일
+										</th>
+										<th scope="col" class="title_bg">
+											조회수
+										</th>
+										<th scope="col" class="title_bg">
+											파일
+										</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td class="no">
+											<img src='/Web-home/main/kr/btn_notice_ktc.gif' alt='공지'>
+										</td>
+										<td class="title">
+											<strong><a href='boardList.action?command=view&page=1&boardId=10418동&boardSeq=418031'>학과활동인정 외부행사/세미나 안내<strong></a>
+										</td>
+										<td>
+											조교_김효경
+										</td>
+										<td>
+											2015-04-07
+										</td>
+										<td>
+											981
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											<img src='/Web-home/main/kr/btn_notice_ktc.gif' alt='공지'>
+										</td>
+										<td class="title">
+											<strong><a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=405968'>야간잔류자 허가신청 안내(전산실,과제도서실,학생회실)<strong></a>
+										</td>
+										<td>
+											조교_박미라
+										</td>
+										<td>
+											2014-05-16
+										</td>
+										<td>
+											923
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											<img src='/Web-home/main/kr/btn_notice_ktc.gif' alt='공지'>
+										</td>
+										<td class="title">
+											<strong><a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=405276'>학부생 출입카드 대여 및 발급 안내<strong></a>
+										</td>
+										<td>
+											조교_김효경
+										</td>
+										<td>
+											2012-03-02
+										</td>
+										<td>
+											4621
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											<img src='/Web-home/main/kr/btn_notice_ktc.gif' alt='공지'>
+										</td>
+										<td class="title">
+											<strong><a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=404900'>학생지원시스템 개인정보 입력/수정 안내<strong></a>
+										</td>
+										<td>
+											조교_윤현정
+										</td>
+										<td>
+											2010-11-30
+										</td>
+										<td>
+											2265
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											<img src='/Web-home/main/kr/btn_notice_ktc.gif' alt='공지'>
+										</td>
+										<td class="title">
+											<strong><a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=403694'>홈페이지 로그인 안내 및 서버계정 발급안내<strong></a>
+										</td>
+										<td>
+											조교_홈페이지
+										</td>
+										<td>
+											2007-03-08
+										</td>
+										<td>
+											7447
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2895
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=430447'>
+											2015.2학기 재입학신청:학부~6.16/대학원~8.12 &nbsp; <img src="/Web-home/contents/board_new/new0_01.gif" alt="새글 표시 아이콘"/>
+											</a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-06-01
+										</td>
+										<td>
+											<b>46</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2894
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=430429'>
+											일반물리학(I) 기말고사 안내 &nbsp; <img src="/Web-home/contents/board_new/new0_01.gif" alt="새글 표시 아이콘"/>
+											</a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-06-01
+										</td>
+										<td>
+											<b>51</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2893
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=430356'>
+											[학과활동] 'ITRC Forum 2015 참가자명단 확인 : ~6.5 &nbsp; <img src="/Web-home/contents/board_new/new0_01.gif" alt="새글 표시 아이콘"/>
+											</a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-06-01
+										</td>
+										<td>
+											<b>87</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2892
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=430238'>
+											2015학년도 여름계절수업 1차 폐강강좌 통보 및 수강정정 알림 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-29
+										</td>
+										<td>
+											<b>160</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2891
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=430111'>
+											학과활동 인정시기 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-05-28
+										</td>
+										<td>
+											<b>337</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2890
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429987'>
+											[학과활동인정:외부행사] 대학생의 글로벌 마인드 셋팅(글로벌 취업을 위하면 시몽을 만나라!) (6.4) &nbsp; </a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-05-28
+										</td>
+										<td>
+											<b>314</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2889
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429936'>
+											[모집기한연장]2015학년도 하계방학 PNU Global Leaders Program 참가자 모집 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-27
+										</td>
+										<td>
+											<b>179</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2888
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429868'>
+											TOPCIT 정기평가 응시자들에게 알립니다. &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-27
+										</td>
+										<td>
+											<b>320</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2887
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429777'>
+											[학과활동 인정:모집완료] ITRC Forum 2015 상세일정 안내(5.29, 코엑스) &nbsp; </a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-05-26
+										</td>
+										<td>
+											<b>255</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2886
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429704'>
+											[학과활동] 조맹섭박사초청특강 최종학과활동인정명단 및 초청특강자료공유 &nbsp; </a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-05-26
+										</td>
+										<td>
+											<b>241</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2885
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429522'>
+											LINC사업단 소셜네트워크서비스(SNS) 활용 홍보 계획 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-22
+										</td>
+										<td>
+											<b>184</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2884
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429518'>
+											[장학]2015년 2기 국가근로장학금 신청 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-22
+										</td>
+										<td>
+											<b>221</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2883
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429512'>
+											[장학]2015년 2학기 한국장학재단 국가장학금 1차 신청 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-22
+										</td>
+										<td>
+											<b>150</b>
+										</td>
+										<td>
+											<img src="/Web-home/contents/board/board/skin_001/kr/img/icon_file.gif" alt="파일아이콘"/>
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2882
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429507'>
+											2016학년도 제1차 학생 해외파견 프로그램 정기 설명회 안내 &nbsp; </a>
+										</td>
+										<td>
+											 조교_황유경
+										</td>
+										<td>
+											 2015-05-22
+										</td>
+										<td>
+											<b>95</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									<tr>
+										<td class="no">
+											2881
+										</td>
+										<td class="title">
+											<a href='boardList.action?command=view&page=1&boardId=10418&boardSeq=429470'>
+											[학과활동:외부행사] 공공행정 빅데이터 활용 A toZ (6.4, 벡스코) &nbsp; </a>
+										</td>
+										<td>
+											 조교_김효경
+										</td>
+										<td>
+											 2015-05-22
+										</td>
+										<td>
+											<b>249</b>
+										</td>
+										<td>
+											 -
+										</td>
+									</tr>
+									</tbody>
+									</table>
+								</form>
+								<form name="form_list" method="get" action="/user/boardList.action" onsubmit="return jf_write()">
+									<input name="boardId" value="10418" type="hidden">
+									<input name="siteId" value="cse" type="hidden">
+									<input name="page" value="1" type="hidden">
+									<input name="search" value="" type="hidden">
+									<input name="column" value="" type="hidden">
+									<input name="categoryDepth" value="" type="hidden">
+									<input name="categoryId" value="0" type="hidden">
+									<input name="boardType" value="01" type="hidden">
+									<input name="listType" value="" type="hidden">
+									<input name="parent" value="%2Fuser%2FindexSub.action%3FcodyMenuSeq%3D21679%26siteId%3Dcse%26" type="hidden">
+									<input name="boardSeq" value="" type="hidden">
+									<input name="command" type="hidden" value="write">
+									<input name="chkBoxSeq" type="hidden">
+									<input name="chkBoxId" type="hidden">
+									<input name="chkBoxPos" type="hidden">
+									<input name="chkBoxDepth" type="hidden">
+									<input name="chkBoxFamSeq" type="hidden">
+									<input name="warningYn" value="N" type="hidden">
+									<input type=submit value="이동" style="display:none;">
+									<!--리스트끝 -->
+									<div class="leftBtn">
+									</div>
+									<!--페이지 -->
+									<div class="paging">
+										<a href="/user/boardList.action?boardId=10418&page=1"><img src="/Web-home/contents/board/board/skin_001/kr/img/arrow_begin.gif" alt="처음"/></a>
+										<img src="/Web-home/contents/board/board/skin_001/kr/img/arrow_left.gif" alt="이전"/>
+										<ul>
+											<li class="on">[1]</li>
+											<li><a href="/user/boardList.action?boardId=10418&page=2">[2]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=3">[3]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=4">[4]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=5">[5]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=6">[6]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=7">[7]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=8">[8]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=9">[9]</a></li>
+											<li><a href="/user/boardList.action?boardId=10418&page=10">[10]</a></li>
+										</ul>
+										<a href="/user/boardList.action?boardId=10418&page=11"><img src="/Web-home/contents/board/board/skin_001/kr/img/arrow_right.gif" alt="다음"/></a>
+										<a href="/user/boardList.action?boardId=10418&page=193"><img src="/Web-home/contents/board/board/skin_001/kr/img/arrow_last.gif" alt="끝"/></a>
+									</div>
+									<!--페이지 -->
+									<div class="rightBtn">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- s:mid-container -->
+		<!-- s:footer-container -->
+		<div id="footer-container">
+			<div id=pageBottomT style='position:absolute;'>
+				<title></title>
+				<img style="left: 55px; top: 84px; position: absolute; z-index: 505;" alt="부산대학교 공과대학 전기컴퓨터공학부 정보컴퓨터공학전공" src="/user/cse/mycodyimages/tail_logo.gif" border="0"/>
+				<a href="/new_pusan/index/privacy.html" target="_blank"><img style="left: 300px; top: 85px; position: absolute; z-index: 505;" alt="개인정보보호방침" src="/user/cse/mycodyimages/tail_menu.png" border="0"/></a>
+				<div class="text_box_define_css" style="left: 300px; top: 105px; width: 700px; height: 38px; position: absolute; z-index: 506;">
+					<span style="color: rgb(140, 140, 140); font-family: 돋움; font-size: 11px;">[609-735] 부산광역시 금정구 부산대학로63번길 2(장전동) 부산대학교 제6공학관(컴퓨터공학관) 6410호<br/>
+					TEL: 051-510-1436, FAX: 051-517-2431</span>
+				</div>
+				<div class="text_box_define_css" style="left: 300px; top: 141px; width: 465px; height: 38px; position: absolute; z-index: 506;">
+					<span style="color: rgb(140, 140, 140); font-family: arial; font-size: 10px;">COPYRIGHT(C) 2014 PUSAN NATIONAL UNIVERSITY. ALL RIGHTS RESERVED.</span>
+				</div>
+				<img style="left: 30px; top: 50px; position: absolute; z-index: 504;" src="/user/cse/mycodyimages/tail_bg.jpg" border="0"/>
+			</div>
+		</div>
+		<!-- s:footer-container -->
+	</div>
+	</body>
+	</html>
