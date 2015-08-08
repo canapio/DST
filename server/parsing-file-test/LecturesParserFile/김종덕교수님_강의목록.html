@@ -1,0 +1,943 @@
+<html lang="ko">
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title>Lecture</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/common/css/xe.min.css?20140513145100">
+<link rel="stylesheet" href="/common/js/plugins/ui/jquery-ui.min.css?20140513145100">
+<link rel="stylesheet" href="/layouts/sketchbook5/css/layout.css?20121114014904">
+<link rel="stylesheet" href="/modules/editor/styles/default/style.css?20140513145100">
+<link rel="stylesheet" href="/widgets/tab_newest_document/skins/xe_official/css/normal.css?20090710213622">
+<!-- JS -->
+<!--[if lt IE 9]><script src="/common/js/jquery-1.x.min.js?20140513145100"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="/common/js/jquery.min.js?20140513145100"></script>
+<!--[endif]---->
+<script src="/common/js/x.min.js?20140513145100"></script>
+<script src="/common/js/xe.min.js?20140513145100"></script>
+<script src="/widgets/tab_newest_document/skins/xe_official/js/tab.js?20090710213622"></script>
+<!--[if lt IE 9]><script src="/common/js/html5.js"></script><![endif]-->
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="./modules/admin/tpl/img/faviconSample.png">
+<link rel="apple-touch-icon" href="./modules/admin/tpl/img/mobiconSample.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi">
+<style>
+ .xe_content { font-family:Arial, Helvetica, sans-serif;font-size:12px; }
+</style>
+<style type="text/css">
+body,input,textarea,select,button,table{font-family:'Segoe UI',Meiryo,'Trebuchet MS','나눔고딕',NanumGothic,ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,AppleGothic,sans-serif}
+#xe{max-width:px}
+#hd .hgroup{text-align:;}
+#hd h1 .home{top:px;left:px}
+.xe_mobile{display:none}
+</style>
+<style type="text/css">
+@media screen and (max-width:533px){
+#gnb_wrp{padding-right:10px}
+}
+</style>
+<script>
+//<![CDATA[
+var current_url = "http://mobile.pusan.ac.kr/?mid=Lecture_2015_1";
+var request_uri = "http://mobile.pusan.ac.kr/";
+var current_mid = "Lecture_2015_1";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "http://mobile.pusan.ac.kr";
+xe.current_lang = "ko";
+xe.cmd_find = "찾기";
+xe.cmd_cancel = "취소";
+xe.cmd_confirm = "확인";
+xe.msg_no_root = "루트는 선택 할 수 없습니다.";
+xe.msg_no_shortcut = "바로가기는 선택 할 수 없습니다.";
+xe.msg_select_menu = "대상 메뉴 선택";
+//]]>
+</script>
+</head>
+<body class="white" data-pinterest-extension-installed="cr1.37">
+<div id="xe" class="ec ">
+	<div id="hd" class="clear">
+		<a href="#content" class="skipToContent" onclick="jQuery('#content a:first').focus();return false">Skip to content</a>
+		<ul id="top_mn">
+			<li class="item m_yes_inline">
+			<a href="#site_srch" id="tg_site_srch" class="tg_btn"><strong>검색</strong></a>
+			</li>
+			<li class="item">
+			<a href="#site_login" class="tg_btn"><strong>로그인</strong></a>
+			<div id="site_login" class="tg_cnt">
+				<button type="button" class="tg_blur"></button>
+				<h2>로그인</h2>
+				<form action="./" method="post">
+					<input type="hidden" name="error_return_url" value="/Lecture_2015_1"><input type="hidden" name="mid" value="Lecture_2015_1"><input type="hidden" name="vid" value=""><input type="hidden" name="ruleset" value="@login">
+					<fieldset>
+						<input type="hidden" name="act" value="procMemberLogin">
+						<input type="hidden" name="success_return_url" value="/Lecture_2015_1">
+						<div class="itx_area">
+							<span class="itx_wrp">
+							<label for="uid">아이디</label>
+							<input type="text" name="user_id" id="uid" class="itx">
+							</span>
+							<span class="itx_wrp">
+							<label for="upw">비밀번호</label>
+							<input type="password" name="password" id="upw" class="itx">
+							</span>
+						</div>
+						<div class="btn_area">
+							<span class="keep">
+							<input type="checkbox" name="keep_signed" id="keepid_opt" value="Y" onclick="if(this.checked) return confirm('브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다.\n\n로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인할 필요가 없습니다.\n\n단, 게임방, 학교 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.');">
+							<label for="keepid_opt">로그인 유지</label>
+							</span>
+							<span><input type="submit" value="로그인" class="login_btn"></span>
+						</div>
+						<div class="help">
+							<a href="http://mobile.pusan.ac.kr/index.php?mid=Lecture_2015_1&amp;act=dispMemberSignUpForm" class="join"><strong>회원가입</strong></a> | <a href="http://mobile.pusan.ac.kr/index.php?mid=Lecture_2015_1&amp;act=dispMemberFindAccount" class="find">ID/PW 찾기</a> | <a href="http://mobile.pusan.ac.kr/index.php?mid=Lecture_2015_1&amp;act=dispMemberResendAuthMail" class="find">인증메일 재발송</a>
+						</div>
+					</fieldset>
+				</form>
+				<button type="button" class="tg_blur"></button>
+				<button type="button" class="tg_close" title="Close this layer">X</button>
+			</div>
+			</li>
+			<li class="item">
+			<a href="http://mobile.pusan.ac.kr/index.php?mid=Lecture_2015_1&amp;act=dispMemberSignUpForm" class="login_btn">가입하기</a></li>
+			<li class="item">
+			<a href="#lang" class="tg_btn">한국어</a>
+			<div id="lang" class="tg_cnt">
+				<button type="button" class="tg_blur"></button>
+				<ul>
+				</ul>
+				<button type="button" class="tg_blur"></button>
+			</div>
+			</li>
+		</ul>
+		<div class="hgroup ui_font">
+			<h1>
+			<a href="http://mobile.pusan.ac.kr/" class="home" style="position:relative;top:px;left:px"><img class="m_no_inline" src="http://mobile.pusan.ac.kr/files/attach/images/704/6b8c1f10bea9c94d78cd05176e7cb236.png" alt=""><img src="http://mobile.pusan.ac.kr/files/attach/images/704/648b34b0c42fe9a2e9ecb8c55ac4ca31.png" class="m_yes_inline" alt=""></a>
+			</h1>
+		</div>
+		<ul id="mid_mn" class="fr">
+			<li><a href="http://mobile.pusan.ac.kr/MNCLAB">MNC</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Professor2">People</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Research2">Research</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/International_Journal">Publication</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Lecture_2015_1" class="on">Lecture</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/mnc_notice">Board</a></li>
+		</ul>
+		<div id="gnb_wrp" class="clear">
+			<div id="site_srch" class="srch">
+				<form action="http://mobile.pusan.ac.kr/" method="get">
+					<input type="hidden" name="error_return_url" value="/Lecture_2015_1">
+					<input type="hidden" name="vid" value="">
+					<input type="hidden" name="mid" value="Lecture_2015_1">
+					<input type="hidden" name="act" value="IS">
+					<input type="text" name="is_keyword" value="" title="검색" class="itx css3pie" accesskey="S">
+					<input type="image" src="/layouts/sketchbook5/img/bs_white.png" alt="Search" class="is">
+				</form>
+			</div>
+			<!-- GNB -->
+			<ul id="gnb" class="ui_font">
+				<li class="li1 m_li1_tg">
+				<a class="a1 lightsky" href="http://mobile.pusan.ac.kr/MNCLAB">MNC</a>
+				<button type="button" class="tg_ul2 m_yes_inline"><strong>−</strong><span>+</span></button>
+				<ul class="ul2">
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/mainpage">MNC Main</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/MNCLAB">MNC Lab</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Contact">Contact</a>
+					</li>
+					<li><button type="button" class="close_ul2 m_yes">닫기</button></li>
+				</ul>
+				</li>
+				<li class="li1 m_li1_tg">
+				<a class="a1 orange" href="http://mobile.pusan.ac.kr/Professor2">People</a>
+				<button type="button" class="tg_ul2 m_yes_inline"><strong>−</strong><span>+</span></button>
+				<ul class="ul2">
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Professor2">professor</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Members">Member</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Alumni">Alumni</a>
+					</li>
+					<li><button type="button" class="close_ul2 m_yes">닫기</button></li>
+				</ul>
+				</li>
+				<li class="li1 m_li1_tg">
+				<a class="a1 sky" href="http://mobile.pusan.ac.kr/Research2">Research</a>
+				</li>
+				<li class="li1 m_li1_tg">
+				<a class="a1 green" href="http://mobile.pusan.ac.kr/International_Journal">Publication</a>
+				<button type="button" class="tg_ul2 m_yes_inline"><strong>−</strong><span>+</span></button>
+				<ul class="ul2">
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/SCI_International_Journal">International Journal</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/International_Journal">International Conference</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Domestic_Journal">Domestic Journal</a>
+					</li>
+					<li><button type="button" class="close_ul2 m_yes">닫기</button></li>
+				</ul>
+				</li>
+				<li class="li1">
+				<a class="a1 lightpink on" href="http://mobile.pusan.ac.kr/Lecture_2015_1">Lecture</a>
+				<button type="button" class="tg_ul2 m_yes_inline"><strong>−</strong><span>+</span></button>
+				<ul class="ul2">
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/Callender">Callender</a>
+					</li>
+					<li class="li2">
+						<a class="a2" href="http://mobile.pusan.ac.kr/computer_system_2015">컴퓨터시스템 입문<b>+</b></a>
+						<ul class="ul3">
+							<li><a class="a3" href="http://mobile.pusan.ac.kr/computer_system_notice_15">공지사항</a></li>
+							<li><a class="a3" href="http://mobile.pusan.ac.kr/computer_system_report_15">레포트 (004)</a></li>
+							<li><a class="a3" href="http://mobile.pusan.ac.kr/computer_system_material_15">강의자료</a></li>
+						</ul>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/data_communication_2015">데이터 통신<b>+</b></a>
+					<ul class="ul3">
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/data_communication_notice_15">공지사항</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/data_communication_report_15">레포트(060)</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/data_communication_material_15">강의자료</a></li>
+					</ul>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/discrete_mathematics_1_2015">이산수학(1)<b>+</b></a>
+					<ul class="ul3">
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/dis_math_notice_15">공지사항</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/dis_math_report_15">레포트(061)</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/dis_math_material_15">강의자료</a></li>
+					</ul>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/elementary_electrical_electronic_2015">기초전기전자실험<b>+</b></a>
+					<ul class="ul3">
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/elementary_elec_notice_15">공지사항</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/elementary_elec_report_15">레포트</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/elementary_elec_material_15">강의자료</a></li>
+					</ul>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/past_lecture">지난 강의<b>+</b></a>
+					<ul class="ul3">
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/Lecture_2013_1">2013년 1학기</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/Lecture_2013_2">2013년 2학기</a></li>
+						<li><a class="a3" href="http://mobile.pusan.ac.kr/Lecture_2014_1">2014년 1학기</a></li>
+					</ul>
+					</li>
+					<li><button type="button" class="close_ul2 m_yes">닫기</button></li>
+				</ul>
+				</li>
+				<li class="li1">
+				<a class="a1 red" href="http://mobile.pusan.ac.kr/mnc_notice">Board</a>
+				<button type="button" class="tg_ul2 m_yes_inline"><strong>−</strong><span>+</span></button>
+				<ul class="ul2">
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/mnc_notice">Notice</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/free_board">자유게시판</a>
+					</li>
+					<li class="li2">
+					<a class="a2" href="http://mobile.pusan.ac.kr/gallery">Gallery</a>
+					</li>
+					<li><button type="button" class="close_ul2 m_yes">닫기</button></li>
+				</ul>
+				</li>
+			</ul>
+			<div id="gnb_next" class="m_yes">
+				<button type="button" class="gnb_next_on"><strong>◀</strong><span>▶</span></button>
+			</div>
+		</div>
+	</div>
+	<div id="container" class="clear">
+		<div id="snb">
+			<div id="hidden_logo">
+				<a href=""><img src="http://mobile.pusan.ac.kr/files/attach/images/704/804b383032ebde471d80e2f9b3fa52bc.png" alt="Logo"></a>
+			</div>
+			<ul id="lnb" class="ui_font clear" style="height: 572px;">
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/Callender">Callender</a>
+				</li>
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/computer_system_2015">컴퓨터시스템 입문</a>
+				<ul>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/computer_system_notice_15">공지사항</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/computer_system_report_15">레포트 (004)</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/computer_system_material_15">강의자료</a>
+					</li>
+				</ul>
+				</li>
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/data_communication_2015">데이터 통신</a>
+				<ul>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/data_communication_notice_15">공지사항</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/data_communication_report_15">레포트(060)</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/data_communication_material_15">강의자료</a>
+					</li>
+				</ul>
+				</li>
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/discrete_mathematics_1_2015">이산수학(1)</a>
+				<ul>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/dis_math_notice_15">공지사항</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/dis_math_report_15">레포트(061)</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/dis_math_material_15">강의자료</a>
+					</li>
+				</ul>
+				</li>
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/elementary_electrical_electronic_2015">기초전기전자실험</a>
+				<ul>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/elementary_elec_notice_15">공지사항</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/elementary_elec_report_15">레포트</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/elementary_elec_material_15">강의자료</a>
+					</li>
+				</ul>
+				</li>
+				<li>
+				<a class="lnb_2nd" href="http://mobile.pusan.ac.kr/past_lecture">지난 강의</a>
+				<ul>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/Lecture_2013_1">2013년 1학기</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/Lecture_2013_2">2013년 2학기</a>
+					</li>
+					<li><a class="lnb_3rd" href="http://mobile.pusan.ac.kr/Lecture_2014_1">2014년 1학기</a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			<div id="page_move">
+				<a class="back_to" href="#hd" onclick="return false" title="위로">▲</a>
+				<a class="back_to" href="#ft" onclick="return false" title="아래로">▼</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id="gap">
+				<div class="xe-widget-wrapper " style="float: left; width: 1002px; height: 27px;">
+					<div style="padding:0px 0px 0px 0px !important;">
+						<b style="color: rgb(0, 170, 255); font-family: Tahoma, Geneva, sans-serif; font-size: large; line-height: 27px;"><span style="color: rgb(239, 0, 124);">컴퓨터시스템입문</span></b><font face="Tahoma, Geneva, sans-serif" size="4"><b><span class="Apple-tab-span" style="color: rgb(239, 0, 124); white-space: pre;"></span><font color="#ef007c">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이산수학(1)</font></b></font>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 496px; height: 171px;">
+					<div style="*zoom:1;padding:0px 0px 0px 0px !important;">
+						<div class="tabWidget">
+							<div class="tabBox">
+								<div class="tab on" id="tab_6416558_0" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/computer_system_notice_15">공지사항</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_6416558_1" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/computer_system_report_15">레포트 (004)</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_6416558_2" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/computer_system_material_15">강의자료</a>
+									</div>
+								</div>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="tabContent show" id="content_6416558_0">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-20]</span>
+											<a href="http://mobile.pusan.ac.kr/18869#0"><span style="font-weight:bold;;color:#2266EE">[과제] 프로그래밍 과제(#2, #3) 기한 변경 안내</span></a><span class="author">by 허준환</span>
+											<span class="readAndVoted">
+											(<span class="readed">37</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-18]</span>
+											<a href="http://mobile.pusan.ac.kr/18828#0"><span style="font-weight:bold;;color:#2266EE">[공지] 컴퓨터 시스템 입문 중간고사 성적</span></a><span class="author">by 허준환</span>
+											<span class="readAndVoted">
+											(<span class="readed">77</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-06]</span>
+											<a href="http://mobile.pusan.ac.kr/18553#0">[과제] 과제 #3 최종 수정 기한 (4월 8일 저녁 10시, 댓글 확인할 것)</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">76</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-06]</span>
+											<a href="http://mobile.pusan.ac.kr/18551#0">[과제] 과제 #4 공고 (~기한 : 4월 15일, 수요일 수업 시작 전)</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">217</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-24]</span>
+											<a href="http://mobile.pusan.ac.kr/18232#0">[과제] 과제 #3 공고 (~기한 : 4월 1일 저녁 10시까지)</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">406</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_6416558_1">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-21]</span>
+											<a href="http://mobile.pusan.ac.kr/18960#0">CHW-15-CP16482-02-201524437</a><img src="http://mobile.pusan.ac.kr/modules/document/tpl/icons/secret.gif" alt="secret" title="secret" style="margin-right:2px;"><span class="author">by 201524437</span>
+											<span class="readAndVoted">
+											(<span class="readed">0</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-21]</span>
+											<a href="http://mobile.pusan.ac.kr/18956#0">CHW-15-CP16482-02-201524540</a><img src="http://mobile.pusan.ac.kr/modules/document/tpl/icons/secret.gif" alt="secret" title="secret" style="margin-right:2px;"><span class="author">by 201524540</span>
+											<span class="readAndVoted">
+											(<span class="readed">0</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-21]</span>
+											<a href="http://mobile.pusan.ac.kr/18952#0">CHW-15-CP16482-02-201524425</a><img src="http://mobile.pusan.ac.kr/modules/document/tpl/icons/secret.gif" alt="secret" title="secret" style="margin-right:2px;"><span class="author">by 201524425</span>
+											<span class="readAndVoted">
+											(<span class="readed">0</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-21]</span>
+											<a href="http://mobile.pusan.ac.kr/18948#0">CHW-15-CP16482-02-201524477</a><img src="http://mobile.pusan.ac.kr/modules/document/tpl/icons/secret.gif" alt="secret" title="secret" style="margin-right:2px;"><span class="author">by 201524477</span>
+											<span class="readAndVoted">
+											(<span class="readed">0</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-21]</span>
+											<a href="http://mobile.pusan.ac.kr/18944#0">CHW-15-CP16482-02-201524534</a><img src="http://mobile.pusan.ac.kr/modules/document/tpl/icons/secret.gif" alt="secret" title="secret" style="margin-right:2px;"><span class="author">by 201524534</span>
+											<span class="readAndVoted">
+											(<span class="readed">0</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_6416558_2">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-18]</span>
+											<a href="http://mobile.pusan.ac.kr/18799#0">[참조코드] OpenAPI</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">120</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-12]</span>
+											<a href="http://mobile.pusan.ac.kr/18670#0">[강의자료] A3. 프로그래밍 과제</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">249</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-11]</span>
+											<a href="http://mobile.pusan.ac.kr/18666#0">[강의자료] A2. Phillips Hue 제어</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">112</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-06]</span>
+											<a href="http://mobile.pusan.ac.kr/18658#0">[참조코드] Naver 검색</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">135</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-03]</span>
+											<a href="http://mobile.pusan.ac.kr/18647#0">[강의자료] A1. OpenAPI 보조 슬라이드</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">219</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 504px; height: 171px;">
+					<div style="*zoom:1;padding:0px 0px 0px 0px !important;">
+						<div class="tabWidget">
+							<div class="tabBox">
+								<div class="tab on" id="tab_9095323_0" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/dis_math_notice_15">공지사항</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_9095323_1" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/dis_math_report_15">레포트(061)</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_9095323_2" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/dis_math_material_15">강의자료</a>
+									</div>
+								</div>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="tabContent show" id="content_9095323_0">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-12]</span>
+											<a href="http://mobile.pusan.ac.kr/18669#0"><span style="font-weight:bold;;color:#2266EE">[공지] 이산수학 퀴즈 #3 성적</span></a><span class="author">by 허준환</span>
+											<span class="readAndVoted">
+											(<span class="readed">105</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-11]</span>
+											<a href="http://mobile.pusan.ac.kr/18667#0">[과제] 과제 #4 공지 - 기한 5월 19일 (화요일) 까지</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">143</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-01]</span>
+											<a href="http://mobile.pusan.ac.kr/18375#0">[과제] 과제 #3 공지 - 기한 4월 14일 (화요일) 까지</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">177</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-23]</span>
+											<a href="http://mobile.pusan.ac.kr/18230#0">[과제] 과제 #2 공지 - 기한 3월 31일 (화요일) 까지</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">181</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-05]</span>
+											<a href="http://mobile.pusan.ac.kr/18084#0">[과제] 과제 #1 공지 - 기한 3월 10일(화요일)까지</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">268</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_9095323_1">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_9095323_2">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-14]</span>
+											<a href="http://mobile.pusan.ac.kr/18796#0">[강의자료] 08 - Equivalence Relations and Partitions</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">32</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-14]</span>
+											<a href="http://mobile.pusan.ac.kr/18795#0">[강의자료] 07 - Properties of Relation</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">39</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-29]</span>
+											<a href="http://mobile.pusan.ac.kr/18646#0">[강의자료] 06 - Relations and Functions</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">103</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-29]</span>
+											<a href="http://mobile.pusan.ac.kr/18644#0">[강의자료] 05 - Mathematical Induction and Properties of Integer</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">111</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-08]</span>
+											<a href="http://mobile.pusan.ac.kr/18582#0">[강의자료] 04 - Set Theory</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">122</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 1000px; height: 18px;;">
+					<div style="padding:0px 0px 0px 0px !important;">
+						<div>
+						</div>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 1001px; height: 28px;">
+					<div style="padding:0px 0px 0px 0px !important;">
+						<b style="color: rgb(0, 170, 255); font-family: Tahoma, Geneva, sans-serif; font-size: large; line-height: 27px;"><span style="color: rgb(239, 0, 124);">데이터통신</span></b><font face="Tahoma, Geneva, sans-serif" size="4"><b><span class="Apple-tab-span" style="color: rgb(239, 0, 124); white-space: pre;"></span><font color="#ef007c">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 기초전기전자회로</font></b></font>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 498px; height: 199px;">
+					<div style="*zoom:1;padding:0px 0px 0px 0px !important;">
+						<div class="tabWidget">
+							<div class="tabBox">
+								<div class="tab on" id="tab_2992078_0" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/data_communication_notice_15">공지사항</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_2992078_1" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/data_communication_report_15">레포트(060)</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_2992078_2" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/data_communication_material_15">강의자료</a>
+									</div>
+								</div>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="tabContent show" id="content_2992078_0">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-18]</span>
+											<a href="http://mobile.pusan.ac.kr/18821#0"><span style="font-weight:bold;">[공지] 데이터통신 중간고사 점수</span></a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">120</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-18]</span>
+											<a href="http://mobile.pusan.ac.kr/18192#0">[Quiz] Quiz #1, 3월 19일 시행 공고</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">74</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_2992078_1">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_2992078_2">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-13]</span>
+											<a href="http://mobile.pusan.ac.kr/18794#0">[강의자료] 08 - Formatting and Source Coding</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">60</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-23]</span>
+											<a href="http://mobile.pusan.ac.kr/18640#0">[강의자료] 07 - Signal Encoding Techniques</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">77</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-12]</span>
+											<a href="http://mobile.pusan.ac.kr/18614#0">[강의자료] 06 - Switching</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">75</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-30]</span>
+											<a href="http://mobile.pusan.ac.kr/18266#0">[강의자료] 05 - Error Detection and Correction Code</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">112</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-15]</span>
+											<a href="http://mobile.pusan.ac.kr/18179#0">[강의자료] 04 - ARQ</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">118</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xe-widget-wrapper " style="float: left; width: 506px; height: 201px;">
+					<div style="*zoom:1;padding:0px 0px 0px 0px !important;">
+						<div class="tabWidget">
+							<div class="tabBox">
+								<div class="tab on" id="tab_1972927_0" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/elementary_elec_notice_15">공지사항</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_1972927_1" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/elementary_elec_report_15">레포트</a>
+									</div>
+								</div>
+								<div class="tab " id="tab_1972927_2" onmouseover="overTab(this);">
+									<div>
+										<a href="http://mobile.pusan.ac.kr/elementary_elec_material_15">강의자료</a>
+									</div>
+								</div>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="tabContent show" id="content_1972927_0">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-04]</span>
+											<a href="http://mobile.pusan.ac.kr/18650#0">[공지] 보고서 및 중간고사 점수</a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">85</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[05-04]</span>
+											<a href="http://mobile.pusan.ac.kr/18648#0"><span style="font-weight:bold;">[공지]이번 주부터 담당조교가 바뀌었습니다.</span></a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">50</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-15]</span>
+											<a href="http://mobile.pusan.ac.kr/18633#0"><span style="font-weight:bold;">[공지]기초전기전자실험 중간고사 일정</span></a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">83</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-27]</span>
+											<a href="http://mobile.pusan.ac.kr/18247#0">[공지] 이번주 PSpice과제는 없습니다.</a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">61</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-26]</span>
+											<a href="http://mobile.pusan.ac.kr/18239#0">[공지]기초전기전자실험 시간표입니다.</a><span class="author">by 강인용</span>
+											<span class="readAndVoted">
+											(<span class="readed">90</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_1972927_1">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<div class="tabContent hide" id="content_1972927_2">
+								<table cellspacing="0">
+								<tbody>
+								<tr>
+									<td class="titleBox">
+										<div class="title">
+											<span class="regdate">[05-04]</span>
+											<a href="http://mobile.pusan.ac.kr/18651#0">[강의자료] LAB 16. 제너 다이오드의 특성</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">29</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-27]</span>
+											<a href="http://mobile.pusan.ac.kr/18642#0">[강의자료] Lab 12, 13 - 다이오드 특성과 정류 회로</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">12</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-13]</span>
+											<a href="http://mobile.pusan.ac.kr/18617#0">[강의자료] Lab 10, 11 - 직렬 및 병렬 공진 회로</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">40</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[04-01]</span>
+											<a href="http://mobile.pusan.ac.kr/18405#0">[강의자료] LAB 8,9 - RL, RC 회로와 Inductance와 Reactance 측정</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">80</span>) </span>
+										</div>
+										<div class="title">
+											<span class="regdate">[03-23]</span>
+											<a href="http://mobile.pusan.ac.kr/18228#0">[강의자료] LAB 6,7 - 테브난과 노턴의 정리</a><span class="author">by 김종덕교수</span>
+											<span class="readAndVoted">
+											(<span class="readed">33</span>) </span>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+								<div class="clear">
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="ft" class="ui_font clear">
+		<ul id="btm_mn">
+			<li><a href="http://mobile.pusan.ac.kr/"><strong>Home</strong></a></li>
+			<li><a href="http://mobile.pusan.ac.kr/MNCLAB">MNC</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Professor2">People</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Research2">Research</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/International_Journal">Publication</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/Lecture_2015_1">Lecture</a></li>
+			<li><a href="http://mobile.pusan.ac.kr/mnc_notice">Board</a></li>
+			<li class="m_yes_inline"><a href="http://mobile.pusan.ac.kr/index.php?mid=Lecture_2015_1&amp;act=dispMenuMenu&amp;menu_srl=141"><strong>전체 보기</strong></a></li>
+			<li class="m_yes_inline"><a href="#"><strong>▲ 위로</strong></a></li>
+		</ul>
+		<p id="address">
+			부산광역시 금정구 장전2동 산30번지 부산대학교 자연대연구실험동 306호 이동통신연구실 (우)609-735 <br>
+			COPYRIGHT 2012(C) MNC LAB ALL RIGHT RESERVED <br>
+			 전화번호 : 051 - 510 - 3941 E-Mail : mobile@mobile.re.kr
+		</p>
+		<p id="maker">
+			Mobile Networking and Computing Lab
+		</p>
+	</div>
+</div>
+<div style="position:absolute;top:-999px;left:-999px;visibility:hidden;font-size:72px">
+	<p id="fontcheck_ng1" style="float:left;font-family:'나눔고딕',NanumGothic,monospace,Verdana !important">
+		sketchbook5, 스케치북5
+	</p>
+	<p id="fontcheck_ng2" style="float:left;font-family:monospace,Verdana !important">
+		sketchbook5, 스케치북5
+	</p>
+</div>
+<div id="install_ng">
+	<button type="button" class="tg_blur"></button><button class="tg_close">X</button>
+	<h3>나눔글꼴 설치 안내</h3>
+	<br>
+	<h4>이 PC에는 <b>나눔글꼴</b>이 설치되어 있지 않습니다.</h4>
+	<p>
+		이 사이트를 <b>나눔글꼴</b>로 보기 위해서는<br>
+		<b>나눔글꼴</b>을 설치해야 합니다.
+	</p>
+	<a class="do" href="http://hangeul.naver.com" target="_blank">설치</a>
+	<a class="cancle close" href="#">취소</a><button type="button" class="tg_blur"></button>
+</div>
+<script type="text/javascript">
+jQuery(function($){
+	$('#fakeM0').click(function(){
+		$.cookie('fakeM',true)
+	});
+	$('#fakeM1').click(function(){
+		$.cookie('fakeM',null)
+	});
+});
+</script>
+<!-- ETC -->
+<div class="wfsr">
+</div>
+<script src="/addons/autolink/autolink.js?20140513145100"></script>
+<script src="/common/js/plugins/ui/jquery-ui.min.js?20140513145100"></script>
+<script src="/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20140513145100"></script>
+<script src="/addons/resize_image/js/resize_image.min.js?20140513145100"></script>
+<script src="/layouts/sketchbook5/js/layout.js?20121114014904"></script>
+<script src="/files/cache/js_filter_compiled/15f32565dc96bb471f0a9c47e375bd59.ko.compiled.js?20141229111426"></script>
+<script src="/files/cache/ruleset/1c27cb4c2c0901ae9a3fd720317b8e88.ko.js?20141229111426"></script>
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span>
+</body>
+</html>

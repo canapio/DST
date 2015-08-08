@@ -1,0 +1,1522 @@
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="XpressEngine">
+<!-- TITLE -->
+<title>2015컴퓨터구조</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/xe/common/js/plugins/ui/jquery-ui.css?20121124171532" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/common/css/xe.min.css?20121124171532" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/layouts/layout_simple look_v0.0.2/css/bootstrap.min.css?20130323140346" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/layouts/layout_simple look_v0.0.2/css/bootstrap-responsive.min.css?20130323140346" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/layouts/layout_simple look_v0.0.2/css/default.css?20131203170037" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/modules/board/skins/sketchbook5/css/board.css?20120221153248" type="text/css" media="all">
+<!--[if lt IE 9]>	<link rel="stylesheet" href="/xe/modules/board/skins/sketchbook5/css/ie8.css?20120221153248" type="text/css" media="all" />
+<![endif]-->
+<link rel="stylesheet" href="/xe/modules/editor/styles/default/style.css?20121124171532" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/widgets/language_select/skins/xe_cafe_language/css/widget.css?20130216153635" type="text/css" media="all">
+<link rel="stylesheet" href="/xe/files/faceOff/266/003/layout.css?20140814131241" type="text/css" media="all">
+<!-- JS -->
+<script type="text/javascript" src="/xe/common/js/jquery.min.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/common/js/x.min.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/common/js/xe.min.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/modules/board/tpl/js/board.js?20120806115050"></script>
+<script type="text/javascript" src="/xe/layouts/layout_simple look_v0.0.2/js/jquery-1.7.1.min.js?20130323140346"></script>
+<script type="text/javascript" src="/xe/layouts/layout_simple look_v0.0.2/js/bootstrap.min.js?20130323140346"></script>
+<script type="text/javascript" src="/xe/layouts/layout_simple look_v0.0.2/js/simple_layout.js?20130323140346"></script>
+<script type="text/javascript" src="/xe/files/cache/ruleset/f501a824d0d792d34c8aacb6e35f7799.ko.js?20140915161818"></script>
+<script type="text/javascript" src="/xe/widgets/language_select/skins/xe_cafe_language/js/language_select.js?20130216153635"></script>
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="./modules/admin/tpl/img/faviconSample.png">
+<link rel="apple-touch-icon" href="./modules/admin/tpl/img/mobiconSample.png">
+<link rel="stylesheet/less" type="text/css" href="./layouts/layout_simple look_v0.0.2/css/colorset.php?tColor=FFFFFF&amp;mColor=526BBE&amp;mtColor=FFFFFF">
+<script src="/xe/layouts/layout_simple look_v0.0.2/js/less-1.3.0.min.js" type="text/javascript"></script>
+<style type="text/css" media="screen" id="less:xe-layouts-layout_simple-20look_v0:0:2-css-colorset">
+/*!
+ * Bootstrap v2.0.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+  /* Makes inputs behave like true block-level elements */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.navbar {
+  *position: relative;
+  *z-index: 2;
+  overflow: visible;
+  margin-bottom: 18px;
+}
+.navbar-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #4b64b7;
+  background-image: -moz-linear-gradient(top, #526bbe, #415aae);
+  background-image: -ms-linear-gradient(top, #526bbe, #415aae);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#526bbe), to(#415aae));
+  background-image: -webkit-linear-gradient(top, #526bbe, #415aae);
+  background-image: -o-linear-gradient(top, #526bbe, #415aae);
+  background-image: linear-gradient(top, #526bbe, #415aae);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#526bbe', endColorstr='#415aae', GradientType=0);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar .container {
+  width: auto;
+}
+.btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #4b64b7;
+  background-image: -moz-linear-gradient(top, #526bbe, #415aae);
+  background-image: -ms-linear-gradient(top, #526bbe, #415aae);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#526bbe), to(#415aae));
+  background-image: -webkit-linear-gradient(top, #526bbe, #415aae);
+  background-image: -o-linear-gradient(top, #526bbe, #415aae);
+  background-image: linear-gradient(top, #526bbe, #415aae);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#526bbe', endColorstr='#415aae', GradientType=0);
+  border-color: #415aae #415aae #2c3d76;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+.btn-navbar:hover,
+.btn-navbar:active,
+.btn-navbar.active,
+.btn-navbar.disabled,
+.btn-navbar[disabled] {
+  background-color: #415aae;
+}
+.btn-navbar:active,
+.btn-navbar.active {
+  background-color: #334789 \9;
+}
+.btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+.nav-collapse.collapse {
+  height: auto;
+}
+.navbar {
+  color: #ffffff;
+}
+.navbar .brand:hover {
+  text-decoration: none;
+}
+.navbar .brand {
+  float: left;
+  display: block;
+  padding: 8px 20px 12px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ffffff;
+}
+.navbar .navbar-text {
+  margin-bottom: 0;
+  line-height: 40px;
+}
+.navbar .btn,
+.navbar .btn-group {
+  margin-top: 5px;
+}
+.navbar .btn-group .btn {
+  margin-top: 0;
+}
+.navbar-form {
+  margin-bottom: 0;
+  *zoom: 1;
+}
+.navbar-form:before,
+.navbar-form:after {
+  display: table;
+  content: "";
+}
+.navbar-form:after {
+  clear: both;
+}
+.navbar-form input,
+.navbar-form select,
+.navbar-form .radio,
+.navbar-form .checkbox {
+  margin-top: 5px;
+}
+.navbar-form input,
+.navbar-form select {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.navbar-form input[type="image"],
+.navbar-form input[type="checkbox"],
+.navbar-form input[type="radio"] {
+  margin-top: 3px;
+}
+.navbar-form .input-append,
+.navbar-form .input-prepend {
+  margin-top: 6px;
+  white-space: nowrap;
+}
+.navbar-form .input-append input,
+.navbar-form .input-prepend input {
+  margin-top: 0;
+}
+.navbar-search {
+  position: relative;
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.navbar-search .search-query {
+  padding: 4px 9px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #97a6d8;
+  border: 1px solid #3a519b;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.15);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.navbar-search .search-query:-moz-placeholder {
+  color: #eeeeee;
+}
+.navbar-search .search-query::-webkit-input-placeholder {
+  color: #eeeeee;
+}
+.navbar-search .search-query:focus,
+.navbar-search .search-query.focused {
+  padding: 5px 10px;
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #ffffff;
+  border: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  outline: 0;
+}
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+}
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.navbar-fixed-top {
+  top: 0;
+}
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.navbar .nav.pull-right {
+  float: right;
+}
+.navbar .nav > li {
+  display: block;
+  float: left;
+}
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 10px 11px;
+  line-height: 19px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #415aae;
+}
+.navbar .divider-vertical {
+  height: 40px;
+  width: 1px;
+  margin: 0 9px;
+  overflow: hidden;
+  background-color: #415aae;
+  border-right: 1px solid #526bbe;
+}
+.navbar .nav.pull-right {
+  margin-left: 10px;
+  margin-right: 0;
+}
+/*!
+ * Bootstrap Responsive v2.0.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.visible-phone {
+  display: none;
+}
+.visible-tablet {
+  display: none;
+}
+.visible-desktop {
+  display: block;
+}
+.hidden-phone {
+  display: block;
+}
+.hidden-tablet {
+  display: block;
+}
+.hidden-desktop {
+  display: none;
+}
+@media (max-width: 767px) {
+  .visible-phone {
+    display: block;
+  }
+  .hidden-phone {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .visible-tablet {
+    display: block;
+  }
+  .hidden-tablet {
+    display: none;
+  }
+  .hidden-desktop {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  .page-header h1 small {
+    display: block;
+    line-height: 18px;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+  .form-horizontal .control-group > label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  .form-horizontal .control-list {
+    padding-top: 0;
+  }
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .modal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0;
+  }
+  .modal.fade.in {
+    top: auto;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+  .carousel-caption {
+    position: static;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar-fixed-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .container {
+    width: auto;
+  }
+  .row-fluid {
+    width: 100%;
+  }
+  .row {
+    margin-left: 0;
+  }
+  .row > [class*="span"],
+  .row-fluid > [class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin: 0;
+  }
+  .thumbnails [class*="span"] {
+    width: auto;
+  }
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    /* Make inputs at least the height of their button counterpart */
+    /* Makes inputs behave like true block-level elements */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    width: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .row {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 20px;
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 724px;
+  }
+  .span12 {
+    width: 724px;
+  }
+  .span11 {
+    width: 662px;
+  }
+  .span10 {
+    width: 600px;
+  }
+  .span9 {
+    width: 538px;
+  }
+  .span8 {
+    width: 476px;
+  }
+  .span7 {
+    width: 414px;
+  }
+  .span6 {
+    width: 352px;
+  }
+  .span5 {
+    width: 290px;
+  }
+  .span4 {
+    width: 228px;
+  }
+  .span3 {
+    width: 166px;
+  }
+  .span2 {
+    width: 104px;
+  }
+  .span1 {
+    width: 42px;
+  }
+  .offset12 {
+    margin-left: 764px;
+  }
+  .offset11 {
+    margin-left: 702px;
+  }
+  .offset10 {
+    margin-left: 640px;
+  }
+  .offset9 {
+    margin-left: 578px;
+  }
+  .offset8 {
+    margin-left: 516px;
+  }
+  .offset7 {
+    margin-left: 454px;
+  }
+  .offset6 {
+    margin-left: 392px;
+  }
+  .offset5 {
+    margin-left: 330px;
+  }
+  .offset4 {
+    margin-left: 268px;
+  }
+  .offset3 {
+    margin-left: 206px;
+  }
+  .offset2 {
+    margin-left: 144px;
+  }
+  .offset1 {
+    margin-left: 82px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid > [class*="span"] {
+    float: left;
+    margin-left: 2.762430939%;
+  }
+  .row-fluid > [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid > .span12 {
+    width: 99.999999993%;
+  }
+  .row-fluid > .span11 {
+    width: 91.436464082%;
+  }
+  .row-fluid > .span10 {
+    width: 82.87292817100001%;
+  }
+  .row-fluid > .span9 {
+    width: 74.30939226%;
+  }
+  .row-fluid > .span8 {
+    width: 65.74585634900001%;
+  }
+  .row-fluid > .span7 {
+    width: 57.182320438000005%;
+  }
+  .row-fluid > .span6 {
+    width: 48.618784527%;
+  }
+  .row-fluid > .span5 {
+    width: 40.055248616%;
+  }
+  .row-fluid > .span4 {
+    width: 31.491712705%;
+  }
+  .row-fluid > .span3 {
+    width: 22.928176794%;
+  }
+  .row-fluid > .span2 {
+    width: 14.364640883%;
+  }
+  .row-fluid > .span1 {
+    width: 5.801104972%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 714px;
+  }
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 652px;
+  }
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 590px;
+  }
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 528px;
+  }
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 466px;
+  }
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 404px;
+  }
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 342px;
+  }
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 280px;
+  }
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 218px;
+  }
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 156px;
+  }
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 94px;
+  }
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 32px;
+  }
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+  .navbar-fixed-top {
+    position: static;
+    margin-bottom: 18px;
+  }
+  .navbar-fixed-top .navbar-inner {
+    padding: 5px;
+  }
+  .navbar .container {
+    width: auto;
+    padding: 0;
+  }
+  .navbar .brand {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 0 0 -5px;
+  }
+  .navbar .nav-collapse {
+    clear: left;
+  }
+  .navbar .nav {
+    float: none;
+    margin: 0 0 9px;
+  }
+  .navbar .nav > li {
+    float: none;
+  }
+  .navbar .nav > li > a {
+    margin-bottom: 2px;
+  }
+  .navbar .nav > .divider-vertical {
+    display: none;
+  }
+  .navbar .nav .nav-header {
+    color: #ffffff;
+    text-shadow: none;
+  }
+  .navbar .nav > li > a,
+  .navbar .dropdown-menu a {
+    padding: 6px 15px;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .navbar .dropdown-menu li + li a {
+    margin-bottom: 2px;
+  }
+  .navbar .nav > li > a:hover,
+  .navbar .dropdown-menu a:hover {
+    background-color: #415aae;
+  }
+  .navbar .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    float: none;
+    display: block;
+    max-width: none;
+    margin: 0 15px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .navbar .dropdown-menu:before,
+  .navbar .dropdown-menu:after {
+    display: none;
+  }
+  .navbar .dropdown-menu .divider {
+    display: none;
+  }
+  .navbar-form,
+  .navbar-search {
+    float: none;
+    padding: 9px 15px;
+    margin: 9px 0;
+    border-top: 1px solid #415aae;
+    border-bottom: 1px solid #415aae;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar .nav.pull-right {
+    float: none;
+    margin-left: 0;
+  }
+  .navbar-static .navbar-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .btn-navbar {
+    display: block;
+  }
+  .nav-collapse {
+    overflow: hidden;
+    height: 0;
+  }
+}
+@media (min-width: 980px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+@media (min-width: 1200px) {
+  .row {
+    margin-left: -30px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 30px;
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1170px;
+  }
+  .span12 {
+    width: 1170px;
+  }
+  .span11 {
+    width: 1070px;
+  }
+  .span10 {
+    width: 970px;
+  }
+  .span9 {
+    width: 870px;
+  }
+  .span8 {
+    width: 770px;
+  }
+  .span7 {
+    width: 670px;
+  }
+  .span6 {
+    width: 570px;
+  }
+  .span5 {
+    width: 470px;
+  }
+  .span4 {
+    width: 370px;
+  }
+  .span3 {
+    width: 270px;
+  }
+  .span2 {
+    width: 170px;
+  }
+  .span1 {
+    width: 70px;
+  }
+  .offset12 {
+    margin-left: 1230px;
+  }
+  .offset11 {
+    margin-left: 1130px;
+  }
+  .offset10 {
+    margin-left: 1030px;
+  }
+  .offset9 {
+    margin-left: 930px;
+  }
+  .offset8 {
+    margin-left: 830px;
+  }
+  .offset7 {
+    margin-left: 730px;
+  }
+  .offset6 {
+    margin-left: 630px;
+  }
+  .offset5 {
+    margin-left: 530px;
+  }
+  .offset4 {
+    margin-left: 430px;
+  }
+  .offset3 {
+    margin-left: 330px;
+  }
+  .offset2 {
+    margin-left: 230px;
+  }
+  .offset1 {
+    margin-left: 130px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid > [class*="span"] {
+    float: left;
+    margin-left: 2.564102564%;
+  }
+  .row-fluid > [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid > .span12 {
+    width: 100%;
+  }
+  .row-fluid > .span11 {
+    width: 91.45299145300001%;
+  }
+  .row-fluid > .span10 {
+    width: 82.905982906%;
+  }
+  .row-fluid > .span9 {
+    width: 74.358974359%;
+  }
+  .row-fluid > .span8 {
+    width: 65.81196581200001%;
+  }
+  .row-fluid > .span7 {
+    width: 57.264957265%;
+  }
+  .row-fluid > .span6 {
+    width: 48.717948718%;
+  }
+  .row-fluid > .span5 {
+    width: 40.170940171000005%;
+  }
+  .row-fluid > .span4 {
+    width: 31.623931624%;
+  }
+  .row-fluid > .span3 {
+    width: 23.076923077%;
+  }
+  .row-fluid > .span2 {
+    width: 14.529914530000001%;
+  }
+  .row-fluid > .span1 {
+    width: 5.982905983%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 1160px;
+  }
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 1060px;
+  }
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 960px;
+  }
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 860px;
+  }
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 760px;
+  }
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 660px;
+  }
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 560px;
+  }
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 460px;
+  }
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 360px;
+  }
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 260px;
+  }
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 160px;
+  }
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 60px;
+  }
+  .thumbnails {
+    margin-left: -30px;
+  }
+  .thumbnails > li {
+    margin-left: 30px;
+  }
+}
+</style>
+<style type="text/css">
+.bd,.bd input,.bd textarea,.bd select,.bd button,.bd table{font-family:'Segoe UI',Meiryo,'Trebuchet MS','나눔고딕',NanumGothic,ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,AppleGothic,sans-serif}
+.bd em,.bd .color{color:#333333;}
+.bd .shadow{text-shadow:1px 1px 1px ;}
+.bd .bolder{color:#333333;text-shadow:2px 2px 4px ;}
+.bd .bg_color{background-color:#333333;}
+.bd .bg_f_color{background-color:#333333;background:-ms-linear-gradient(#FFF -50%,#333333 50%);background:-moz-linear-gradient(#FFF -50%,#333333 50%);background:-webkit-linear-gradient(#FFF -50%,#333333 50%);}
+.bd .border_color{border-color:#333333;}
+.bd .bx_shadow{ -webkit-box-shadow:0 0 2px ;box-shadow:0 0 2px ;}
+#with_viewer.on:before{background-color:#333333;box-shadow:0 0 2px #333333;}
+#bd_zine.zine li:first-child,#bd_lst.common_notice tr:first-child td{margin-top:2px;border-top:1px solid #DDD}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body data-pinterest-extension-installed="cr1.37">
+<script type="text/javascript">
+	//<![CDATA[
+	var current_url = "http://pnucas.org/xe/?mid=bbs_2015ComputerArchitectures";
+	var request_uri = "http://pnucas.org/xe/";
+var current_mid = "bbs_2015ComputerArchitectures";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "http://pnucas.org/xe";
+	//]]>
+	</script>
+<!--#Meta:layouts/layout_simple look_v0.0.2/js/jquery-1.7.1.min.js-->
+<!--#Meta:layouts/layout_simple look_v0.0.2/js/bootstrap.min.js-->
+<!--#Meta:layouts/layout_simple look_v0.0.2/css/bootstrap.min.css-->
+<!--#Meta:layouts/layout_simple look_v0.0.2/css/bootstrap-responsive.min.css-->
+<!--#Meta:layouts/layout_simple look_v0.0.2/js/simple_layout.js-->
+<!--#Meta:layouts/layout_simple look_v0.0.2/css/default.css-->
+<div id="myModal" class="modal hide fade">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">×</a>
+		<h3>로그인</h3>
+	</div>
+	<div class="bootstrap">
+		<form action="" method="post" class="typeA" id="commonLogin" style="padding:0px; margin:0px;">
+			<input type="hidden" name="error_return_url" value="/xe/index.php?mid=bbs_2015ComputerArchitectures"><input type="hidden" name="mid" value="bbs_2015ComputerArchitectures"><input type="hidden" name="vid" value=""><input type="hidden" name="ruleset" value="@login">
+			<input type="hidden" name="success_return_url" value="/xe/index.php?mid=bbs_2015ComputerArchitectures">
+			<input type="hidden" name="act" value="procMemberLogin">
+			<div class="modal-body">
+				<label for="kid">아이디</label>
+				<input class="span4" name="user_id" type="text" id="kid" placeholder="아이디">
+				<label for="upw">비밀번호</label>
+				<input class="span4" name="password" type="password" id="ups" placeholder="비밀번호">
+			</div>
+			<div class="modal-footer">
+				<input name="keep_signed" type="checkbox" id="keepA" value="Y" onclick="if(this.checked) return confirm('브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다.\n\n로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인을 하실 필요가 없습니다.\n\n단, 게임방, 학교 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.');"><span>로그인 유지</span>
+				<input name="" class="btn btn-inverse" type="submit" value="로그인"><a href="http://pnucas.org/xe/index.php?act=dispMemberSignUpForm" class="btn">회원가입</a><a href="#" class="btn" data-dismiss="modal">닫기</a>
+			</div>
+		</form>
+	</div>
+</div>
+<div id="wrap">
+	<div id="header">
+		<div class="hgroup hidden-phone hidden-tablet">
+		</div>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="http://pnucas.org/xe/"><img src="http://pnucas.org/xe/img/top_logo.png" width="180px" height="53px"></a>
+					<br>
+					 &nbsp; <font size="5" color="#ffffff" face="한컴 소망 M">부산대학교 임베디드 네트워크 시스템 연구실</font><br>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="/xe/index.php?mid=introduction">연구실소개</a>
+							</li>
+							<li><a href="/xe/index.php?mid=lab_member">연구실사람들</a>
+							</li>
+							<li><a href="/xe/index.php?mid=bbs_Journal">연구논문/특허</a>
+							</li>
+							<li class="active"><a href="/xe/index.php?mid=bbs_2015ComputerArchitectures">수업/강의</a>
+							</li>
+							<li><a href="/xe/index.php?mid=bbs_Notification">커뮤니티</a>
+							</li>
+							<li><a href="/xe/index.php?mid=bbs_LabBoard">온라인랩</a>
+							</li>
+						</ul>
+						<ul class="nav pull-right">
+							<!--<form action="http://pnucas.org/xe/" method="post" class="iSearch navbar-search pull-left bootstrap"><input type="hidden" name="error_return_url" value="/xe/index.php?mid=bbs_2015ComputerArchitectures" />
+																<input type="hidden" name="mid" value="bbs_2015ComputerArchitectures" />
+								<input type="hidden" name="act" value="IS" />
+								<input type="hidden" name="search_target" value="title_content" />
+								<input name="is_keyword" type="text" class="iText search-query" title="keyword" placeholder="Search" />
+							</form>-->
+							<li class="divider-vertical"></li>
+							<!--<li><a class="login" data-toggle="modal" href="#myModal">로그인</a></li>-->
+							<!--<li><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;act=dispSocialxeLoginForm">소셜로그인</a></li>-->
+							<li><a href="http://pnucas.org/xe/index.php?act=dispMemberSignUpForm">로그인</a></li>
+							<li>Language Select
+							<div style="overflow:hidden;">
+								<div style="*zoom:1;padding:0px 0px 0px 0px !important; padding:none !important;">
+									<div class="widgetContainer">
+										<div class="widgetLanguage">
+											<p>
+												<a href="#" class="cafeXeA language_selector">한국어</a>
+											</p>
+											<ul class="langList" style="right: 3px;">
+												<!-- class="" | class="open" -->
+												<li><a href="#" onclick="doChangeLangType('en');return false;">English</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="body">
+		<div class="container">
+			<div class="tabbable ">
+				<ul class="nav nav-tabs">
+					<li class="dropdown dropdown-hover active">
+					<a class="dropdown-toggle" href="/xe/index.php?mid=bbs_2015ComputerArchitectures">컴퓨터 구조(I)<b></b></a>
+					</li>
+					<li class="dropdown dropdown-hover">
+					<a class="dropdown-toggle" href="/xe/index.php?mid=bbs_2015SystemProgramDesign">시스템 프로그램 설계<b></b></a>
+					</li>
+					<li class="dropdown dropdown-hover">
+					<a class="dropdown-toggle" href="/xe/index.php?mid=bbs_2015UbiSensorNetwork">유비쿼터스 센서네트워크(대학원)<b></b></a>
+					</li>
+				</ul>
+				<div class="tab-content" id="content"> 
+					<div class="content">
+						<div>
+						</div> 
+						<div id="bd" class="bd use_np use_bubble small_lst_btn">
+							<div class="bd_hd clear">
+								<div class="bd_bc fl">
+									<a href="http://pnucas.org/xe/"><strong>Home</strong></a>
+									<span>›</span><a href="/xe/index.php?mid=bbs_2015ComputerArchitectures">수업/강의</a><span>›</span><a href="/xe/index.php?mid=bbs_2015ComputerArchitectures"><em>컴퓨터 구조(I)</em></a>
+								</div>
+								<div class="bd_font fr">
+									<a class="select tg_btn2" href="#bd_font"><b>T</b><strong>추천글꼴</strong><span class="arrow down"></span></a>
+									<div id="bd_font" class="tg_cnt2">
+										<button type="button" class="tg_blur2"></button>
+										<ul>
+											<li class="ui_font on"><a href="#" title="나눔고딕 등의 여러글꼴을 섞어서 사용합니다">추천글꼴</a><em>✔</em></li>
+											<li class="ng"><a href="#popup_menu_area">나눔고딕</a><em>✔</em></li>
+											<li class="window_font"><a href="#">맑은고딕</a><em>✔</em></li>
+											<li class="tahoma"><a href="#">굴림</a><em>✔</em></li>
+										</ul>
+										<button type="button" class="tg_blur2"></button>
+									</div>
+								</div>
+								<div class="bd_set fr">
+									<a class="show_srch bubble" href="#" onclick="return false"><b class="ico_16px search"></b>검색<span class="wrp" style="margin-left: -61px;"><span class="speech">검색창을 열고 닫습니다</span><span class="edge"></span></span></a><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;act=dispBoardWrite"><b class="ico_16px write"></b>쓰기</a>
+								</div>
+							</div>
+							<div class="tl_srch">
+								<form action="http://pnucas.org/xe/" method="get" onsubmit="return procFilter(this, search)" id="bd_srch" class="bd_srch">
+									<input type="hidden" name="act" value="">
+									<input type="hidden" name="vid" value="">
+									<input type="hidden" name="mid" value="bbs_2015ComputerArchitectures">
+									<input type="hidden" name="category" value="">
+									<span class="select border_color">
+									<select name="search_target">
+										<option value="title">제목</option>
+										<option value="content">내용</option>
+										<option value="title_content">제목+내용</option>
+										<option value="comment">댓글</option>
+										<option value="user_name">이름</option>
+										<option value="nick_name">닉네임</option>
+										<option value="user_id">아이디</option>
+										<option value="tag">태그</option>
+									</select>
+									</span>
+									<input type="text" name="search_keyword" value="" class="srch_itx border_color">
+									<button type="submit" onclick="xGetElementById('bd_srch').submit();return false" class="srch_btn"><span class="ico_24px bg_color">검색</span></button>
+								</form>
+							</div>
+							<div class="lst_btn fr">
+								<ul>
+									<li class="classic on"><a class="bubble" href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;listStyle=list"><b>List</b><span class="wrp" style="margin-left: -30.5px;"><span class="speech">Text Style</span><span class="edge"></span></span></a></li>
+									<li class="zine"><a class="bubble" href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;listStyle=webzine"><b>Zine</b><span class="wrp" style="margin-left: -51.5px;"><span class="speech">Text + Image Style</span><span class="edge"></span></span></a></li>
+									<li class="gall"><a class="bubble" href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;listStyle=gallery"><b>Gallery</b><span class="wrp" style="margin-left: -37.5px;"><span class="speech">Gallery Style</span><span class="edge"></span></span></a></li>
+								</ul>
+							</div>
+							<table id="bd_lst" class="bd_lst" width="100%" cellspacing="0" summary="List of Articles" style="margin-top:0">
+							<thead class="bg_f_f9">
+							<tr>
+								<th scope="col">
+									<span><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;order_type=desc" title="내림차순">번호</a></span>
+								</th>
+								<th scope="col" class="title">
+									<span><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;sort_index=title&amp;order_type=desc">제목</a></span>
+								</th>
+								<th scope="col">
+									<span>글쓴이</span>
+								</th>
+								<th scope="col">
+									<span><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;sort_index=regdate&amp;order_type=desc">날짜</a></span>
+								</th>
+								<th scope="col">
+									<span><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;sort_index=readed_count&amp;order_type=desc">조회 수</a></span>
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr class="notice">
+								<td>공지</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281827">15장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.05.18
+								</td>
+								<td>
+									44
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>공지</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281772">14장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.05.12
+								</td>
+								<td>
+									38
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281707">10장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.05.04
+								</td>
+								<td>
+									54
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281599">6장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.04.13
+								</td>
+								<td>
+									56
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281528">5장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.04.05
+								</td>
+								<td>
+									70
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281444">PCI 보충자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.03.25
+								</td>
+								<td>
+									64
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281407">4장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.03.23
+								</td>
+								<td>
+									89
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281326"><span style="font-weight:bold;">3장 강의자료</span></a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.03.14
+								</td>
+								<td>
+									108
+								</td>
+							</tr>
+							<tr class="notice">
+								<td>
+									 공지
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281214">1장, 2장 강의자료</a>
+									&nbsp;<img src="http://pnucas.org/xe/modules/document/tpl/icons/file.gif" alt="file" title="file" style="margin-right:2px;">
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time">
+									2015.03.03
+								</td>
+								<td>
+									188
+								</td>
+							</tr>
+							<tr>
+								<td class="no">4</td>
+								<td class="title"><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281689" class="hx" rel="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281689&amp;listStyle=viewer">휴강 공지입니다. ( 4/29 수)</a>
+									&nbsp;</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time" title="15:15">
+									2015.04.27
+								</td>
+								<td>
+									14
+								</td>
+							</tr>
+							<tr>
+								<td class="no">
+									 3
+								</td>
+								<td class="title">
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281660" class="hx" rel="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;document_srl=281660&amp;listStyle=viewer">중간고사 공지입니다.(4/22 수)</a>
+									&nbsp;
+								</td>
+								<td class="author">
+									<a href="#popup_menu_area" class="member_4" onclick="return false">enslab</a>
+								</td>
+								<td class="time" title="10:11">
+									2015.04.21
+								</td>
+								<td>
+									16
+								</td>
+							</tr>
+							</tbody>
+							</table>
+							<div class="btm_mn clear">
+								<div class="fl">
+									<form action="http://pnucas.org/xe/" method="get" onsubmit="return procFilter(this, search)" id="bd_srch_btm">
+										<input type="hidden" name="act" value="">
+										<input type="hidden" name="vid" value="">
+										<input type="hidden" name="mid" value="bbs_2015ComputerArchitectures">
+										<input type="hidden" name="category" value="">
+										<span class="btn_img itx_wrp">
+										<button type="submit" onclick="xGetElementById('bd_srch_btm').submit();return false" class="ico_16px search">Search</button>
+										<label for="bd_srch_btm_itx" style="visibility: visible;">검색</label>
+										<input type="text" name="search_keyword" id="bd_srch_btm_itx" value="">
+										</span>
+										<span class="btn_area">
+										<span class="btn_img select">
+										<select name="search_target">
+											<option value="title">제목</option>
+											<option value="content">내용</option>
+											<option value="title_content">제목+내용</option>
+											<option value="comment">댓글</option>
+											<option value="user_name">이름</option>
+											<option value="nick_name">닉네임</option>
+											<option value="user_id">아이디</option>
+											<option value="tag">태그</option>
+										</select>
+										</span>
+										</span>
+									</form>
+								</div>
+								<div class="fr">
+									<a class="btn_img" href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;act=dispBoardWrite"><b class="ico_16px write"></b> 쓰기</a>
+								</div>
+							</div>
+							<form action="./" method="get" class="bd_pg">
+								<input type="hidden" name="error_return_url" value="/xe/index.php?mid=bbs_2015ComputerArchitectures"><input type="hidden" name="act" value="">
+								<fieldset>
+									<legend class="blind">Board Pagination</legend>
+									<input type="hidden" name="vid" value="">
+									<input type="hidden" name="mid" value="bbs_2015ComputerArchitectures">
+									<input type="hidden" name="category" value="">
+									<input type="hidden" name="search_keyword" value="">
+									<input type="hidden" name="search_target" value="">
+									<input type="hidden" name="listStyle" value="list">
+									<strong class="direction">‹ Prev</strong><strong class="this">1</strong>
+									<a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;page=2" class="frst_last bubble">2<span class="wrp" style="margin-left: -24.5px;"><span class="speech">끝 페이지</span><span class="edge"></span></span></a><a href="http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures&amp;page=2" class="direction">Next ›</a>
+									<div id="go_page" class="tg_cnt2 wrp">
+										<button type="button" class="tg_blur2"></button>
+										<input type="text" name="page" class="itx"> / 2 <button type="submit" class="btn">GO</button>
+										<span class="edge"></span>
+										<button type="button" class="tg_blur2"></button>
+									</div>
+								</fieldset>
+							</form>
+							<address class="bd_maker clear">Designed by hikaru100</address>
+							<div id="install_ng2">
+								<button type="button" class="tg_blur2"></button><button class="tg_close2">X</button>
+								<h3>나눔글꼴 설치 안내</h3>
+								<br>
+								<h4>이 PC에는 <b>나눔글꼴</b>이 설치되어 있지 않습니다.</h4>
+								<p>
+									이 사이트를 <b>나눔글꼴</b>로 보기 위해서는<br>
+									<b>나눔글꼴</b>을 설치해야 합니다.
+								</p>
+								<a class="do btn_img" href="http://hangeul.naver.com" target="_blank"><span class="tx_ico_chk">✔</span> 설치</a>
+								<a class="btn_img no close" href="#">취소</a>
+								<button type="button" class="tg_blur2"></button>
+							</div>
+						</div>
+						<div style="position:absolute;top:-999px;left:-999px;visibility:hidden;font-size:72px">
+							<p id="fontcheck_ng3" style="float:left;font-family:'나눔고딕',NanumGothic,monospace,Verdana !important">
+								SketchBook5,스케치북5
+							</p>
+							<p id="fontcheck_ng4" style="float:left;font-family:monospace,Verdana !important">
+								SketchBook5,스케치북5
+							</p>
+						</div>
+						<div style="position:absolute;top:-999px;left:-999px;visibility:hidden;font-size:72px">
+							<p id="fontcheck_np1" style="float:left;font-family:'나눔손글씨 펜','Nanum Pen Script',np,monospace,Verdana !important">
+								SketchBook5,스케치북5
+							</p>
+							<p id="fontcheck_np2" style="float:left;font-family:monospace,Verdana !important">
+								SketchBook5,스케치북5
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="banner hidden-phone">
+				<div class="row">
+				</div>
+			</div>
+			<div align="center">
+				<font color="#8C8C8C"> Copyrightⓒ. 2013. PNU Embedded Network Systems Lab. All Rights Reserved.</font>
+			</div>
+			<div align="center">
+				<font color="#8C8C8C"> 부산광역시 금정구 장전동 산30번지 부산대학교 제도관(A06) 6404-1호 임베디드 네트워크 시스템 연구실</font>
+			</div>
+			<div align="center">
+				<font color="#8C8C8C"> Post code : 609-735 | Tel : (82)051-510-3647,3532 | Fax : (82)051-517-2431 | Email : pnuens@gmail.com</font>
+			</div>
+			<div align="center">
+				<font color="#8C8C8C"></font>
+			</div>
+			<p>
+			</p>
+		</div>
+		<div id="footer-floor">
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						&nbsp;
+					</div>
+					<div class="span4 bootstrap">
+						<h4 style="text-align:center;"></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ETC -->
+<div class="wfsr">
+</div>
+<script type="text/javascript" src="/xe/files/cache/js_filter_compiled/d046d1841b9c79c545b82d3be892699d.ko.compiled.js?20121124234917"></script>
+<script type="text/javascript" src="/xe/files/cache/js_filter_compiled/1bdc15d63816408b99f674eb6a6ffcea.ko.compiled.js?20121124234917"></script>
+<script type="text/javascript" src="/xe/files/cache/js_filter_compiled/9b007ee9f2af763bb3d35e4fb16498e9.ko.compiled.js?20121124234917"></script>
+<script type="text/javascript" src="/xe/addons/autolink/autolink.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/common/js/plugins/ui/jquery-ui.min.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/addons/resize_image/js/resize_image.min.js?20121124171532"></script>
+<script type="text/javascript" src="/xe/modules/board/skins/sketchbook5/js/board.js?20120221153246"></script>
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span>
+</body>
+</html>
