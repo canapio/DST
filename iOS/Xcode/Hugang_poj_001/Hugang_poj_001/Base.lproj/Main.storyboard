@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fdv-oC-FX0">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -278,12 +279,13 @@
                     <connections>
                         <segue destination="hR0-rd-Lyc" kind="relationship" relationship="viewControllers" id="Dkz-cc-QMA"/>
                         <segue destination="Qd0-Nc-RCu" kind="relationship" relationship="viewControllers" id="eTW-L3-Hry"/>
+                        <segue destination="raf-0e-XJK" kind="relationship" relationship="viewControllers" id="pzi-jH-CW1"/>
                         <segue destination="Fhn-r9-Yh9" kind="relationship" relationship="viewControllers" id="vJd-sf-U0H"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yti-Ih-uDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="309"/>
+            <point key="canvasLocation" x="457" y="311"/>
         </scene>
         <!--Lecture Table View Controller-->
         <scene sceneID="abO-cJ-7tP">
@@ -634,6 +636,28 @@
             </objects>
             <point key="canvasLocation" x="1295" y="1328"/>
         </scene>
+        <!--링크모음-->
+        <scene sceneID="TrI-eN-NaR">
+            <objects>
+                <navigationController id="raf-0e-XJK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="링크모음" image="tab_link" id="7YF-Dx-ntu"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="7ze-Ef-eS7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="psk-6c-oty" kind="relationship" relationship="rootViewController" id="fYC-Ff-pTf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVi-vj-PqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="1975"/>
+        </scene>
         <!--Push History View Controller-->
         <scene sceneID="e7c-3X-nLY">
             <objects>
@@ -743,11 +767,83 @@
             </objects>
             <point key="canvasLocation" x="1729" y="1646"/>
         </scene>
+        <!--링크모음-->
+        <scene sceneID="aGh-wr-4Md">
+            <objects>
+                <viewController id="psk-6c-oty" customClass="LinkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3SB-7H-XKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="01U-qx-t2I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Fe-u1-s4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="X45-cs-p8f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.87028044459999998" green="0.0" blue="0.085161961620000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LinkTableViewCell" id="Sel-ue-CBe" customClass="LinkTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sel-ue-CBe" id="8Yr-nB-GPk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_earth" translatesAutoresizingMaskIntoConstraints="NO" id="2jo-nj-CeM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="7Kc-WD-5my"/>
+                                                        <constraint firstAttribute="width" constant="43" id="FfW-bJ-cI2"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="43" id="QhQ-rb-tbN"/>
+                                                        <constraint firstAttribute="height" constant="43" id="Z8p-gK-vdM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-CI-LCg">
+                                                    <rect key="frame" x="46" y="11" width="266" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="u4f-CI-LCg" secondAttribute="trailing" constant="8" id="ddA-VF-rrm"/>
+                                                <constraint firstItem="u4f-CI-LCg" firstAttribute="leading" secondItem="2jo-nj-CeM" secondAttribute="trailing" constant="3" id="n8T-ih-JGm"/>
+                                                <constraint firstItem="2jo-nj-CeM" firstAttribute="leading" secondItem="8Yr-nB-GPk" secondAttribute="leading" id="xrZ-GK-SWF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="2jo-nj-CeM" id="nU4-Sy-lQQ"/>
+                                            <outlet property="titleLabel" destination="u4f-CI-LCg" id="y7T-9B-udA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X45-cs-p8f" firstAttribute="top" secondItem="0Fe-u1-s4Q" secondAttribute="top" id="ODV-Cb-WDo"/>
+                            <constraint firstAttribute="trailing" secondItem="X45-cs-p8f" secondAttribute="trailing" id="WBK-VU-dS6"/>
+                            <constraint firstAttribute="bottom" secondItem="X45-cs-p8f" secondAttribute="bottom" id="dEy-5o-y8n"/>
+                            <constraint firstItem="X45-cs-p8f" firstAttribute="leading" secondItem="0Fe-u1-s4Q" secondAttribute="leading" id="wMz-oJ-0LQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="링크모음" id="xv1-Pz-kob"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="X45-cs-p8f" id="ldq-Bp-dhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoB-9C-tJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="1975"/>
+        </scene>
     </scenes>
     <resources>
         <image name="favo_off" width="43" height="43"/>
         <image name="favo_on" width="43" height="43"/>
+        <image name="icon_earth" width="25" height="25"/>
         <image name="navibtn_more" width="4" height="20"/>
+        <image name="tab_link" width="37" height="10"/>
         <image name="thum_folder" width="30" height="30"/>
         <image name="thum_professor" width="36" height="36"/>
     </resources>

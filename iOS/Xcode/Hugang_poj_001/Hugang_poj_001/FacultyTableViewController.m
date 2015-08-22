@@ -142,12 +142,9 @@
 //            NSLog(@"__self.navigationController:%p", self.navigationController.tabBarController);
             IntroHelpViewController *introHelpViewController = [[IntroHelpViewController alloc] init];
             if (!ISIPAD) {
-                
-                [self.navigationController presentViewController:introHelpViewController animated:YES completion:^{
-                }];
+                [self.navigationController presentViewController:introHelpViewController animated:YES completion:^{}];
             } else {
-                [self.navigationController presentViewController:introHelpViewController animated:YES completion:^{
-                }];
+                [self.navigationController presentViewController:introHelpViewController animated:YES completion:^{}];
             }
             
                 

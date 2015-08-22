@@ -8,7 +8,7 @@ LectureParser = function () {
 LectureParser.prototype.executeParse = function(callback) {
 var _this = this;
 najax({ 
-	url:'http://infosec.pusan.ac.kr/bbs/zboard.php?id=u2015_1_cs_hw', 
+	url:'http://infosec.pusan.ac.kr/lec_15_2.html', 
 	type:'GET' 
 }).success(function(html){
 	

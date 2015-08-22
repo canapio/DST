@@ -16,7 +16,7 @@ var jquery = fs.readFileSync("js/jquery.js", "utf-8");
  
  //http://borame.cs.pusan.ac.kr/lecture/fr_lecture_s2015_1.htm
 jsdom.env({// 
-  url: "http://borame.cs.pusan.ac.kr/lecture/left_s2015-1.htm",
+  url: "http://borame.cs.pusan.ac.kr/lecture/left_s2015-2.htm",
   encoding:'binary',
   src: [jquery],
   done: function (errors, window) {

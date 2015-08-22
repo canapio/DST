@@ -52,6 +52,7 @@
 		36D39A261B40EB61001108B0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D39A251B40EB61001108B0 /* SystemConfiguration.framework */; };
 		36D39A281B40EB69001108B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D39A271B40EB69001108B0 /* libz.dylib */; };
 		36D39A2A1B40EB6F001108B0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D39A291B40EB6F001108B0 /* libsqlite3.dylib */; };
+		36D9026B1B78C05D00CD5AB5 /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D9026A1B78C05D00CD5AB5 /* LinkViewController.m */; };
 		36F53E8D1B13E290002B4816 /* PushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F53E8C1B13E290002B4816 /* PushController.m */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,8 @@
 		36D39A251B40EB61001108B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36D39A271B40EB69001108B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		36D39A291B40EB6F001108B0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		36D902691B78C05D00CD5AB5 /* LinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
+		36D9026A1B78C05D00CD5AB5 /* LinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		36F53E8B1B13E290002B4816 /* PushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushController.h; sourceTree = "<group>"; };
 		36F53E8C1B13E290002B4816 /* PushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +272,7 @@
 				36B991761B2ED04700368324 /* SplitViewController.m */,
 				368A9E9F1B0411610051A4FA /* MainViewController */,
 				368A9EA01B04116B0051A4FA /* FavoViewController */,
+				36D902681B78C03000CD5AB5 /* LinkViewController */,
 				36AE19711B1E7AAE00DF4C39 /* SettingViewController */,
 			);
 			name = ViewController;
@@ -457,6 +461,15 @@
 			name = ExtraViewController;
 			sourceTree = "<group>";
 		};
+		36D902681B78C03000CD5AB5 /* LinkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36D902691B78C05D00CD5AB5 /* LinkViewController.h */,
+				36D9026A1B78C05D00CD5AB5 /* LinkViewController.m */,
+			);
+			name = LinkViewController;
+			sourceTree = "<group>";
+		};
 		36F53E8A1B13E27E002B4816 /* PushController */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +606,7 @@
 				369417D31AE0AA3100E18F0D /* FacultyTableViewController.m in Sources */,
 				36B9C4361AF85EC000DEAC3D /* QTouchposeApplication.m in Sources */,
 				36AE19741B1E7AC600DF4C39 /* SettingViewController.m in Sources */,
+				36D9026B1B78C05D00CD5AB5 /* LinkViewController.m in Sources */,
 				3675727D1B1DEA3E002F0B45 /* TOActivitySafari.m in Sources */,
 				36D39A0F1B3F9497001108B0 /* ExtraViewController.m in Sources */,
 				369417AB1AE09DC500E18F0D /* main.m in Sources */,
@@ -713,7 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Doyoung Gwak (5WXJ4Z4H69)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -729,7 +743,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c43dadfe-e708-4223-be69-0dd676d745d7";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Ad-Hoc";
@@ -845,7 +859,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Doyoung Gwak (5WXJ4Z4H69)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -861,7 +875,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c43dadfe-e708-4223-be69-0dd676d745d7";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -871,7 +885,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Doyoung Gwak (5WXJ4Z4H69)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -886,7 +900,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c43dadfe-e708-4223-be69-0dd676d745d7";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

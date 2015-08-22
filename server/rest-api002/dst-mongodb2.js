@@ -954,11 +954,11 @@ DST.prototype.pushnotice = function(param, callback) {
 	this.notice_collection.insert(insertobj, {}, function(e, results){
 	    if (e) {callback(500, e); return;}
 
-	    // _this.callPush(param, function () {
+	    _this.callPush(param, function () {
 	    	_this.callPush2(param, function () {
 	    		callback(0, success_error_message, ((results.length==1)?results[0]:results))
 	    	})
-	    // });
+	    });
 	    
   	})
 }
@@ -1983,8 +1983,8 @@ DST.prototype.callAndroidPush2 = function (param, callback) {
 		// console.log("android push end ::::")
 
 
-		// _this.calliOSProductionPush2(param, callback);
-		if (callback) callback();
+		_this.calliOSProductionPush2(param, callback);
+		// if (callback) callback();
 				
 	})
 	

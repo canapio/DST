@@ -29,7 +29,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 
-#define ANALYTICSON YES
+#define ANALYTICSON NO
 #define GOOGLE_ANALYTICS_KEY @"UA-64596536-1"//
 
 #define ISIPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -45,8 +45,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 #define PUSH_ID ([FavoController shared].pushid)?([FavoController shared].pushid):(@"ABABABABABABABABA")
-//#define APNS_IOS @"ios"
-#define APNS_IOS @"ios_production"
+#define APNS_IOS @"ios"
+//#define APNS_IOS @"ios_production"
 
 #define WEBPAGE_URL @"http://14.49.37.33:8003/DSTWebManager"
 

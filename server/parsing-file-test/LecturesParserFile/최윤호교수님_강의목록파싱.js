@@ -18,25 +18,31 @@ jsdom.env({
   done: function (errors, window) {
     var $ = window.$;
     // console.log("HN Links");
-    console.log("___2");
+    // console.log("___2");
 
     var returnLectureList = []
     // #pageLeftT div ul.subMenu li a font
     // #pageLeftT div ul.subMenu li ul li a font
     var num = 0;
+    var lecturetitle1 = null;
     $("#pageLeftT div ul.subMenu li").each (function() {
+        // console.log("___________________")
         var ulhtml = $(this).find('ul').html();
         if (ulhtml) {
             $(this).find('ul li').each(function(){
                 num++;
-                var lecturetitle1 = $(this).find('a font').html();
-                console.log("    "+num+"-lecturetitle2:"+lecturetitle1.trim() + "      "+$(this).find('a').attr('href'));
+                var lecturetitle2 = $(this).find('a font').html();
+                // console.log("    "+num+"-lecturetitle2:"+lecturetitle2.trim() + "      "+$(this).find('a').attr('href'));
+                returnLectureList.push({
+                  title:lecturetitle1+"-"+lecturetitle2.trim(),
+                  postsparseurl:'http://prof.pusan.ac.kr'+$(this).find('a').attr('href')
+                })
             })
             
         } else {
-            console.log("ulhtml:"+ulhtml)
-            var lecturetitle1 = $(this).find('a font').html();
-            console.log("lecturetitle1:"+lecturetitle1.trim() + "      "+$(this).find('a').attr('href'));
+            // console.log("ulhtml:"+ulhtml)
+            lecturetitle1 = $(this).find('a font').html().trim();
+            // console.log("lecturetitle1:"+lecturetitle1.trim() + "      "+$(this).find('a').attr('href'));
         }
 
 
@@ -65,7 +71,10 @@ jsdom.env({
       //       }
       //     }
       // })
+      
     })
+    callback(returnLectureList);
+    
     
   }
 });
