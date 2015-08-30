@@ -1,0 +1,99 @@
+eu.erikw.PullToRefreshListView -> eu.erikw.PullToRefreshListView:
+    float PULL_RESISTANCE -> PULL_RESISTANCE
+    int BOUNCE_ANIMATION_DURATION -> BOUNCE_ANIMATION_DURATION
+    int BOUNCE_ANIMATION_DELAY -> BOUNCE_ANIMATION_DELAY
+    float BOUNCE_OVERSHOOT_TENSION -> BOUNCE_OVERSHOOT_TENSION
+    int ROTATE_ARROW_ANIMATION_DURATION -> ROTATE_ARROW_ANIMATION_DURATION
+    int measuredHeaderHeight -> measuredHeaderHeight
+    boolean scrollbarEnabled -> scrollbarEnabled
+    boolean bounceBackHeader -> bounceBackHeader
+    boolean lockScrollWhileRefreshing -> lockScrollWhileRefreshing
+    boolean showLastUpdatedText -> showLastUpdatedText
+    java.lang.String pullToRefreshText -> pullToRefreshText
+    java.lang.String releaseToRefreshText -> releaseToRefreshText
+    java.lang.String refreshingText -> refreshingText
+    java.lang.String lastUpdatedText -> lastUpdatedText
+    java.text.SimpleDateFormat lastUpdatedDateFormat -> lastUpdatedDateFormat
+    float previousY -> previousY
+    int headerPadding -> headerPadding
+    boolean hasResetHeader -> hasResetHeader
+    long lastUpdated -> lastUpdated
+    eu.erikw.PullToRefreshListView$State state -> state
+    android.widget.LinearLayout headerContainer -> headerContainer
+    android.widget.RelativeLayout header -> header
+    android.view.animation.RotateAnimation flipAnimation -> flipAnimation
+    android.view.animation.RotateAnimation reverseFlipAnimation -> reverseFlipAnimation
+    android.widget.ImageView image -> image
+    android.widget.ProgressBar spinner -> spinner
+    android.widget.TextView text -> text
+    android.widget.TextView lastUpdatedTextView -> lastUpdatedTextView
+    android.widget.AdapterView$OnItemClickListener onItemClickListener -> onItemClickListener
+    android.widget.AdapterView$OnItemLongClickListener onItemLongClickListener -> onItemLongClickListener
+    eu.erikw.PullToRefreshListView$OnRefreshListener onRefreshListener -> onRefreshListener
+    float mScrollStartY -> mScrollStartY
+    int IDLE_DISTANCE -> IDLE_DISTANCE
+    void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener) -> setOnItemClickListener
+    void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener) -> setOnItemLongClickListener
+    void setOnRefreshListener(eu.erikw.PullToRefreshListView$OnRefreshListener) -> setOnRefreshListener
+    boolean isRefreshing() -> isRefreshing
+    void setLockScrollWhileRefreshing(boolean) -> setLockScrollWhileRefreshing
+    void setShowLastUpdatedText(boolean) -> setShowLastUpdatedText
+    void setLastUpdatedDateFormat(java.text.SimpleDateFormat) -> setLastUpdatedDateFormat
+    void setRefreshing() -> setRefreshing
+    void onRefreshComplete() -> onRefreshComplete
+    void setTextPullToRefresh(java.lang.String) -> setTextPullToRefresh
+    void setTextReleaseToRefresh(java.lang.String) -> setTextReleaseToRefresh
+    void setTextRefreshing(java.lang.String) -> setTextRefreshing
+    void init() -> init
+    void setHeaderPadding(int) -> setHeaderPadding
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void bounceBackHeader() -> bounceBackHeader
+    void resetHeader() -> resetHeader
+    void setUiRefreshing() -> setUiRefreshing
+    void setState(eu.erikw.PullToRefreshListView$State) -> setState
+    void onScrollChanged(int,int,int,int) -> onScrollChanged
+    eu.erikw.PullToRefreshListView$State access$300(eu.erikw.PullToRefreshListView) -> access$300
+    boolean access$400(eu.erikw.PullToRefreshListView) -> access$400
+    int access$500() -> access$500
+    android.widget.LinearLayout access$600(eu.erikw.PullToRefreshListView) -> access$600
+    void access$700(eu.erikw.PullToRefreshListView,int) -> access$700
+    boolean access$800(eu.erikw.PullToRefreshListView) -> access$800
+    boolean access$802(eu.erikw.PullToRefreshListView,boolean) -> access$802
+    void access$900(eu.erikw.PullToRefreshListView) -> access$900
+    void access$1000(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$State) -> access$1000
+    android.widget.RelativeLayout access$1100(eu.erikw.PullToRefreshListView) -> access$1100
+    int access$502(int) -> access$502
+    boolean access$1202(eu.erikw.PullToRefreshListView,boolean) -> access$1202
+    android.widget.AdapterView$OnItemClickListener access$1300(eu.erikw.PullToRefreshListView) -> access$1300
+    android.widget.AdapterView$OnItemLongClickListener access$1400(eu.erikw.PullToRefreshListView) -> access$1400
+eu.erikw.PullToRefreshListView$1 -> eu.erikw.a:
+    int[] $SwitchMap$eu$erikw$PullToRefreshListView$State -> a
+eu.erikw.PullToRefreshListView$HeaderAnimationListener -> eu.erikw.PullToRefreshListView$a:
+    int height -> b
+    int translation -> c
+    eu.erikw.PullToRefreshListView$State stateAtAnimationStart -> d
+    eu.erikw.PullToRefreshListView this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+eu.erikw.PullToRefreshListView$HeaderAnimationListener$1 -> eu.erikw.b:
+    eu.erikw.PullToRefreshListView$HeaderAnimationListener this$1 -> a
+    void run() -> run
+eu.erikw.PullToRefreshListView$OnRefreshListener -> eu.erikw.PullToRefreshListView$OnRefreshListener:
+    void onRefresh() -> onRefresh
+eu.erikw.PullToRefreshListView$PTROnGlobalLayoutListener -> eu.erikw.PullToRefreshListView$b:
+    eu.erikw.PullToRefreshListView this$0 -> a
+    void onGlobalLayout() -> onGlobalLayout
+eu.erikw.PullToRefreshListView$PTROnItemClickListener -> eu.erikw.PullToRefreshListView$c:
+    eu.erikw.PullToRefreshListView this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+eu.erikw.PullToRefreshListView$PTROnItemLongClickListener -> eu.erikw.PullToRefreshListView$d:
+    eu.erikw.PullToRefreshListView this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+eu.erikw.PullToRefreshListView$State -> eu.erikw.PullToRefreshListView$e:
+    eu.erikw.PullToRefreshListView$State PULL_TO_REFRESH -> a
+    eu.erikw.PullToRefreshListView$State RELEASE_TO_REFRESH -> b
+    eu.erikw.PullToRefreshListView$State REFRESHING -> c
+    eu.erikw.PullToRefreshListView$State[] $VALUES -> d
+    eu.erikw.PullToRefreshListView$State[] values() -> values
+    eu.erikw.PullToRefreshListView$State valueOf(java.lang.String) -> valueOf

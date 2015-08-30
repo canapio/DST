@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="푸시 설정" >
+        <SwitchPreference
+
+            android:defaultValue="true"
+            android:key="pushOn"
+            android:summary="푸시 알림을 켭니다"
+            android:switchTextOff="OFF"
+            android:switchTextOn="ON"
+            android:title="푸시 설정" />
+
+        <Preference
+            android:summary="푸시 기록을 봅니다"
+            android:title="푸시 히스토리"
+            android:key="push_history">
+            <intent
+                android:targetClass="com.pnucse.csenotice.Hugang.HistoryActivity"
+                android:targetPackage="com.pnucse.csenotice.Hugang" />
+        </Preference>
+        <!--
+        <Preference
+            android:title="홈스크린 위젯목록 초기화"
+            android:key="delete_history">
+
+
+        </Preference>
+        -->
+
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="어플 정보">
+        <Preference
+
+            android:title="공지사항"
+            android:key="notice">
+
+            <intent
+                android:targetClass="com.pnucse.csenotice.Hugang.NoticeActivity"
+                android:targetPackage="com.pnucse.csenotice.Hugang" />
+
+        </Preference>
+        <Preference
+            android:title="소개 웹페이지"
+            android:key="intro_web">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://14.49.37.33:8003/DSTWebManager" />
+        </Preference>
+
+        <Preference
+            android:summary="별 다섯개"
+            android:title="평가하기"
+            android:key="rate">
+
+        </Preference>
+
+        <Preference
+            android:summary="개발자에게 메일을 보냅니다"
+            android:title="FeedBack"
+            android:key="mailtodeveloper">
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

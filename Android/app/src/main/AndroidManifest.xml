@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pnucse.csenotice.Hugang" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <!-- GCM 권한 -->
+    <permission
+        android:name="com.pnucse.csenotice.Hugang.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.pnucse.csenotice.Hugang.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- GCM 처리 서비스 -->
+        <service android:name=".GCMIntentService" />
+
+
+
+        <!-- GCM 관련 브로드캐스트 메시지를 받을 수신자 -->
+        <receiver
+            android:name=".GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- 메시지 수신 메시지 지정 -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.pnucse.csenotice.Hugang.todaynolecture" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".LectureActivity"
+            android:label="@string/title_activity_lecture"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PostActivity"
+            android:label="@string/title_activity_post"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".NoticeActivity"
+            android:label="@string/title_activity_notice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/title_activity_history"
+            android:screenOrientation="portrait" >
+        </activity>
+<!--
+        <receiver
+            android:name=".WidgetProvider"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+           >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/list_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+-->
+    </application>
+
+</manifest>
