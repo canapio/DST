@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.pnucse.csenotice.Hugang"
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode 5
+        versionName "1.22"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("./keystore/test.keystore")
+            storePassword "qwer1234"
+            keyAlias "nova"
+            keyPassword "qwer1234"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':MaterialTabsModule')
+    compile project(':libraryproject')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
+    compile 'com.android.support:support-v4:22.1.1'
+}
