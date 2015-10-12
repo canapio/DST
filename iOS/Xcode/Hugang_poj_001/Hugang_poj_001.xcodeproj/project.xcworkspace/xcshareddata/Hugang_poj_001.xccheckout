@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D87827AA-2A2A-407F-B894-412AAC104DE1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Hugang_poj_001</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C80FF552F8906C3840C57C33A4EFC2BEE4546A70</key>
 		<string>https://github.com/canapio/DST.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS/Xcode/Hugang_poj_001/Hugang_poj_001.xcodeproj</string>
+	<string>iOS/Xcode/Hugang_poj_001/Hugang_poj_001.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C80FF552F8906C3840C57C33A4EFC2BEE4546A70</key>

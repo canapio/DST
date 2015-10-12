@@ -7,8 +7,8 @@ console.log("_______________ parse _________________");
 var path = '../parsing-file-test/PostsParser_LectureFile/'
 
 
-path += '최윤호교수님_자동글파싱';
-var url = 'http://prof.pusan.ac.kr/user/indexSub.action?codyMenuSeq=7238&siteId=sec&linkUrl='
+path += '학사행정_정컴_자동글파싱2';
+var url = 'http://uwcms.pusan.ac.kr/user/indexSub.action?codyMenuSeq=21704&siteId=cse&linkUrl='
 
 
 var PostParser = require(path).PostParser;

@@ -1,6 +1,8 @@
 var najax = require('najax');
 var jsdom = require("jsdom");
 var fs = require("fs");
+var Iconv = require('iconv').Iconv;
+var iconv = new Iconv('ksc5601', 'UTF-8//TRANSLIT//IGNORE');
 
 LectureParser = function () {
 
@@ -10,50 +12,56 @@ LectureParser.prototype.executeParse = function(callback) {
 
 
 
-var jquery = fs.readFileSync("js/jquery.js", "utf-8");
+var jquery = fs.readFileSync("./js/jquery.js", "utf-8");
  
-jsdom.env({
-  url: "http://se.ce.pusan.ac.kr/xe/?mid=lecture_present",
+ //http://borame.cs.pusan.ac.kr/lecture/fr_lecture_s2015_1.htm
+jsdom.env({// 
+  url: "http://stem.cs.pusan.ac.kr/",
   src: [jquery],
   done: function (errors, window) {
     var $ = window.$;
-    // console.log("HN Links");
 
 
-    var returnLectureList = []
+    var returnList = []
+    //
+    $("html body div.WordSection1 ul li.MsoNormal a span").each(function () {
+    	var lecture = $(this).html()
+    	lecture = lecture.trim();
+
+    	console.log("lecture:"+lecture)
+    	var buf = new Buffer(lecture.length);
+        buf.write(lecture, 0, lecture.length, 'binary');
+        lecture = iconv.convert(buf).toString();
 
 
-    $("#wrap table tbody tr td table tbody tr td div").each (function() {
-    	$(this).find("div div.tabWidget div.tabBox").each( function() {
-    		console.log("______-------_______");
-    		var lecture1 = null;
-    		$(this).find("div div a").each( function(argument) {
-    			// console.log(":::::"+$(this).html());
-    			var lecture2 = "";
-    			if (!lecture1) {
-    				lecture1 = $(this).html()
-    				lecture2 = "공지사항";
-    			} else {
-    				lecture2 = $(this).html()
-    			}
-    			var url = "http://se.ce.pusan.ac.kr" + $(this).attr('href');
-    			var _title = lecture1.trim()+" - "+lecture2.trim();
-    			returnLectureList.push({title:_title, postsparseurl:url});
-    		})
-    	})
+     // var dataIn = new Uint8Array(lecture/*[0xA1, 0xB4]*/);
+     // var str = new TextDecoder('KSC5601').decode(dataIn);
+     // var codePoint = str.codePointAt(0);
+    	console.log("_ _ _ _" + lecture);
+
+    	var lecture = $(this).html()
+    	lecture = lecture.trim();
+    	
+		var url = $(this).attr('href');
+		returnList.push({title:lecture, postsparseurl:url});        
     });
 
 
-    // for (var i=0; i<returnLectureList.length; i++) {
-    // 	console.log(returnLectureList[i].title + ":::::" + returnLectureList[i].postsparseurl );
-    // }
 
-    callback(returnLectureList);
+
+
+
+		// for (var i=0; i<returnList.length; i++) {
+	 //    	console.log(returnList[i].title + "\t" + returnList[i].postsparseurl);
+	 //    }
+
+	    callback(returnList);
 
   }
 });
 
 };
+
 
 
 
@@ -82,6 +90,8 @@ String.prototype.trim = function () {
 
 	return str;
 }
+
+
 
 
 exports.LectureParser = LectureParser;

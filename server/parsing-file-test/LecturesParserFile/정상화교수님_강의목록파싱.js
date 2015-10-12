@@ -13,7 +13,7 @@ LectureParser.prototype.executeParse = function(callback) {
 var jquery = fs.readFileSync("js/jquery.js", "utf-8");
  
 jsdom.env({
-  url: "http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures",
+  url: "http://pnucas.org/xe/index.php?mid=bbs_2015experiment",//http://pnucas.org/xe/index.php?mid=bbs_2015ComputerArchitectures",
   src: [jquery],
   done: function (errors, window) {
     var $ = window.$;

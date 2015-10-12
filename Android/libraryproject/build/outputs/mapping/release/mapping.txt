@@ -32,6 +32,9 @@ eu.erikw.PullToRefreshListView -> eu.erikw.PullToRefreshListView:
     eu.erikw.PullToRefreshListView$OnRefreshListener onRefreshListener -> onRefreshListener
     float mScrollStartY -> mScrollStartY
     int IDLE_DISTANCE -> IDLE_DISTANCE
+    void <init>(android.content.Context) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
     void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener) -> setOnItemClickListener
     void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener) -> setOnItemLongClickListener
     void setOnRefreshListener(eu.erikw.PullToRefreshListView$OnRefreshListener) -> setOnRefreshListener
@@ -66,30 +69,39 @@ eu.erikw.PullToRefreshListView -> eu.erikw.PullToRefreshListView:
     boolean access$1202(eu.erikw.PullToRefreshListView,boolean) -> access$1202
     android.widget.AdapterView$OnItemClickListener access$1300(eu.erikw.PullToRefreshListView) -> access$1300
     android.widget.AdapterView$OnItemLongClickListener access$1400(eu.erikw.PullToRefreshListView) -> access$1400
-eu.erikw.PullToRefreshListView$1 -> eu.erikw.a:
+eu.erikw.PullToRefreshListView$1 -> eu.erikw.PullToRefreshListView$1:
     int[] $SwitchMap$eu$erikw$PullToRefreshListView$State -> a
+    void <clinit>() -> <clinit>
 eu.erikw.PullToRefreshListView$HeaderAnimationListener -> eu.erikw.PullToRefreshListView$a:
     int height -> b
     int translation -> c
     eu.erikw.PullToRefreshListView$State stateAtAnimationStart -> d
     eu.erikw.PullToRefreshListView this$0 -> a
+    void <init>(eu.erikw.PullToRefreshListView,int) -> <init>
     void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
     void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
     void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
-eu.erikw.PullToRefreshListView$HeaderAnimationListener$1 -> eu.erikw.b:
+eu.erikw.PullToRefreshListView$HeaderAnimationListener$1 -> eu.erikw.a:
     eu.erikw.PullToRefreshListView$HeaderAnimationListener this$1 -> a
+    void <init>(eu.erikw.PullToRefreshListView$HeaderAnimationListener) -> <init>
     void run() -> run
 eu.erikw.PullToRefreshListView$OnRefreshListener -> eu.erikw.PullToRefreshListView$OnRefreshListener:
     void onRefresh() -> onRefresh
 eu.erikw.PullToRefreshListView$PTROnGlobalLayoutListener -> eu.erikw.PullToRefreshListView$b:
     eu.erikw.PullToRefreshListView this$0 -> a
+    void <init>(eu.erikw.PullToRefreshListView) -> <init>
     void onGlobalLayout() -> onGlobalLayout
+    void <init>(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1) -> <init>
 eu.erikw.PullToRefreshListView$PTROnItemClickListener -> eu.erikw.PullToRefreshListView$c:
     eu.erikw.PullToRefreshListView this$0 -> a
+    void <init>(eu.erikw.PullToRefreshListView) -> <init>
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    void <init>(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1) -> <init>
 eu.erikw.PullToRefreshListView$PTROnItemLongClickListener -> eu.erikw.PullToRefreshListView$d:
     eu.erikw.PullToRefreshListView this$0 -> a
+    void <init>(eu.erikw.PullToRefreshListView) -> <init>
     boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+    void <init>(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1) -> <init>
 eu.erikw.PullToRefreshListView$State -> eu.erikw.PullToRefreshListView$e:
     eu.erikw.PullToRefreshListView$State PULL_TO_REFRESH -> a
     eu.erikw.PullToRefreshListView$State RELEASE_TO_REFRESH -> b
@@ -97,3 +109,5 @@ eu.erikw.PullToRefreshListView$State -> eu.erikw.PullToRefreshListView$e:
     eu.erikw.PullToRefreshListView$State[] $VALUES -> d
     eu.erikw.PullToRefreshListView$State[] values() -> values
     eu.erikw.PullToRefreshListView$State valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>

@@ -25,10 +25,10 @@ najax({
 	var tableArray = html.split('<table ')
 	var realTableArray = [];
 	for (var i=0; i<tableArray.length; i++) {
-		findindex = tableArray[i].search('대학원');	
+		findindex = tableArray[i].search('논리회로 설계 및 실험');	
 		if (findindex!=-1) {realTableArray.push(tableArray[i]);continue;}
 
-		findindex = tableArray[i].search('학부');	
+		findindex = tableArray[i].search('이산수학');	
 		if (findindex!=-1) realTableArray.push(tableArray[i]);
 	}
 
@@ -38,11 +38,11 @@ najax({
 		// console.log(JSON.stringify(lecturelist));
 
 		var title1 = "";
-		findindex = realTableArray[i].search('대학원');	
-		if (findindex!=-1) title1 = "대학원";
+		findindex = realTableArray[i].search('논리회로 설계 및 실험');	
+		if (findindex!=-1) title1 = "논리회로 설계 및 실험";
 
-		findindex = realTableArray[i].search('학부');	
-		if (findindex!=-1) title1 = "학부";
+		findindex = realTableArray[i].search('이산수학');	
+		if (findindex!=-1) title1 = "이산수학";
 
 
 		// console.log("title1:"+title1)
@@ -97,6 +97,8 @@ najax({
 				var lecturename2 = lectureRawList[k].substring(0, findindex);
 
 				var lecturetitle = lecturename + " - " + lecturename2;
+				if (title1=="논리회로 설계 및 실험") lecturetitle = "논설실험 :: " + lecturetitle;
+				// else (title1=="이산수학") lecturetitle = "이산수학 :: " + lecturetitle;
 				returnLectureList.push({title:lecturetitle, postsparseurl:_postparseurl})
 			}
 

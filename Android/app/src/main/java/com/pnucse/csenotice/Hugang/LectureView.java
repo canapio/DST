@@ -156,7 +156,7 @@ public class LectureView extends LinearLayout {
             String lect_id = params[0];
             String onoff = params[1];
 
-            Log.d("push",pushid);
+            Log.d("push:::",pushid);
             //System.out.println("*** doInBackground ** paramUsername " + paramUsername + " paramPassword :" + paramPassword);
 
             HttpClient httpClient = new DefaultHttpClient();

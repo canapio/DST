@@ -45,6 +45,7 @@ Constant Pool (count = 523):
   + Class [android/widget/RelativeLayout]
   + Class [android/widget/TextView]
   + Class [eu/erikw/PullToRefreshListView]
+  + Class [eu/erikw/PullToRefreshListView$1]
   + Class [eu/erikw/PullToRefreshListView$OnRefreshListener]
   + Class [eu/erikw/PullToRefreshListView$a]
   + Class [eu/erikw/PullToRefreshListView$b]
@@ -55,7 +56,6 @@ Constant Pool (count = 523):
   + Class [eu/erikw/R$id]
   + Class [eu/erikw/R$layout]
   + Class [eu/erikw/R$string]
-  + Class [eu/erikw/a]
   + Class [java/lang/Math]
   + Class [java/lang/Object]
   + Class [java/lang/String]
@@ -93,6 +93,7 @@ Constant Pool (count = 523):
   + Fieldref [eu/erikw/PullToRefreshListView.spinner Landroid/widget/ProgressBar;]
   + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
   + Fieldref [eu/erikw/PullToRefreshListView.text Landroid/widget/TextView;]
+  + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
   + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
@@ -106,7 +107,6 @@ Constant Pool (count = 523):
   + Fieldref [eu/erikw/R$string.ptr_pull_to_refresh I]
   + Fieldref [eu/erikw/R$string.ptr_refreshing I]
   + Fieldref [eu/erikw/R$string.ptr_release_to_refresh I]
-  + Fieldref [eu/erikw/a.a [I]
   + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
   + Methodref [android/view/LayoutInflater.from (Landroid/content/Context;)Landroid/view/LayoutInflater;]
   + Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;)Landroid/view/View;]
@@ -165,9 +165,9 @@ Constant Pool (count = 523):
   + Methodref [eu/erikw/PullToRefreshListView.setVerticalFadingEdgeEnabled (Z)V]
   + Methodref [eu/erikw/PullToRefreshListView.startAnimation (Landroid/view/animation/Animation;)V]
   + Methodref [eu/erikw/PullToRefreshListView$a.<init> (Leu/erikw/PullToRefreshListView;I)V]
-  + Methodref [eu/erikw/PullToRefreshListView$b.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
-  + Methodref [eu/erikw/PullToRefreshListView$c.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
-  + Methodref [eu/erikw/PullToRefreshListView$d.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+  + Methodref [eu/erikw/PullToRefreshListView$b.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
+  + Methodref [eu/erikw/PullToRefreshListView$c.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
+  + Methodref [eu/erikw/PullToRefreshListView$d.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
   + Methodref [java/lang/Math.abs (F)F]
   + Methodref [java/lang/Math.max (II)I]
@@ -187,7 +187,7 @@ Constant Pool (count = 523):
   + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
   + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
   + NameAndType [<init> (Leu/erikw/PullToRefreshListView;I)V]
-  + NameAndType [<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+  + NameAndType [<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [IDLE_DISTANCE I]
   + NameAndType [a Leu/erikw/PullToRefreshListView$e;]
@@ -327,8 +327,8 @@ Constant Pool (count = 523):
   + Utf8 [(Leu/erikw/PullToRefreshListView;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Z]
   + Utf8 [(Leu/erikw/PullToRefreshListView;I)V]
+  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$e;)V]
-  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;Z)Z]
   + Utf8 [(Ljava/lang/CharSequence;)V]
   + Utf8 [(Ljava/lang/String;)V]
@@ -420,6 +420,7 @@ Constant Pool (count = 523):
   + Utf8 [dd/MM HH:mm]
   + Utf8 [e]
   + Utf8 [eu/erikw/PullToRefreshListView]
+  + Utf8 [eu/erikw/PullToRefreshListView$1]
   + Utf8 [eu/erikw/PullToRefreshListView$OnRefreshListener]
   + Utf8 [eu/erikw/PullToRefreshListView$a]
   + Utf8 [eu/erikw/PullToRefreshListView$b]
@@ -430,7 +431,6 @@ Constant Pool (count = 523):
   + Utf8 [eu/erikw/R$id]
   + Utf8 [eu/erikw/R$layout]
   + Utf8 [eu/erikw/R$string]
-  + Utf8 [eu/erikw/a]
   + Utf8 [findViewById]
   + Utf8 [flipAnimation]
   + Utf8 [format]
@@ -799,7 +799,7 @@ Methods (count = 37):
       [0] aload_0 v0
       [1] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [4] getstatic #89
+      [4] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [7] ifacmpne +7 (target=14)
       [10] iconst_1
@@ -858,7 +858,7 @@ Methods (count = 37):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 23, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] getstatic #89
+      [1] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [4] putfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
@@ -883,7 +883,7 @@ Methods (count = 37):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 19, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] getstatic #87
+      [1] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [4] putfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
@@ -910,7 +910,7 @@ Methods (count = 37):
       [5] aload_0 v0
       [6] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [9] getstatic #87
+      [9] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [12] ifacmpne +11 (target=23)
       [15] aload_0 v0
@@ -934,7 +934,7 @@ Methods (count = 37):
       [5] aload_0 v0
       [6] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [9] getstatic #88
+      [9] getstatic #89
         + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
       [12] ifacmpne +11 (target=23)
       [15] aload_0 v0
@@ -958,7 +958,7 @@ Methods (count = 37):
       [5] aload_0 v0
       [6] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [9] getstatic #89
+      [9] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [12] ifacmpne +11 (target=23)
       [15] aload_0 v0
@@ -985,7 +985,7 @@ Methods (count = 37):
         + Methodref [eu/erikw/PullToRefreshListView.getContext ()Landroid/content/Context;]
       [10] invokestatic #102
         + Methodref [android/view/LayoutInflater.from (Landroid/content/Context;)Landroid/view/LayoutInflater;]
-      [13] getstatic #95
+      [13] getstatic #96
         + Fieldref [eu/erikw/R$layout.ptr_header I]
       [16] aconst_null
       [17] invokevirtual #103
@@ -998,7 +998,7 @@ Methods (count = 37):
       [27] aload_0 v0
       [28] getfield #64
         + Fieldref [eu/erikw/PullToRefreshListView.headerContainer Landroid/widget/LinearLayout;]
-      [31] getstatic #90
+      [31] getstatic #91
         + Fieldref [eu/erikw/R$id.ptr_id_header I]
       [34] invokevirtual #125
         + Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
@@ -1010,7 +1010,7 @@ Methods (count = 37):
       [44] aload_0 v0
       [45] getfield #63
         + Fieldref [eu/erikw/PullToRefreshListView.header Landroid/widget/RelativeLayout;]
-      [48] getstatic #94
+      [48] getstatic #95
         + Fieldref [eu/erikw/R$id.ptr_id_text I]
       [51] invokevirtual #136
         + Methodref [android/widget/RelativeLayout.findViewById (I)Landroid/view/View;]
@@ -1022,7 +1022,7 @@ Methods (count = 37):
       [61] aload_0 v0
       [62] getfield #63
         + Fieldref [eu/erikw/PullToRefreshListView.header Landroid/widget/RelativeLayout;]
-      [65] getstatic #92
+      [65] getstatic #93
         + Fieldref [eu/erikw/R$id.ptr_id_last_updated I]
       [68] invokevirtual #136
         + Methodref [android/widget/RelativeLayout.findViewById (I)Landroid/view/View;]
@@ -1034,7 +1034,7 @@ Methods (count = 37):
       [78] aload_0 v0
       [79] getfield #63
         + Fieldref [eu/erikw/PullToRefreshListView.header Landroid/widget/RelativeLayout;]
-      [82] getstatic #91
+      [82] getstatic #92
         + Fieldref [eu/erikw/R$id.ptr_id_image I]
       [85] invokevirtual #136
         + Methodref [android/widget/RelativeLayout.findViewById (I)Landroid/view/View;]
@@ -1046,7 +1046,7 @@ Methods (count = 37):
       [95] aload_0 v0
       [96] getfield #63
         + Fieldref [eu/erikw/PullToRefreshListView.header Landroid/widget/RelativeLayout;]
-      [99] getstatic #93
+      [99] getstatic #94
         + Fieldref [eu/erikw/R$id.ptr_id_spinner I]
       [102] invokevirtual #136
         + Methodref [android/widget/RelativeLayout.findViewById (I)Landroid/view/View;]
@@ -1058,7 +1058,7 @@ Methods (count = 37):
       [112] aload_0 v0
       [113] invokevirtual #146
         + Methodref [eu/erikw/PullToRefreshListView.getContext ()Landroid/content/Context;]
-      [116] getstatic #97
+      [116] getstatic #98
         + Fieldref [eu/erikw/R$string.ptr_pull_to_refresh I]
       [119] invokevirtual #101
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
@@ -1068,7 +1068,7 @@ Methods (count = 37):
       [126] aload_0 v0
       [127] invokevirtual #146
         + Methodref [eu/erikw/PullToRefreshListView.getContext ()Landroid/content/Context;]
-      [130] getstatic #99
+      [130] getstatic #100
         + Fieldref [eu/erikw/R$string.ptr_release_to_refresh I]
       [133] invokevirtual #101
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
@@ -1078,7 +1078,7 @@ Methods (count = 37):
       [140] aload_0 v0
       [141] invokevirtual #146
         + Methodref [eu/erikw/PullToRefreshListView.getContext ()Landroid/content/Context;]
-      [144] getstatic #98
+      [144] getstatic #99
         + Fieldref [eu/erikw/R$string.ptr_refreshing I]
       [147] invokevirtual #101
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
@@ -1088,7 +1088,7 @@ Methods (count = 37):
       [154] aload_0 v0
       [155] invokevirtual #146
         + Methodref [eu/erikw/PullToRefreshListView.getContext ()Landroid/content/Context;]
-      [158] getstatic #96
+      [158] getstatic #97
         + Fieldref [eu/erikw/R$string.ptr_last_updated I]
       [161] invokevirtual #101
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
@@ -1181,7 +1181,7 @@ Methods (count = 37):
       [276] invokevirtual #143
         + Methodref [eu/erikw/PullToRefreshListView.addHeaderView (Landroid/view/View;)V]
       [279] aload_0 v0
-      [280] getstatic #87
+      [280] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [283] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1198,33 +1198,33 @@ Methods (count = 37):
         + Methodref [android/widget/RelativeLayout.getViewTreeObserver ()Landroid/view/ViewTreeObserver;]
       [301] astore_1 v1
       [302] aload_1 v1
-      [303] new #38
+      [303] new #39
         + Class [eu/erikw/PullToRefreshListView$b]
       [306] dup
       [307] aload_0 v0
       [308] aconst_null
       [309] invokespecial #159
-        + Methodref [eu/erikw/PullToRefreshListView$b.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+        + Methodref [eu/erikw/PullToRefreshListView$b.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
       [312] invokevirtual #107
         + Methodref [android/view/ViewTreeObserver.addOnGlobalLayoutListener (Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V]
       [315] aload_0 v0
-      [316] new #39
+      [316] new #40
         + Class [eu/erikw/PullToRefreshListView$c]
       [319] dup
       [320] aload_0 v0
       [321] aconst_null
       [322] invokespecial #160
-        + Methodref [eu/erikw/PullToRefreshListView$c.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+        + Methodref [eu/erikw/PullToRefreshListView$c.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
       [325] invokespecial #133
         + Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
       [328] aload_0 v0
-      [329] new #40
+      [329] new #41
         + Class [eu/erikw/PullToRefreshListView$d]
       [332] dup
       [333] aload_0 v0
       [334] aconst_null
       [335] invokespecial #161
-        + Methodref [eu/erikw/PullToRefreshListView$d.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+        + Methodref [eu/erikw/PullToRefreshListView$d.<init> (Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
       [338] invokespecial #134
         + Methodref [android/widget/ListView.setOnItemLongClickListener (Landroid/widget/AdapterView$OnItemLongClickListener;)V]
       [341] return
@@ -1278,7 +1278,7 @@ Methods (count = 37):
       [7] aload_0 v0
       [8] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [11] getstatic #89
+      [11] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [14] ifacmpeq +20 (target=34)
       [17] aload_0 v0
@@ -1334,15 +1334,15 @@ Methods (count = 37):
       [113] aload_0 v0
       [114] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [117] getstatic #88
+      [117] getstatic #89
         + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
       [120] ifacmpeq +10 (target=130)
       [123] aload_0 v0
       [124] invokevirtual #147
         + Methodref [eu/erikw/PullToRefreshListView.getFirstVisiblePosition ()I]
       [127] ifne +260 (target=387)
-      [130] getstatic #100
-        + Fieldref [eu/erikw/a.a [I]
+      [130] getstatic #87
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
       [133] aload_0 v0
       [134] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
@@ -1354,7 +1354,7 @@ Methods (count = 37):
         2: offset = 41, target = 182
         default: offset = 45, target = 186
       [168] aload_0 v0
-      [169] getstatic #89
+      [169] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [172] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1438,7 +1438,7 @@ Methods (count = 37):
       [284] aload_0 v0
       [285] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [288] getstatic #89
+      [288] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [291] ifacmpeq +96 (target=387)
       [294] aload_0 v0
@@ -1448,7 +1448,7 @@ Methods (count = 37):
       [300] aload_0 v0
       [301] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [304] getstatic #87
+      [304] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [307] ifacmpne +38 (target=345)
       [310] aload_0 v0
@@ -1456,7 +1456,7 @@ Methods (count = 37):
         + Fieldref [eu/erikw/PullToRefreshListView.headerPadding I]
       [314] ifle +31 (target=345)
       [317] aload_0 v0
-      [318] getstatic #88
+      [318] getstatic #89
         + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
       [321] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1477,7 +1477,7 @@ Methods (count = 37):
       [345] aload_0 v0
       [346] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [349] getstatic #88
+      [349] getstatic #89
         + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
       [352] ifacmpne +35 (target=387)
       [355] aload_0 v0
@@ -1485,7 +1485,7 @@ Methods (count = 37):
         + Fieldref [eu/erikw/PullToRefreshListView.headerPadding I]
       [359] ifge +28 (target=387)
       [362] aload_0 v0
-      [363] getstatic #87
+      [363] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [366] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1517,7 +1517,7 @@ Methods (count = 37):
       [0] aload_0 v0
       [1] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [4] getstatic #89
+      [4] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [7] ifacmpne +21 (target=28)
       [10] aload_0 v0
@@ -1592,7 +1592,7 @@ Methods (count = 37):
       [99] invokevirtual #121
         + Methodref [android/view/animation/TranslateAnimation.setInterpolator (Landroid/view/animation/Interpolator;)V]
       [102] aload_2 v2
-      [103] new #37
+      [103] new #38
         + Class [eu/erikw/PullToRefreshListView$a]
       [106] dup
       [107] aload_0 v0
@@ -1627,7 +1627,7 @@ Methods (count = 37):
       [16] invokespecial #153
         + Methodref [eu/erikw/PullToRefreshListView.setHeaderPadding (I)V]
       [19] aload_0 v0
-      [20] getstatic #87
+      [20] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [23] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1695,8 +1695,8 @@ Methods (count = 37):
       [1] aload_1 v1
       [2] putfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [5] getstatic #100
-        + Fieldref [eu/erikw/a.a [I]
+      [5] getstatic #87
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
       [8] aload_1 v1
       [9] invokevirtual #162
         + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
@@ -1807,7 +1807,7 @@ Methods (count = 37):
         + Fieldref [eu/erikw/PullToRefreshListView.onRefreshListener Leu/erikw/PullToRefreshListView$OnRefreshListener;]
       [180] ifnonnull +13 (target=193)
       [183] aload_0 v0
-      [184] getstatic #87
+      [184] getstatic #88
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [187] invokespecial #154
         + Methodref [eu/erikw/PullToRefreshListView.setState (Leu/erikw/PullToRefreshListView$e;)V]
@@ -1842,7 +1842,7 @@ Methods (count = 37):
       [22] aload_0 v0
       [23] getfield #85
         + Fieldref [eu/erikw/PullToRefreshListView.state Leu/erikw/PullToRefreshListView$e;]
-      [26] getstatic #89
+      [26] getstatic #90
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [29] ifacmpeq +11 (target=40)
       [32] aload_0 v0
@@ -2023,7 +2023,8 @@ Class file attributes (count = 1):
   + Inner classes attribute (count = 16)
     - InnerClassesInfo:
       Access flags:  0x1008 = static synthetic 
-      + Class [eu/erikw/a]
+      + Class [eu/erikw/PullToRefreshListView$1]
+      + Class [eu/erikw/PullToRefreshListView]
     - InnerClassesInfo:
       Access flags:  0x2 = private 
       + Class [eu/erikw/PullToRefreshListView$d]
@@ -2101,26 +2102,26 @@ Class file attributes (count = 1):
       + Utf8 [AnimationListener]
 
 _____________________________________________________________________
-+ Program class: eu/erikw/a
++ Program class: eu/erikw/PullToRefreshListView$1
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
     = target 1.6
   Access flags:  0x1020
-    = synthetic class eu.erikw.a extends java.lang.Object
+    = synthetic class eu.erikw.PullToRefreshListView$1 extends java.lang.Object
 
 Interfaces (count = 0):
 
 Constant Pool (count = 37):
   + Class [eu/erikw/PullToRefreshListView]
+  + Class [eu/erikw/PullToRefreshListView$1]
   + Class [eu/erikw/PullToRefreshListView$e]
-  + Class [eu/erikw/a]
   + Class [java/lang/NoSuchFieldError]
   + Class [java/lang/Object]
+  + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
   + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
-  + Fieldref [eu/erikw/a.a [I]
   + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
   + Methodref [eu/erikw/PullToRefreshListView$e.values ()[Leu/erikw/PullToRefreshListView$e;]
   + NameAndType [a Leu/erikw/PullToRefreshListView$e;]
@@ -2142,8 +2143,8 @@ Constant Pool (count = 37):
   + Utf8 [c]
   + Utf8 [e]
   + Utf8 [eu/erikw/PullToRefreshListView]
+  + Utf8 [eu/erikw/PullToRefreshListView$1]
   + Utf8 [eu/erikw/PullToRefreshListView$e]
-  + Utf8 [eu/erikw/a]
   + Utf8 [java/lang/NoSuchFieldError]
   + Utf8 [java/lang/Object]
   + Utf8 [ordinal]
@@ -2164,11 +2165,11 @@ Methods (count = 1):
         + Methodref [eu/erikw/PullToRefreshListView$e.values ()[Leu/erikw/PullToRefreshListView$e;]
       [3] arraylength
       [4] newarray 10
-      [6] putstatic #9
-        + Fieldref [eu/erikw/a.a [I]
-      [9] getstatic #9
-        + Fieldref [eu/erikw/a.a [I]
-      [12] getstatic #7
+      [6] putstatic #6
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
+      [9] getstatic #6
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
+      [12] getstatic #8
         + Fieldref [eu/erikw/PullToRefreshListView$e.b Leu/erikw/PullToRefreshListView$e;]
       [15] invokevirtual #10
         + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
@@ -2176,9 +2177,9 @@ Methods (count = 1):
       [19] iastore
       [20] goto +4 (target=24)
       [23] astore_0 v0
-      [24] getstatic #9
-        + Fieldref [eu/erikw/a.a [I]
-      [27] getstatic #6
+      [24] getstatic #6
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
+      [27] getstatic #7
         + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
       [30] invokevirtual #10
         + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
@@ -2186,9 +2187,9 @@ Methods (count = 1):
       [34] iastore
       [35] goto +4 (target=39)
       [38] astore_0 v0
-      [39] getstatic #9
-        + Fieldref [eu/erikw/a.a [I]
-      [42] getstatic #8
+      [39] getstatic #6
+        + Fieldref [eu/erikw/PullToRefreshListView$1.a [I]
+      [42] getstatic #9
         + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
       [45] invokevirtual #10
         + Methodref [eu/erikw/PullToRefreshListView$e.ordinal ()I]
@@ -2210,7 +2211,8 @@ Class file attributes (count = 1):
   + Inner classes attribute (count = 2)
     - InnerClassesInfo:
       Access flags:  0x1008 = static synthetic 
-      + Class [eu/erikw/a]
+      + Class [eu/erikw/PullToRefreshListView$1]
+      + Class [eu/erikw/PullToRefreshListView]
     - InnerClassesInfo:
       Access flags:  0x401a = private static final enum 
       + Class [eu/erikw/PullToRefreshListView$e]
@@ -2238,7 +2240,7 @@ Constant Pool (count = 118):
   + Class [eu/erikw/PullToRefreshListView]
   + Class [eu/erikw/PullToRefreshListView$a]
   + Class [eu/erikw/PullToRefreshListView$e]
-  + Class [eu/erikw/b]
+  + Class [eu/erikw/a]
   + Class [java/lang/Object]
   + Long [100]
   + Fieldref [android/view/ViewGroup$LayoutParams.height I]
@@ -2263,7 +2265,7 @@ Constant Pool (count = 118):
   + Methodref [eu/erikw/PullToRefreshListView.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
   + Methodref [eu/erikw/PullToRefreshListView.setSelection (I)V]
   + Methodref [eu/erikw/PullToRefreshListView.setVerticalScrollBarEnabled (Z)V]
-  + Methodref [eu/erikw/b.<init> (Leu/erikw/PullToRefreshListView$a;)V]
+  + Methodref [eu/erikw/a.<init> (Leu/erikw/PullToRefreshListView$a;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Leu/erikw/PullToRefreshListView$a;)V]
@@ -2333,7 +2335,7 @@ Constant Pool (count = 118):
   + Utf8 [eu/erikw/PullToRefreshListView]
   + Utf8 [eu/erikw/PullToRefreshListView$a]
   + Utf8 [eu/erikw/PullToRefreshListView$e]
-  + Utf8 [eu/erikw/b]
+  + Utf8 [eu/erikw/a]
   + Utf8 [getHeight]
   + Utf8 [getLayoutParams]
   + Utf8 [getTop]
@@ -2521,11 +2523,11 @@ Methods (count = 4):
       [106] getfield #14
         + Fieldref [eu/erikw/PullToRefreshListView$a.a Leu/erikw/PullToRefreshListView;]
       [109] new #9
-        + Class [eu/erikw/b]
+        + Class [eu/erikw/a]
       [112] dup
       [113] aload_0 v0
       [114] invokespecial #35
-        + Methodref [eu/erikw/b.<init> (Leu/erikw/PullToRefreshListView$a;)V]
+        + Methodref [eu/erikw/a.<init> (Leu/erikw/PullToRefreshListView$a;)V]
       [117] ldc2_w #11
         + Long [100]
       [120] invokevirtual #31
@@ -2566,7 +2568,7 @@ Class file attributes (count = 1):
       + Utf8 [a]
     - InnerClassesInfo:
       Access flags:  0x0 = 
-      + Class [eu/erikw/b]
+      + Class [eu/erikw/a]
     - InnerClassesInfo:
       Access flags:  0x401a = private static final enum 
       + Class [eu/erikw/PullToRefreshListView$e]
@@ -2584,13 +2586,13 @@ Class file attributes (count = 1):
       + Utf8 [AnimationListener]
 
 _____________________________________________________________________
-+ Program class: eu/erikw/b
++ Program class: eu/erikw/a
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
     = target 1.6
   Access flags:  0x20
-    = class eu.erikw.b extends java.lang.Object
+    = class eu.erikw.a extends java.lang.Object
 
 Interfaces (count = 1):
   + Class [java/lang/Runnable]
@@ -2598,11 +2600,11 @@ Interfaces (count = 1):
 Constant Pool (count = 30):
   + Class [eu/erikw/PullToRefreshListView]
   + Class [eu/erikw/PullToRefreshListView$a]
-  + Class [eu/erikw/b]
+  + Class [eu/erikw/a]
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
   + Fieldref [eu/erikw/PullToRefreshListView$a.a Leu/erikw/PullToRefreshListView;]
-  + Fieldref [eu/erikw/b.a Leu/erikw/PullToRefreshListView$a;]
+  + Fieldref [eu/erikw/a.a Leu/erikw/PullToRefreshListView$a;]
   + Methodref [eu/erikw/PullToRefreshListView.access$900 (Leu/erikw/PullToRefreshListView;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
@@ -2621,7 +2623,7 @@ Constant Pool (count = 30):
   + Utf8 [access$900]
   + Utf8 [eu/erikw/PullToRefreshListView]
   + Utf8 [eu/erikw/PullToRefreshListView$a]
-  + Utf8 [eu/erikw/b]
+  + Utf8 [eu/erikw/a]
   + Utf8 [java/lang/Object]
   + Utf8 [java/lang/Runnable]
   + Utf8 [run]
@@ -2634,13 +2636,13 @@ Fields (count = 1):
 Methods (count = 2):
   - Method:       <init>(Leu/erikw/PullToRefreshListView$a;)V
     Access flags: 0x0
-      = b(eu.erikw.PullToRefreshListView$a)
+      = a(eu.erikw.PullToRefreshListView$a)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        + Fieldref [eu/erikw/b.a Leu/erikw/PullToRefreshListView$a;]
+        + Fieldref [eu/erikw/a.a Leu/erikw/PullToRefreshListView$a;]
       [5] aload_0 v0
       [6] invokespecial #9
         + Methodref [java/lang/Object.<init> ()V]
@@ -2654,7 +2656,7 @@ Methods (count = 2):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #7
-        + Fieldref [eu/erikw/b.a Leu/erikw/PullToRefreshListView$a;]
+        + Fieldref [eu/erikw/a.a Leu/erikw/PullToRefreshListView$a;]
       [4] getfield #6
         + Fieldref [eu/erikw/PullToRefreshListView$a.a Leu/erikw/PullToRefreshListView;]
       [7] invokestatic #8
@@ -2672,7 +2674,7 @@ Class file attributes (count = 1):
       + Utf8 [a]
     - InnerClassesInfo:
       Access flags:  0x0 = 
-      + Class [eu/erikw/b]
+      + Class [eu/erikw/a]
 
 _____________________________________________________________________
 + Program class: eu/erikw/PullToRefreshListView$OnRefreshListener
@@ -2729,9 +2731,9 @@ Constant Pool (count = 73):
   + Class [android/view/ViewTreeObserver$OnGlobalLayoutListener]
   + Class [android/widget/RelativeLayout]
   + Class [eu/erikw/PullToRefreshListView]
+  + Class [eu/erikw/PullToRefreshListView$1]
   + Class [eu/erikw/PullToRefreshListView$b]
   + Class [eu/erikw/PullToRefreshListView$e]
-  + Class [eu/erikw/a]
   + Class [java/lang/Object]
   + Fieldref [eu/erikw/PullToRefreshListView$b.a Leu/erikw/PullToRefreshListView;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.c Leu/erikw/PullToRefreshListView$e;]
@@ -2768,7 +2770,7 @@ Constant Pool (count = 73):
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Leu/erikw/PullToRefreshListView$e;]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;I)V]
-  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [InnerClasses]
@@ -2788,9 +2790,9 @@ Constant Pool (count = 73):
   + Utf8 [c]
   + Utf8 [e]
   + Utf8 [eu/erikw/PullToRefreshListView]
+  + Utf8 [eu/erikw/PullToRefreshListView$1]
   + Utf8 [eu/erikw/PullToRefreshListView$b]
   + Utf8 [eu/erikw/PullToRefreshListView$e]
-  + Utf8 [eu/erikw/a]
   + Utf8 [getHeight]
   + Utf8 [getViewTreeObserver]
   + Utf8 [java/lang/Object]
@@ -2873,9 +2875,9 @@ Methods (count = 3):
       [68] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V
+  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V
     Access flags: 0x1000
-      = synthetic PullToRefreshListView$b(eu.erikw.PullToRefreshListView,eu.erikw.a)
+      = synthetic PullToRefreshListView$b(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 6, locals = 3, stack = 2):
       [0] aload_0 v0
@@ -2895,7 +2897,8 @@ Class file attributes (count = 1):
       + Utf8 [b]
     - InnerClassesInfo:
       Access flags:  0x1008 = static synthetic 
-      + Class [eu/erikw/a]
+      + Class [eu/erikw/PullToRefreshListView$1]
+      + Class [eu/erikw/PullToRefreshListView]
     - InnerClassesInfo:
       Access flags:  0x609 = public static interface 
       + Class [android/view/ViewTreeObserver$OnGlobalLayoutListener]
@@ -2923,9 +2926,9 @@ Constant Pool (count = 55):
   + Class [android/widget/AdapterView]
   + Class [android/widget/AdapterView$OnItemClickListener]
   + Class [eu/erikw/PullToRefreshListView]
+  + Class [eu/erikw/PullToRefreshListView$1]
   + Class [eu/erikw/PullToRefreshListView$c]
   + Class [eu/erikw/PullToRefreshListView$e]
-  + Class [eu/erikw/a]
   + Class [java/lang/Object]
   + Fieldref [eu/erikw/PullToRefreshListView$c.a Leu/erikw/PullToRefreshListView;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
@@ -2951,7 +2954,7 @@ Constant Pool (count = 55):
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Landroid/widget/AdapterView$OnItemClickListener;]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Leu/erikw/PullToRefreshListView$e;]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)V]
-  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;Z)Z]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -2968,9 +2971,9 @@ Constant Pool (count = 55):
   + Utf8 [c]
   + Utf8 [e]
   + Utf8 [eu/erikw/PullToRefreshListView]
+  + Utf8 [eu/erikw/PullToRefreshListView$1]
   + Utf8 [eu/erikw/PullToRefreshListView$c]
   + Utf8 [eu/erikw/PullToRefreshListView$e]
-  + Utf8 [eu/erikw/a]
   + Utf8 [getHeaderViewsCount]
   + Utf8 [java/lang/Object]
   + Utf8 [onItemClick]
@@ -3042,9 +3045,9 @@ Methods (count = 3):
       [57] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V
+  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V
     Access flags: 0x1000
-      = synthetic PullToRefreshListView$c(eu.erikw.PullToRefreshListView,eu.erikw.a)
+      = synthetic PullToRefreshListView$c(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 6, locals = 3, stack = 2):
       [0] aload_0 v0
@@ -3064,7 +3067,8 @@ Class file attributes (count = 1):
       + Utf8 [c]
     - InnerClassesInfo:
       Access flags:  0x1008 = static synthetic 
-      + Class [eu/erikw/a]
+      + Class [eu/erikw/PullToRefreshListView$1]
+      + Class [eu/erikw/PullToRefreshListView]
     - InnerClassesInfo:
       Access flags:  0x609 = public static interface 
       + Class [android/widget/AdapterView$OnItemClickListener]
@@ -3092,9 +3096,9 @@ Constant Pool (count = 55):
   + Class [android/widget/AdapterView]
   + Class [android/widget/AdapterView$OnItemLongClickListener]
   + Class [eu/erikw/PullToRefreshListView]
+  + Class [eu/erikw/PullToRefreshListView$1]
   + Class [eu/erikw/PullToRefreshListView$d]
   + Class [eu/erikw/PullToRefreshListView$e]
-  + Class [eu/erikw/a]
   + Class [java/lang/Object]
   + Fieldref [eu/erikw/PullToRefreshListView$d.a Leu/erikw/PullToRefreshListView;]
   + Fieldref [eu/erikw/PullToRefreshListView$e.a Leu/erikw/PullToRefreshListView$e;]
@@ -3120,7 +3124,7 @@ Constant Pool (count = 55):
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Landroid/widget/AdapterView$OnItemLongClickListener;]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)Leu/erikw/PullToRefreshListView$e;]
   + Utf8 [(Leu/erikw/PullToRefreshListView;)V]
-  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V]
+  + Utf8 [(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V]
   + Utf8 [(Leu/erikw/PullToRefreshListView;Z)Z]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -3137,9 +3141,9 @@ Constant Pool (count = 55):
   + Utf8 [d]
   + Utf8 [e]
   + Utf8 [eu/erikw/PullToRefreshListView]
+  + Utf8 [eu/erikw/PullToRefreshListView$1]
   + Utf8 [eu/erikw/PullToRefreshListView$d]
   + Utf8 [eu/erikw/PullToRefreshListView$e]
-  + Utf8 [eu/erikw/a]
   + Utf8 [getHeaderViewsCount]
   + Utf8 [java/lang/Object]
   + Utf8 [onItemLongClick]
@@ -3213,9 +3217,9 @@ Methods (count = 3):
       [59] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/a;)V
+  - Method:       <init>(Leu/erikw/PullToRefreshListView;Leu/erikw/PullToRefreshListView$1;)V
     Access flags: 0x1000
-      = synthetic PullToRefreshListView$d(eu.erikw.PullToRefreshListView,eu.erikw.a)
+      = synthetic PullToRefreshListView$d(eu.erikw.PullToRefreshListView,eu.erikw.PullToRefreshListView$1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 6, locals = 3, stack = 2):
       [0] aload_0 v0
@@ -3235,7 +3239,8 @@ Class file attributes (count = 1):
       + Utf8 [d]
     - InnerClassesInfo:
       Access flags:  0x1008 = static synthetic 
-      + Class [eu/erikw/a]
+      + Class [eu/erikw/PullToRefreshListView$1]
+      + Class [eu/erikw/PullToRefreshListView]
     - InnerClassesInfo:
       Access flags:  0x609 = public static interface 
       + Class [android/widget/AdapterView$OnItemLongClickListener]

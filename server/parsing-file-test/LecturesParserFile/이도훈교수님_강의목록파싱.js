@@ -11,10 +11,10 @@ LectureParser.prototype.executeParse = function(callback) {
 
 
 var jquery = fs.readFileSync("js/jquery.js", "utf-8");
- 
+
  //http://borame.cs.pusan.ac.kr/lecture/fr_lecture_s2015_1.htm
 jsdom.env({// 
-  url: "http://164.125.35.15/visbic_course/index.php?mid=LA1501notice",
+  url: "http://164.125.35.15/visbic_course/index.php?mid=DS1502notice",
   src: [jquery],
   done: function (errors, window) {
     var $ = window.$;

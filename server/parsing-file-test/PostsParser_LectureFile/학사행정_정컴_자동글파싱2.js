@@ -55,9 +55,11 @@ jsdom.env({
 		}
     	
     	$(this).find('td.title').each(function () {
+
     		if ($(this).find('strong').html()) _title = $(this).find('strong').html();
 	    	$(this).find('a').each(function() {
 	    		var title = $(this).html();
+
 	    		var href = 'http://uwcms.pusan.ac.kr/user/'+$(this).attr('href');
 
 	    		if (title.search('<strong>')!=-1) {
@@ -121,6 +123,7 @@ jsdom.env({
 String.prototype.trim = function () {
 	var str = this;
 	
+	
 	str = str.replace('/&nbsp;/gi;', '');
 	str = str.replace('/\n/gi', '');
 	str = str.replace('/\r/gi', '');
@@ -152,14 +155,19 @@ String.prototype.trim = function () {
 		str = str.substring(0, i+1);
 		break;
 	}
+
+	
+
 	if (str.search('&nbsp;')==0) {
 		str = str.substring('&nbsp;'.length, str.length);
 		str = str.trim();
 	}
-	if (str.search('&nbsp;')==str.length-'&nbsp;'.length) {
+
+	if (str.search('&nbsp;')!=-1 && str.search('&nbsp;')==str.length-'&nbsp;'.length) {
 		str = str.substring(0, str.length-'&nbsp;'.length);
 		str = str.trim();
 	}
+	
 	return str;
 }
 

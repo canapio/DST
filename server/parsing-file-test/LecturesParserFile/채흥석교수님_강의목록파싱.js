@@ -13,7 +13,7 @@ LectureParser.prototype.executeParse = function(callback) {
 var jquery = fs.readFileSync("js/jquery.js", "utf-8");
  
 jsdom.env({
-  url: "http://square.cse.pusan.ac.kr/xe/board_mTVp73",
+  url: "http://square.cse.pusan.ac.kr/xe/board_xGAk46",
   src: [jquery],
   done: function (errors, window) {
   	try {

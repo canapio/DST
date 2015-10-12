@@ -18,7 +18,7 @@ var jquery = fs.readFileSync("js/jquery.js", "utf-8");
 var lecturearr = []
 var lectureurldic = {}
 jsdom.env({
-  url: "http://eslab.ismine.net/?page_id=705",
+  url: "http://eslab.ismine.net/?page_id=832",//http://eslab.ismine.net/?page_id=705",
   src: [jquery],
   done: function (errors, window) {
     var $ = window.$;
