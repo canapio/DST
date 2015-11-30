@@ -69,7 +69,7 @@ eu.erikw.PullToRefreshListView -> eu.erikw.PullToRefreshListView:
     boolean access$1202(eu.erikw.PullToRefreshListView,boolean) -> access$1202
     android.widget.AdapterView$OnItemClickListener access$1300(eu.erikw.PullToRefreshListView) -> access$1300
     android.widget.AdapterView$OnItemLongClickListener access$1400(eu.erikw.PullToRefreshListView) -> access$1400
-eu.erikw.PullToRefreshListView$1 -> eu.erikw.PullToRefreshListView$1:
+eu.erikw.PullToRefreshListView$1 -> eu.erikw.a:
     int[] $SwitchMap$eu$erikw$PullToRefreshListView$State -> a
     void <clinit>() -> <clinit>
 eu.erikw.PullToRefreshListView$HeaderAnimationListener -> eu.erikw.PullToRefreshListView$a:
@@ -81,7 +81,7 @@ eu.erikw.PullToRefreshListView$HeaderAnimationListener -> eu.erikw.PullToRefresh
     void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
     void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
     void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
-eu.erikw.PullToRefreshListView$HeaderAnimationListener$1 -> eu.erikw.a:
+eu.erikw.PullToRefreshListView$HeaderAnimationListener$1 -> eu.erikw.b:
     eu.erikw.PullToRefreshListView$HeaderAnimationListener this$1 -> a
     void <init>(eu.erikw.PullToRefreshListView$HeaderAnimationListener) -> <init>
     void run() -> run

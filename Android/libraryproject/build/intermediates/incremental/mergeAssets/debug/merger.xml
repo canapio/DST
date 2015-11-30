@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Dong\AndroidStudioProjects\TodayNoLecture\libraryproject\src\main\assets"/></dataSet><dataSet config="debug"><source path="C:\Users\Dong\AndroidStudioProjects\TodayNoLecture\libraryproject\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/canapio/Desktop/Project_Folder/DST/Android/libraryproject/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/canapio/Desktop/Project_Folder/DST/Android/libraryproject/src/debug/assets"/></dataSet></merger>

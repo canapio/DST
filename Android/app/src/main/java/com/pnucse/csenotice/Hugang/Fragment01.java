@@ -219,6 +219,7 @@ public class Fragment01 extends Fragment {
 
         @Override
         protected void onPostExecute(String result) {
+            // log?
 
             if (result.equals("에러")){
                 AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
@@ -243,27 +244,34 @@ public class Fragment01 extends Fragment {
                 JSONObject data = jobj.getJSONObject("data");
                 JSONArray dataarr = data.getJSONArray("list");
 
+//                Log.i("MYLOG----", "data : "+data);
+//                Log.i("MYLOG----", "dataarr.length : "+dataarr.length());
                 Resources res = getResources();
-                for (int i = 0; i< dataarr.length(); i++){
+                for (int i = 0; i< dataarr.length(); i++) {
 
                     String name = null;
                     String id = null;
                     String count = null;
                     int order = 0;
                     data = dataarr.getJSONObject(i);
-                    if (data.has("name") && data.has("_id")){
+                    if (data.has("name") && data.has("_id")) {
                         name = data.getString("name");
                         id = data.getString("_id");
                         if (data.has("lecturecount"))
                             count = data.getString("lecturecount");
                         if (data.has("order"))
                             order = Integer.parseInt(data.getString("order"));
+                    } else {
+                        continue;
                     }
-                    else { continue;}
                     String enable = null;
-                    enable = data.getString("status");
+                    if (data.has("status")) {
+                        enable = data.getString("status");
+                    }
                     String pageurl = null;
-                    pageurl = data.getString("lecturesparseurl");
+                    if (data.has("lecturesparseurl")) {
+                        pageurl = data.getString("lecturesparseurl");
+                    }
 
                     if(name.contains("컴퓨터공학"))
                     {
@@ -279,16 +287,18 @@ public class Fragment01 extends Fragment {
                         //Log.d("JSON",name);
                     }
 
-                    listView1.onRefreshComplete();
+
 
                 }
+
+
 
 
             } catch (Exception e) {
                 Log.d("TodayNo_JSONError", e.getMessage());
             }
 
-
+            listView1.onRefreshComplete();
             /*
             try {
                 JSONArray ja = new JSONArray(result);
